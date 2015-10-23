@@ -1,0 +1,541 @@
+/*
+Theme Name: Sensitive Skin Bootstrap
+Theme URI: http://underscores.me/
+Author: Bernard Meisler
+Author URI: http://underscores.me/
+Description: Bootstrap based theme for Sensitive Skin magazine
+Version: 1.0.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: sensitive-skin-bootstrap
+Tags:
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+
+Sensitive Skin Bootstrap is based on Underscores http://underscores.me/, (C) 2012-2015 Automattic, Inc.
+Underscores is distributed under the terms of the GNU GPL v2 or later.
+
+Normalizing styles have been helped along thanks to the fine work of
+Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
+*/
+
+/*--------------------------------------------------------------
+>>> TABLE OF CONTENTS:
+----------------------------------------------------------------
+# Normalize
+# Typography
+# Elements
+# Forms
+# Navigation
+	## Links
+	## Menus
+# Accessibility
+# Alignments
+# Clearings
+# Widgets
+# Content
+    ## Posts and pages
+	## Asides
+	## Comments
+# Infinite scroll
+# Media
+	## Captions
+	## Galleries
+--------------------------------------------------------------*/
+
+
+
+
+
+/*--------------------------------------------------------------
+## Links
+--------------------------------------------------------------*/
+a {
+	color: royalblue;
+}
+
+a:visited {
+	color: purple;
+}
+
+a:hover,
+a:focus,
+a:active {
+	color: midnightblue;
+}
+
+a:focus {
+	outline: thin dotted;
+}
+
+a:hover,
+a:active {
+	outline: 0;
+}
+
+/*--------------------------------------------------------------
+Footer
+--------------------------------------------------------------*/
+#colophon {
+	margin-top: 50px;
+}
+/*#colophon a {
+	color: white;
+}*/
+/*#colophon p {
+	color: white;
+}*/
+ 
+#colophon .container {
+	border: 1px solid #ddd;
+	padding-top: 25px;
+	background-color: white;
+}
+ 
+.bottom-row{
+	margin-bottom:10px;
+}
+.footer-menu {
+	margin-left:0;
+	padding:0 0 30px 0;
+}
+ 
+.footer-menu li {
+	display:inline;
+	list-style-type:none;
+}
+ 
+.footer-menu li a {
+	border-left:1px solid #ddd;
+	padding: 0 8px;
+}
+ 
+.footer-menu > li:first-child > a {
+	border-left:none;
+	padding:0 8px 0 0;
+}
+.copyright{
+	float:left;
+}
+.blogroll{
+	background-color: black;
+	border-top: 1px solid #ddd;
+	margin-top:1px;
+	padding-top:25px;
+	padding-bottom:25px;
+	font-size: 80%;
+	color:	white;
+}
+
+/*--------------------------------------------------------------
+# Alignments
+--------------------------------------------------------------*/
+.alignleft {
+	display: inline;
+	float: left;
+	margin-right: 1.5em;
+}
+
+.alignright {
+	display: inline;
+	float: right;
+	margin-left: 1.5em;
+}
+
+.aligncenter {
+	clear: both;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+
+
+/*--------------------------------------------------------------
+# Widgets
+--------------------------------------------------------------*/
+.widget {
+	margin: 0 0 1.5em;
+}
+
+/* Make sure select elements fit in widgets. */
+.widget select {
+	max-width: 100%;
+}
+
+/* Search widget. */
+.widget_search .search-submit {
+	display: none;
+}
+
+.widget ul{
+	list-style: none;
+	padding-left:8px;
+}
+
+/*--------------------------------------------------------------
+# Content
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+## Posts and pages
+--------------------------------------------------------------*/
+.sticky {
+	display: block;
+}
+
+.hentry {
+	margin: 0 0 1.8em;
+	border-bottom: 1px solid #ddd;
+	padding-bottom: 1.8em;
+}
+.enter{
+	text-indent: none;
+}
+
+#floatingsidebar .hentry {
+	margin: 0 0 .2em;
+	border-bottom: 1px solid #ddd;
+	padding-bottom: .2em;
+}
+
+.byline,
+.updated:not(.published) {
+	display: none;
+}
+
+.single .byline,
+.group-blog .byline {
+	display: inline;
+}
+
+.page-content,
+.entry-content,
+.entry-summary {
+	margin: 1.5em 0 0;
+}
+
+.page-links {
+	clear: both;
+	margin: 0 0 1.5em;
+}
+
+/*--------------------------------------------------------------
+## Asides
+--------------------------------------------------------------*/
+.blog .format-aside .entry-title,
+.archive .format-aside .entry-title {
+	display: none;
+}
+
+/*--------------------------------------------------------------
+## Comments
+--------------------------------------------------------------*/
+.comment-content a {
+	word-wrap: break-word;
+}
+
+.bypostauthor {
+	display: block;
+}
+
+/*--------------------------------------------------------------
+# Infinite scroll
+--------------------------------------------------------------*/
+/* Globally hidden elements when Infinite Scroll is supported and in use. */
+.infinite-scroll .posts-navigation, /* Older / Newer Posts Navigation (always hidden) */
+.infinite-scroll.neverending .site-footer { /* Theme Footer (when set to scrolling) */
+	display: none;
+}
+
+/* When Infinite Scroll has reached its end we need to re-display elements that were hidden (via .neverending) before. */
+.infinity-end.neverending .site-footer {
+	display: block;
+}
+
+/*--------------------------------------------------------------
+# Media
+--------------------------------------------------------------*/
+.page-content .wp-smiley,
+.entry-content .wp-smiley,
+.comment-content .wp-smiley {
+	border: none;
+	margin-bottom: 0;
+	margin-top: 0;
+	padding: 0;
+}
+
+/* Make sure embeds and iframes fit their containers. */
+embed,
+iframe,
+object,
+img {
+	max-width: 100%;
+}
+
+/*--------------------------------------------------------------
+## Captions
+--------------------------------------------------------------*/
+.wp-caption {
+	margin-bottom: 1.5em;
+	max-width: 100%;
+}
+
+.wp-caption img[class*="wp-image-"] {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.wp-caption .wp-caption-text {
+	margin: 0.8075em 0;
+}
+
+.wp-caption-text {
+	text-align: center;
+}
+
+/*--------------------------------------------------------------
+## Galleries
+--------------------------------------------------------------*/
+.gallery {
+	margin-bottom: 1.5em;
+}
+
+.gallery-item {
+	display: inline-block;
+	text-align: center;
+	vertical-align: top;
+	width: 100%;
+}
+
+.gallery-columns-2 .gallery-item {
+	max-width: 50%;
+}
+
+.gallery-columns-3 .gallery-item {
+	max-width: 33.33%;
+}
+
+.gallery-columns-4 .gallery-item {
+	max-width: 25%;
+}
+
+.gallery-columns-5 .gallery-item {
+	max-width: 20%;
+}
+
+.gallery-columns-6 .gallery-item {
+	max-width: 16.66%;
+}
+
+.gallery-columns-7 .gallery-item {
+	max-width: 14.28%;
+}
+
+.gallery-columns-8 .gallery-item {
+	max-width: 12.5%;
+}
+
+.gallery-columns-9 .gallery-item {
+	max-width: 11.11%;
+}
+
+.gallery-caption {
+	display: block;
+}
+
+
+
+/*--------------------------------------------------------------
+## Extra Media Query to hide columns instead of stacking
+--------------------------------------------------------------*/
+.grid{
+	background-color: white;
+	height:100%;
+}
+.grid-item {
+	  float: left;
+	  width: 25%;
+	  height: auto;
+	  background-color: white;
+	  border-left: 1px solid #b6b5b4;
+	  color:black;
+	}
+	.grid-item:last-child {
+	  display:none;
+	}
+	.grid-item:first-child{
+		border-left:none;
+	}
+
+.blogroll .grid-item{
+	border-left: none;
+	vertical-align: top;
+	background-color:	black;
+	color: white;
+	font-size: 80%;
+}
+/**
+	/* fluid 4 columns */
+	.no-stack{
+		display:none;
+	}
+
+
+
+	
+Media QueriesCSS
+
+/*--------------------------------------------------------------
+Media Queries 
+--------------------------------------------------------------*/
+
+/* Custom, iPhone Retina */ 
+@media only screen and (min-width : 320px) {
+	
+}
+
+/* Extra Small Devices, Phones */ 
+@media only screen and (min-width : 480px) {
+
+}
+
+/* Small Devices, Tablets */
+@media only screen and (min-width : 768px) {
+
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (min-width : 992px) {
+
+	.copyright {
+		float: right;
+	}
+	 /*Isotope styles */
+	.grid-item {
+	  float: left;
+	  width: 20%;
+	}
+	.grid-item .bottom-links-title a{
+		color: black;
+	}
+	.grid-item:last-child {
+	  display:block;
+	}
+	.no-stack{
+		display:block;
+		min-width:340px;
+	}
+	.grid-item--width2 { width: 25%; }
+	
+}
+
+/* Large Devices, Wide Screens */
+@media only screen and (min-width : 1200px) {
+	/* keep the container at 970, no matter how wide the screen*/
+	.container {
+    	width: 970px;
+	}
+}
+
+.nav li, .footer{
+	font-family: "Arial","sans-serif";
+	font-weight: bold;
+	text-transform: uppercase;
+	color: #eeeeee;
+}
+
+.entry-content img{
+	float: left;
+	padding-right: 12px;
+	padding-bottom: 12px;
+}
+.entry-content p{
+	text-indent: 0px;
+	max-width:600px;
+	margin-top:0px;
+}
+.single-content p{
+	text-indent: 20px;
+	max-width:600px;
+	margin-top:0px;
+}
+.enter-header{
+	max-width:600px;
+}
+article{
+	max-width:600px;
+}
+
+aside ul{
+	padding:0px;
+	margin-bottom:0px;
+	margin-top:0px;
+	padding: 0px;
+}
+
+
+.btn-twitter {
+    background: #00acee;
+    border-radius: 0;
+    color: #fff
+}
+.btn-twitter:link, .btn-twitter:visited {
+    color: #fff
+}
+.btn-twitter:active, .btn-twitter:hover {
+    background: #0087bd;
+    color: #fff
+}
+.btn-facebook {
+    background: #3b5998;
+    border-radius: 0;
+    color: #fff
+}
+.btn-facebook:link, .btn-facebook:visited {
+    color: #fff
+}
+.btn-facebook:active, .btn-facebook:hover {
+    background: #30477a;
+    color: #fff
+}
+.btn-googleplus {
+    background: #e93f2e;
+    border-radius: 0;
+    color: #fff
+}
+.btn-googleplus:link, .btn-googleplus:visited {
+    color: #fff
+}
+.btn-googleplus:active, .btn-googleplus:hover {
+    background: #ba3225;
+    color: #fff
+}
+.btn-stumbleupon {
+    background: #f74425;
+    border-radius: 0;
+    color: #fff
+}
+.btn-stumbleupon:link, .btn-stumbleupon:visited {
+    color: #fff
+}
+.btn-stumbleupon:active, .btn-stumbleupon:hover {
+    background: #c7371e;
+    color: #fff
+}
+.btn-linkedin {
+    background: #0e76a8;
+    border-radius: 0;
+    color: #fff
+}
+.btn-linkedin:link, .btn-linkedin:visited {
+    color: #fff
+}
+.btn-linkedin:active, .btn-linkedin:hover {
+    background: #0b6087;
+    color: #fff
+}
+
+
+

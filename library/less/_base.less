@@ -1,0 +1,2171 @@
+/******************************************************************
+Site Name:
+Author:
+
+Stylesheet: Base Mobile Stylesheet
+
+Be light and don't over style since everything here will be
+loaded by mobile devices. You want to keep it as minimal as
+possible. This is called at the top of the main stylsheet
+and will be used across all viewports.
+
+------------ MAP ------------
+
+01. GENERAL STYLES
+02. WORDPRESS BODY CLASSES
+03. LAYOUT & GRID STYLES
+04. LINK STYLES
+05. H1, H2, H3, H4, H5 STYLES
+06. HEADER SYTLES
+07. NAVIGATION STYLES
+08. POSTS & CONTENT STYLES
+09. PAGE NAVI STYLES
+10. COMMENT STYLES
+11. COMMENT FORM STYLES
+12. SIDEBARS & ASIDES
+13. FOOTER STYLES
+
+******************************************************************/
+
+
+//additional styles required for grid
+.thumbnails .col-md-6 img { 
+ max-height:400px;
+}
+.thumbnails .col-md-3 img {
+ max-height:200px;
+}
+
+
+.book-col1, .book-col2, .book-col3 {float:left; width:49%; height:100% }
+//.col { width:150px; float:left; margin-right:5px; }
+
+/* .first, .middle, .last styling of posts on home page for three column */
+/*
+.first, .middle, .last { width: 32%; float:left; clear:none!important; }
+.first { margin-right: 2%; clear:both!important; }
+.middle { margin-right: 2%; } 
+*/
+
+.btn-group-category{
+	float:left;
+}
+.book-category-excerpt{
+	text-indent:0 !important;
+	font-size: 0.9em !important;
+}
+.book-category-title{
+    font-size: 1.2em;
+    line-height: 1em;
+    text-align: left;
+    font-family: Georgia, "Times New Roman", Times, serif;
+    font-style: bold;
+    color: #000;
+    margin-top:6px;
+    margin-right:6px;
+    margin-left:3px;
+}
+.book-category-title a {
+    text-decoration: none;
+    outline: none;
+    color: #000;
+}
+.book-category-title a:hover {
+    text-decoration: underline;
+    color: #cc0000;
+}
+.book-category-author{
+    font-family: Georgia, "Times New Roman", Times, serif;
+
+    font-style: italic;
+    font-size: 0.8em;
+    margin-left:3px;
+    margin-bottom:6px;
+    margin-top:6px;
+    font-style: italic;
+    font-weight:bold;
+    color: #A28F62;
+    line-height: 1.2em;
+    text-transform: uppercase;
+}
+.book-category-title{
+	font-size: 1.8em;
+			line-height: 1.6em;
+			//text-align: center;
+			//margin: -5px;
+			font-family: @serif;
+			font-weight: bold;
+			color:#333333;
+
+}
+
+.book-excerpt{
+	text-indent:0 !important;
+	font-size: 18px !important;
+	font-style: italic; 
+}
+#book-title{
+	font-size: 1.8em;
+			line-height: 1.6em;
+			//text-align: center;
+			//margin: -5px;
+			font-family: @serif;
+			font-weight: bold;
+			color:#333333;
+
+}
+#author-block{
+	border-top-style: double;
+}
+#book-info{
+	margin-top: 10px;
+	border-top-style: double;
+
+	float: left;
+}
+#book-author{
+	margin-top: -14px;
+	font-family: Georgia, "Times New Roman", Times, serif;
+	margin-bottom: 14px;
+	font-style: italic; 
+	font-size: 0.9em;
+	line-height: 1em;
+	margin-left:3px;
+	margin-bottom:6px;
+	font-style: italic;
+	font-weight:bold;
+	color: #A28F62;
+	line-height: 1.2em;
+	text-transform: uppercase;
+}
+
+
+/****MIX-INS - HAD TROUBLE COMPILING WHEN THESE WEREN'T HERE ********/
+@alert-yellow:      #ebe16f;
+@alert-red:         #fbe3e4;
+@alert-green:       #e6efc2;
+@alert-blue:        #d5edf8;
+
+@black:             #000;
+@white:             #fff;
+
+@bones-pink:        #f01d4f;
+@bones-blue:        #1990db;
+
+@link-color:        #cc0000;
+@link-hover:        darken(@link-color, 9%);
+
+/*
+Here's a great tutorial on how to
+use color variables properly:
+http://sachagreif.com/sass-color-variables/
+*/
+
+
+/*********************
+TYPOGRAPHY
+*********************/
+
+@sans-serif:         "Helvetica Neue", Helvetica, Arial, sans-serif; 
+@serif:              "Georgia", Cambria, Times New Roman, Times, serif; 
+
+/*********************
+01. GENERAL STYLES
+*********************/
+
+html, body {
+	/* height: 100%; */
+}
+body {
+	font-family: @serif;
+	font-size: 100%;  
+	line-height: 1.5;
+	color: #565656;
+}
+/*TURN OFF DISQUS SHITE */
+#discovery{
+	visibility:hidden !important;
+	display:none !important;
+}
+//this will overrid the default in the _grid file, which I don't want to edit at all
+.eightcol{
+	min-height: 2720px; 
+}
+/********************
+02. WORDPRESS BODY CLASSES
+    style a page via class
+********************/
+
+.rtl {}                           /* for sites that are read right to left (i.e. hebrew) */
+.home {}                          /* home page */
+.blog {}                          /* blog template page */
+.archive {}                       /* archive page */
+.date {}                          /* date archive page */
+	.date-paged-1 {}                /* replace the number to the corresponding page number */
+.search {
+}                        /* search page */
+	.search-results {}              /* search result page */
+	.search-no-results {}           /* no results search page */
+	.search-paged-1 {}              /* individual paged search (i.e. body.search-paged-3) */
+.error404 {}                      /* 404 page */
+.single {}                        /* single post page */
+	.postid-1 {}                    /* individual post page by id (i.e. body.postid-73) */
+	.single-paged-1 {}              /* individual paged single (i.e. body.single-paged-3) */
+.attachment {}                    /* attatchment page */
+	.attachmentid-1 {}              /* individual attatchment page (i.e. body.attachmentid-763) */
+	.attachment-mime-type {}        /* style mime type pages */
+.author {}                        /* author page */
+	.author-nicename {}             /* user nicename (i.e. body.author-samueladams) */
+	.author-paged-1 {}              /* paged author archives (i.e. body.author-paged-4) for page 4 */
+.category {}                      /* category page */
+	.category-1 {}                  /* individual category page (i.e. body.category-6) */
+	.category-paged-1 {}            /* replace the number to the corresponding page number */
+.tag {}                           /* tag page */
+	.tag-slug {}                    /* individual tag page (i.e. body.tag-news) */
+	.tag-paged-1 {}                 /* replace the number to the corresponding page number */
+.page-template {}                 /* custom page template page */
+	.page-template-page-php {}      /* individual page template (i.e. body.page-template-contact-php */
+	.page-paged-1 {}                /* replace the number to the corresponding page number */
+	.page-parent {}                 /* parent page template */
+	.page-child {}                  /* child page template */
+	.parent-pageid-1 {}             /* replace the number to the corresponding page number */
+.logged-in {}                     /* if user is logged in */
+.paged {}                         /* paged items like search results or archives */
+	.paged-1 {}                     /* individual paged (i.e. body.paged-3) */
+
+/*********************
+03. LAYOUT & GRID STYLES
+*********************/
+
+.wrap {
+	width: 98%;
+	margin: 0 auto;
+}
+#container {}
+
+
+/*********************
+04. LINK STYLES
+*********************/
+
+a, a:visited {
+	text-decoration: none;
+	color: @link-color;
+
+	/* on hover */
+	&:hover, &:focus {
+		color: @link-hover;
+		text-decoration: underline;
+
+	}
+
+	/* on click */
+	&:active {
+
+	}
+
+	/* mobile tap color */
+	&:link {
+		/*
+		this highlights links on iPhones/iPads.
+		so it basically works like the :hover selector
+		for mobile devices.
+		*/
+		-webkit-tap-highlight-color : rgba( 0, 0, 0, 0.3 );
+	}
+}
+ div#poem{
+     border:1px solid @black;
+     padding:0px 10px 10px 10px;
+    h3{
+        margin-top:10px;
+    }
+ }
+h5.storytitle {
+	font-family: @sans-serif;
+    line-height:1.2em;
+
+	a{
+	color:@link-color;
+	/* on hover */
+	&:hover, &:focus {
+		color: @link-hover;
+		text-decoration: underline;
+
+	}
+	}
+	
+}
+
+/******************************************************************
+05. H1, H2, H3, H4, H5 STYLES
+******************************************************************/
+
+
+h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5 {
+	font-family: @sans-serif;
+	text-rendering: optimizelegibility;
+	font-weight: 400;
+	/*
+	if you're going to use webfonts, be sure to check your weights
+	http://css-tricks.com/watch-your-font-weight/
+	*/
+
+	/* removing text decoration from all headline links */
+	a {
+		text-decoration: none;
+	}
+}
+
+h1, .h1 {
+	font-size: 2.0em;
+	line-height: 1.333em;
+}
+
+h2, .h2 {
+	font-size: 1.5em;
+	line-height: 1.4em;
+	margin-bottom: 0.375em;
+}
+
+h3, .h3 {
+	font-size: 1.2em;
+}
+
+h4, .h4 {
+	font-size: 1.1em;
+	font-weight: 700;
+}
+
+h5, .h5 {
+	font-size: 0.846em;
+	line-height: 2.09em;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+}
+
+/*********************
+06. HEADER SYTLES
+*********************/
+
+.header {
+	#inner-header {
+	}
+
+	#logo {}
+
+	
+	
+
+
+	
+	
+}
+
+#headerimage{
+	position:relative;
+	top:10px;
+	left:10px;
+	padding-right:15px;
+/* 	width:98%; */
+/* 	height:98%; */
+	max-width:366px;
+	max-height:48px;
+		h1, h3 {
+		  display: none;
+		  margin-left: -9999px;
+		}
+		#figure-logo{
+			width:98%;
+			margin-bottom:20px;
+			top:-5px;
+			img{
+				width:100%;
+			}
+		}
+}
+
+
+
+
+
+/*********************
+07. NAVIGATION STYLES
+*********************/
+
+/*
+all navs have a .nav class applied via
+the wp_menu function; this is so we can
+easily write one group of styles for
+the navs on the site so our css is cleaner
+and more scalable.
+*/
+
+/*///////////////////////////////////////////////////////////
+STYLES FOR ARCHIVE PAGINATION BOXES
+///////////////////////////////////////////////////////////////////*/
+
+
+
+
+/*********************
+08. POSTS & CONTENT STYLES
+*********************/
+article{
+/* 	color:blue; */
+
+}
+#content {
+	margin-top: 1.2em;
+	margin-left:10px;
+
+	#inner-content {
+
+	}
+}
+
+		.hentry {
+
+			header {}
+
+			footer {}
+
+		} /* end .hentry */
+		
+		
+
+		.single-title,
+		.page-title {}
+
+		.single-title {/*posts titles*/
+			font-size: 1.3em;
+			line-height: 1.4em;
+			text-align: center;
+			margin: -5px;
+			font-family: @serif;
+			font-weight: bold;
+			color:black;
+		}
+		#author{
+			font-family: @serif;
+			font-weight: bold;
+		    font-size: 0.9em;
+		    margin: 15px 25%;
+			text-align: center;
+			font-style:italic;
+			border-top: 1px solid #000;
+			border-bottom: 1px solid #000; 
+			color:black		
+		}
+		#author a {
+			text-decoration: none;
+			outline: none;
+			color: #000;
+			}	
+		#author a:hover {
+			text-decoration: underline;
+			color: #cc0000;
+		}
+		li #author{
+			font-family: @serif;
+			font-weight: bold;
+		    font-size: 0.9em;
+		    margin: 15px 0;
+			text-align: center;
+			font-style:italic;
+			border-top: 1px solid #000;
+			border-bottom: 1px solid #000; 
+			color:black		
+		}
+		#relatedposts {
+			width: 98%;
+			height: auto; 
+			border: 3px double #BFB595;
+			background: #fff;
+			margin:10px 0px;
+			padding: 10px; 
+			font-size: 12px;
+		}
+		#relatedpoststitle {
+			
+			line-height: 1.5em;
+			padding: 0px;
+			text-align: left;
+			margin: 0px;
+			font-family: @serif;
+			font-style: italic;
+			font-weight:bold;
+		    font-size: 14px;
+			color: #000;
+		}
+
+		.page-title {}
+
+		
+
+		/* want to style individual post classes? Booya! */
+		.post-id {}         /* post by id (i.e. post-3) */
+		.post {}            /* general post style */
+		.page {}            /* general article on a page style */
+		.attachment {}      /* general style on an attatchment */
+		.sticky {}          /* sticky post style */
+		.hentry {}          /* hentry class */
+		.category-slug {}   /* style by category (i.e. category-videos) */
+		.tag-slug {}        /* style by tag (i.e. tag-news) */
+
+		/* post meta */
+		.byline {
+			color: #999;
+			time {}
+		}
+		.book{
+		text-indent:0px;
+				line-height:1.2em;
+				font-size: 0.9em;
+				font-family: @sans-serif;
+				color:black;
+			p{
+							}
+			.info{
+				text-indent:0px;
+				font-size:0.9em;
+				}
+			.blurb{
+				text-indent: 0px;
+				font-size:0.9em;
+				color:black;
+			}
+			.blurb-quote{
+				text-align: right;
+				color:black;
+				font-size:0.9em;
+				margin-top:-0.5em;
+			}
+
+		}
+		
+		.isbn{
+				font-size:0.8em;
+				margin-top:-0.5em;
+			}
+		#book-logo{
+			margin-top:30px;
+		}
+		p.vcard{
+			font-style: italic;
+			font-size:0.9em;
+			margin:0;
+		}
+		.search-title {
+			margin:70px 0 0 0;
+			font-size:1.3em;
+			color:black;
+		}
+		.search-title a{
+			color:black;
+		}
+		.search-title a:hover{
+			color:@link-color;
+		}
+		.search p{
+			text-indent: 0px !important;
+			margin-top: 0px;
+		}
+		
+
+        .small_photo_right img{
+            width:50%;
+            height:auto;
+            font-size: 0.9em;
+            line-height: 1.2em;
+            text-indent: 0px;
+            margin: 20px 0px 20px 20px;
+            float:right;
+        }
+.small_photo_left img{
+    width:50%;
+    height:auto;
+    font-size: 0.9em;
+    line-height: 1.2em;
+    text-indent: 0px;
+    margin: 20px 20px 20px 0px;
+    float:left;
+}
+/////
+//WE HAVE FOUR IMAGE SIZES - FULL (98%/600px), MEDIUM (67%/400px) 50 (50%/300px) and SMALL (33%/200px)
+figure{
+	width:100%;
+    height:auto;
+	//padding-right:5px;
+    text-indent:0 !important;
+    margin-bottom:12px;         
+}
+p + figcaption{//gets rid of space from empty p tag sometimes added above figcaption by Chrome and FF
+	margin-top: -12px !important;
+}
+	
+	
+    .figure-medium-left{
+		    width:66.67%;
+		    float:left;
+		    
+		figcaption{
+			width:66.7%;
+		}
+	}
+	.figure-medium-left img{
+		    	width:100%;
+				height:auto;
+		} 
+	.figure-medium-right{
+		    width:66.67%;
+		    padding-left:5px;
+		    float:right;
+		    
+		figcaption{
+			width:66.7%;
+			text-align: right;			
+		}
+	}
+	.figure-medium-right img{
+		    	width:100%;
+				height:auto; 
+		} 
+		.figure-50-left{
+		    width:50%;
+		    padding: 5px;
+		    float:left;
+		}  
+		.figure-50-left img{
+		    width:100%; 
+		    height:auto;
+		}
+		.figure-50-right{
+		    width:50%;
+		    padding: 5px;
+		    float:right;
+		    figcaption{
+				//width:66.7%;
+				text-align: right;			
+		}
+		}  
+		.figure-50-right img{
+		    width:100%;
+		    height:auto;
+		}
+		.imageFull{
+			font-size: 11px;
+					float: left;
+					text-indent:0em;
+					position:relative;
+					left:0px;
+					margin-bottom:12px;
+		}
+		
+
+		.imageFull img, .fullImage img, .description img, .figure_full, .figure-full-left img{
+			width:98%;
+            height:auto;
+			padding-right:5px;
+            text-indent:0 !important;
+		}
+        .imageLeft img{
+            width:98%;
+            height:auto;
+            padding-right:5px;
+            left-margin: -1.5em;
+        }
+
+
+		
+		.figure-left img{
+		    width:50%;
+		    height:auto;
+		    font-size: 0.9em;
+		    line-height: 1.2em;
+		    text-indent: 0px;		
+		    margin: 0 10px 0 0;
+		    float:left;
+		}
+		
+		
+		.figure-small-left img{
+		    width:35%;
+		    height:auto;
+		    font-size: 0.9em;
+		    line-height: 1.2em;
+		    text-indent: 0px;		
+		    margin: 0 10px 0 0;
+		    float:left;
+		}
+		.figure-right img{
+			width:50%;
+		    height:auto;
+		    font-size: 0.9em;
+		    line-height: 1.2em;
+		    text-indent: 0px;		
+		    margin: 0 0 0 10px;
+		    float:right;
+		}
+		.figure-small-right img{
+			width:35%;
+		    height:auto;
+		    font-size: 0.9em;
+		    line-height: 1.2em;
+		    text-indent: 0px;		
+		    margin: 0 0 0 10px;
+		    float:right;
+		}
+		.figure-left-stacked {//used in mayakovsky piece
+			width:48%;
+		    height:auto;
+		    margin: 0 0 0px 0;
+		    font-size: 0.9em;
+		    line-height: 1.2em;
+		    text-indent: 0px;		
+		    margin: 0 1% 0 0;
+		    float:left; 
+		    figcaption{
+				
+				text-align: left;
+				margin-top:15px;			
+			}
+		}
+		.figure-right-stacked {
+			width:48%;
+		    height:auto;
+		    margin: 0 0 0px 0;
+		    font-size: 0.9em;
+		    line-height: 1.2em;
+		    text-indent: 0px;		
+		    margin: 0 0 0 1%;
+		    float:right;
+		    figcaption{
+				text-align: right;
+				margin-top:15px;			
+			}
+		}
+		.figure-left-stacked img{
+			width:100%;
+		    height:auto;
+		    margin: 0 0 0px 0;
+		    font-size: 0.9em;
+		    line-height: 1.2em;
+		    text-indent: 0px;		
+		    margin: 0 1% 0 0;
+		    float:left; 
+		}
+		.figure-right-stacked img{
+			width:100%;
+		    height:auto;
+		    margin: 0 0 0px 0;
+		    font-size: 0.9em;
+		    line-height: 1.2em;
+		    text-indent: 0px;		
+		    margin: 0 0 0 1%;
+		    float:right;
+		}
+
+ 
+
+	.footnote-link{
+			    font-size: .83em;
+			    line-height: 0.5em;
+			    vertical-align:baseline;
+			    position: relative;
+			    top: -0.4em;
+			}
+			.footnote-anchor{
+			    font-size: .83em;
+			    line-height: 0.5em;
+			    vertical-align: baseline;
+			    position: relative;
+			    top: -0.4em;
+			}	
+
+		/* entry content */
+		.entry{
+			.entry-content{
+				p{
+					font-size: 14px;
+					width: 100%;
+					//float: left;
+					text-indent:0em;
+					position:relative;
+					left:0px;
+					margin:0px;
+				}
+			}
+		}
+		.entry-content {
+			color:black;
+			
+			figcaption  {
+			 	width:100%;
+			 	font-size: 11px;
+					//float: left;
+					text-indent:0em;
+					position:relative;
+					left:0px;
+					margin:0px;
+				p{
+					font-size: 11px;
+					width: 100%;
+					//float: left;
+					text-indent:0em;
+					position:relative;
+					left:0px;
+					margin:0px;
+				
+				}
+			}
+			.caption-right{
+			 	width:50%;
+			 	float:right;
+				p{
+					font-size: 11px;
+					width: 100%;
+					float: right;
+					text-indent:0em;
+					text-align: right;
+					position:relative;
+					right:0px;
+					margin:3px 0 12px 0;
+				
+				}
+			}
+			.caption-left{
+			 	width:50%;
+			 	float:left;
+				p{
+					font-size: 11px;
+					width: 100%;
+					float: left;
+					text-indent:0em;
+					position:relative;
+					left:0px;
+					margin:3px 0 12px 0;
+				
+				}
+			}
+
+			 
+//KEY DEFINITIONS HERE - PARAGRAPH, ETC.
+			p {
+				font-size: 0.9em;
+				line-height: 1.3em;
+				margin-bottom:0.4em;
+				text-indent:1.5em;
+				
+			}
+			//	EASY DIGITAL DOWNLOAD OVERRIDES
+			p.edd_has_purchased, p.edd_error{
+					text-indent: 0px;
+				}
+			label{
+				text-indent: 0px;
+				font-size:0.9em;
+			}
+			span.edd-description{
+				text-indent: 0px;
+			}
+			.edd-cart-item{
+				font-size:0.9em;
+			}
+			li.edd_checkout{
+				font-size:20px !important;
+			}
+			ul.edd-cart{
+				border:1px solid #ccc;
+				padding:2px;
+			}
+			
+			
+			.infocopysinglespace, .description, .poem-large{
+				text-indent:0;
+			}
+			.infocopysinglespace p, .description p{
+				text-indent:0;
+			}
+			.centeredgraph{
+				text-align: center;
+			}
+			.body-interview {
+				text-indent:0em;
+				text-align: left;
+				margin-bottom:1em;
+			}
+			.body-interview:first-word {
+				font-family: Georgia, Times New Roman, Serif;
+				font-weight:bold;
+				
+			}	
+             .alignCenter{
+                 text-align: center;
+             }
+			.attribution, .excerpt{
+				text-indent:0em;
+				font-style: italic;
+				font-size:0.9em;
+				margin-bottom: 1em;
+			    text-align: right;
+			}
+			
+			.attribution-left{
+				text-indent:0em;
+				font-style: italic;
+				font-size:0.9em;
+				margin-bottom: 1em;
+			    text-align: left;
+			}
+
+			.dropcapgraph:first-letter, .drop-cap-graph:first-letter, .firstLineProse:first-letter {
+					font-family: Georgia, Times New Roman, Serif;
+					font-weight:bold;
+					float:left;
+					line-height:44px;
+					font-size:64px;
+					padding-top:5px;
+					text-indent: 0em; 
+					margin-right: 6px;
+			}	
+			   /* sets all caps for first line */
+			.dropcapgraph:first-line, .drop-cap-graph:first-line, .firstLineProse :first-line {
+				font-variant: small-caps;
+				text-transform:uppercase;
+				letter-spacing: .1em;
+				font-size: 1.2em;
+				}
+
+					/* resets rest of first line */
+			.dropcapgraph, .drop-cap-graph, .firstLineProse {
+				text-indent: 0em; 
+			}
+			
+			.first-graph-new-section:first-letter, .firstLineSection:first-letter {
+				font-family: Georgia, Times New Roman, Serif;
+			}
+			/* sets all caps for first line of a new section */
+			.first-graph-new-section:first-line, .firstLineSection:first-letter {
+				font-variant: small-caps;
+				text-transform:uppercase;
+				letter-spacing: .1em; 
+				font-size: 1.2em;
+				/*letter-spacing: .1em;*/
+			}
+			/* resets rest of first line */
+			.first-graph-new-section, .firstLineSection {
+				margin-top:1em;
+				text-indent: 0;
+			}
+			.quote-block-small{
+			    font-style: italic;
+			    font-size:0.9em;
+			    margin-bottom: 1em;
+			    margin-left: 5%;
+			    margin-right: 5%;
+			    line-height:1.3em;
+			}
+			.contributors{
+				font-size: 0.9em;
+				text-indent: 0px;
+			}
+
+			/*SAD ABOUT THE REDUNDANCY HERE, with pull quotes and credits BUT NOT MUCH TO DO UNLESS I RE-EDIT EVERY DAMN POST...
+				SOMEDAY - PUT EVERYTHING IN PROPER CSS FORMAT, EG, pull-quote-left
+			*/
+			.art-credit {
+				font-size: 11px;
+				text-align: left;
+				width: 100%;
+				float: left;
+				text-indent:0em;
+				position:relative;
+				left:0px;
+				top:-16px;
+				margin:0;
+			}
+
+			.creditLeft {
+				font-size: 11px;
+				text-align: left;
+				width: 100%;
+/* 				float: left; */
+				text-indent:0em;
+				position:relative;
+				left:0px;
+				//top:-16px;
+			}
+            .PhotoCredit_right, {
+                font-size: 11px;
+                text-align: right;
+                width: 100%;
+                float:right;
+                text-indent:0em;
+                position:relative;
+                left:0px;
+                top:-16px;
+            }
+			.pullQuoteLeft, .pull_quote_left {
+				float: left;
+				font-size: 20px;
+				line-height: 30px;
+				text-align: left;
+				width: 98%;
+				font-family: Georgia, "Times New Roman", Times, serif;
+				font-weight:bold;
+				font-style:italic;
+/* 				border-right: 3px solid #ccc; */
+				margin-right: 10px;
+				padding-right: 10px;
+				margin-top:20px;
+				text-indent:0em;
+			}
+            .pull_quote_right, .pullQuoteRight{
+                float: right;
+                font-size: 20px;
+                line-height: 30px;
+                text-align: right;
+                width: 50%;
+                font-family: Georgia, "Times New Roman", Times, serif;
+                font-weight:bold;
+                font-style:italic;
+            /* 				border-right: 3px solid #ccc; */
+                margin-left: 10px;
+                padding-left: 10px;
+                margin-top:20px;
+                margin-bottom:20px;
+                text-indent:0em;
+            }
+			.poem p{
+				text-indent: 0px;
+				margin-bottom: -0.5em;
+				line-height: 1.0em;
+				font-size: 0.8em;
+			}
+             p.postpoem, p.poem{
+                text-indent: 0px;
+                line-height: 1.2em;
+                font-size: 0.8em;
+            }
+			.poem-title, .poemTitle, .poem-subhead{
+				text-indent:0px;
+				font-size: 1.2em;
+				font-weight: bold;
+			}
+            .poemsubhead {
+                text-indent:0px;
+                font-size: 1.0em;
+                font-weight: bold;
+            }
+			p.small-subhead, .smalltitle {
+			    font-weight: bold;
+			    font-style: italic;
+			    font-size: 1.2em;
+			    color: white;
+			    background: #666;
+			    margin: 2.5em 0 1em 0;
+			    padding: 5px;
+			    clear: both;
+			    width: 98%;
+			    background: -webkit-linear-gradient(left, #000, #666);
+			    background: -moz-linear-gradient(left, #000, #666);
+			    background: -o-linear-gradient(left, #000, #666);
+			    background: -ms-linear-gradient(left, #000, #666);
+			    background: linear-gradient(left, #000, #666);
+			    border-radius: 2px; 
+			}
+			
+			.subhead{
+				font-size: 1.0em;
+				font-weight:bold;
+				font-style:italic;
+				line-height: 22px;
+				margin-bottom:0.5em;
+				margin-top:0.5em;
+				text-indent:0em;
+			}
+
+			.caption-full{
+			    font-size: 0.9em;
+			    margin: 1.5em 0 2.5em 0;
+			    text-indent: 0em;
+			}
+			.wp-caption {
+				max-width: 100%;
+				background: #eee;
+				padding: 5px;
+				/* images inside wp-caption */
+				img {
+					max-width: 100%;
+					margin-bottom: 0;
+					width: 100%;
+				}
+
+				p.wp-caption-text {
+					font-size: 0.85em;
+					margin: 4px 0 7px;
+					text-align: center;
+				}
+			 
+
+
+						    			
+						
+
+
+			ul, ol, table, dl {}
+
+			ul, ol {
+
+				li {}
+
+			}
+
+			ul {
+
+				li {}
+
+			}
+
+			ol {
+
+				li {}
+
+			}
+
+			blockquote {
+
+				&:before {}
+
+			}
+
+			dl {}
+
+			dt {}
+
+			dd {
+				margin-left: 0;
+				font-size: 0.9em;
+				color: #787878;
+				margin-bottom: 1.5em;
+			}
+
+			img {
+				margin: 0 0 1.5em 0;
+				max-width: 100%;
+				height: auto;
+			}
+
+			/*
+			image alignment on a screen this size may be
+			a bit difficult. It's set to start aligning
+			and floating images at the next breakpoint,
+			but it's up to you. Feel free to change it up.
+			*/
+			.alignleft, img.alignleft {}
+			.alignright, img.alignright {}
+			.aligncenter, img.aligncenter {}
+
+			video, object {
+				max-width: 100%;
+				height: auto;
+			}
+
+			pre {
+				background: #eee;
+				border: 1px solid #cecece;
+				padding: 10px;
+			}
+
+		} /* end .entry-content */
+					
+		} /* end .wp-caption */
+
+		/* image gallery styles */
+		.gallery {
+
+			dl {
+
+				a {}
+
+				img {}
+
+			}
+
+			dt {}
+
+			dd {}
+
+		} /* end .gallery */
+
+		/* gallery caption styles */
+		.gallery-caption {}
+
+		.size-full {}
+		.size-large {}
+		.size-medium {}
+		.size-thumbnail {}
+
+/******************************************************************
+09. PAGE NAVI STYLES
+******************************************************************/
+
+.page-navigation,
+.wp-prev-next {
+	margin: 1.1em 0 2.2em;
+}
+	.bones_page_navi {
+
+		li {
+			float: left;
+			margin-left: 10px;
+
+			a {
+				padding: 3px 6px;
+				display: block;
+				text-decoration: none;
+				position: relative;
+
+				&:hover,
+				&:focus {
+					color: #f01d4f;
+					text-decoration: underline;
+				}
+			}
+
+		}
+
+		/* current page link */
+		li.bpn-current {
+			padding: 3px 6px;
+			border-bottom: 2px solid #f01d4f;
+			position: relative;
+
+			a {
+				/* hovering on current page link */
+				&:hover,
+				&:focus {}
+
+			}
+
+		} /* end .bones_page_navi .bpn-current */
+
+		/* common styles for page-navi links */
+		li.bpn-prev-link,
+		li.bpn-next-link {
+			font-weight: 700;
+
+			a {
+				padding: 0;
+			}
+		}
+
+		/* remove the bg on end links */
+		li.bpn-prev-link a:hover,
+		li.bpn-next-link a:hover,
+		li.bpn-first-page-link a:hover,
+		li.bpn-last-page-link a:hover {
+			background: none;
+		}
+
+		/* previous link */
+		li.bpn-prev-link {
+			a {
+				&:hover,
+				&:focus {}
+			}
+		}
+
+		/* next page link */
+		li.bpn-next-link {
+			a {
+				&:hover,
+				&:focus {}
+			}
+		}
+
+		/* first page link */
+		li.bpn-first-page-link {
+			a {
+				&:hover,
+				&:focus {}
+			}
+		}
+
+		/* last page link */
+		li.bpn-last-page-link {
+			a {
+				&:hover,
+				&:focus {}
+			}
+		}
+
+	} /* end .bones_page_navi */
+
+	/* fallback previous & next links */
+	.wp-prev-next {
+
+		ul {}
+
+		.prev-link {
+			float: left;
+		}
+
+		.next-link {
+			float: right;
+		}
+
+	} /* end .wp-prev-next */
+
+/******************************************************************
+10. COMMENT STYLES
+******************************************************************/
+
+
+	/*////////////////COMMENTS(see import commen///////////////////
+/////////////////////////////////////////*/
+		
+		
+
+
+/******************************************************************
+11. COMMENT FORM STYLES
+******************************************************************/
+
+
+/*********************
+12. SIDEBARS & ASIDES
+*********************/
+
+
+
+/*********************
+13. FOOTER STYLES
+*********************/
+
+
+
+
+/***************FRONT PAGE AND ARCHIVE SECTIONS ***************/
+
+
+
+.post-img-medium {
+     width:100%;
+     height:auto;
+     padding:0px !important;
+     float:left;   // max-width:300px;
+     margin-right:10px;
+ }
+ .post-img-medium img{
+     width:100%;
+     height:auto;
+     padding:0px !important;
+     float:left;   // max-width:300px;
+     margin-right:10px;
+     margin-bottom:10px;
+ }
+ .post-img-medium-right {
+     width:100%;
+     height:auto;
+     padding:0px !important;
+     float:right;   // max-width:300px;
+     margin-left:10px;
+ }
+ .post-img-medium-right img{
+     width:100%;
+     height:auto;
+     padding:0px !important;
+     float:right;   // max-width:300px;
+     margin-left:10px;
+     margin-bottom:10px;
+ }
+.post-img-small, .post-img-thumb{
+	width:100%;
+	height:100%;
+	float:left;
+}
+.post-img-tn{
+	width:100%;
+	height:100%;
+	float:left;
+}
+.post-img-tn:nth-child(even){
+	float:right;
+}
+/* why three classes that are the same? to distinguish between custom tns, 
+tns created on the fly from post images, and tns derived from featured images */
+.post-img-small img, .post-img-tn img, .post-img-thumb img{
+	width:100%;
+	height:100%;
+	float:left;
+	//max-width:300px;
+	//max-height:200px;
+	margin-bottom:10px;
+}
+
+
+
+.post-img-large{
+	 width:100%;
+     height:auto;
+     padding:0px !important;
+
+}
+.post-img-large img{
+	margin-right:10px;
+	width:100%;
+	height:auto;
+	max-width:640px;
+	//max-height:360px
+	}
+
+.archive-content {
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 12px;
+	line-height: 22px;
+	margin-top:25px;
+	width:98%;
+	max-width: 640px;
+	min-height:134px;
+    height:auto !important;
+    height:134px; 
+	text-align:justify;
+	margin-bottom:10px;
+	border-style:solid;
+	border-width:1px;
+	border-color:#ccc;
+	padding: 0px; 
+}
+.archive-content:first-child {
+
+    margin-top:10px;
+}
+.archive-content .entry{
+	word-wrap: normal;
+}
+.archive-content a {
+		text-decoration: none;
+		outline: none;
+		color: #000;
+		}	
+
+.archive-post-title{
+	font-size: 1.4em;
+	line-height: 1em;
+	text-align: left;
+	font-family: Georgia, "Times New Roman", Times, serif;
+	font-style: normal;
+	color: #000;
+	margin:4px 3px 0px 3px;
+	//margin-left:3px;
+} 
+
+.archive-post-title a {
+		text-decoration: none;
+		outline: none;
+		color: #000;
+		}	
+.archive-post-title a:hover {
+		text-decoration: underline;
+		color: #cc0000;
+		}
+.archive-author{
+	font-family: Georgia, "Times New Roman", Times, serif;
+
+	font-style: italic; 
+	font-size: 0.9em;
+	line-height: 1em;
+	margin-left:3px;
+	margin-bottom:6px;
+	margin-top:4px;
+	font-style: italic;
+	font-weight:bold;
+	color: #A28F62;
+	line-height: 1.2em;
+	text-transform: uppercase;
+}
+.archive-author a {
+		text-decoration: none;
+		outline: none;
+		color: #A28F62;		}
+		.archive-author a:hover {
+		text-decoration: underline;
+		color: @link-color;
+		}	
+
+.archive-content p{
+	font-size: 0.9em;
+	line-height: 1.1em;
+	margin-right:12px;
+	margin-left:3px;
+	margin-top:4px;
+}
+
+
+
+
+
+/*/////////NAVIGATION//////////*/
+#social {
+	position:relative;
+	display:block;
+	z-index:1001;
+}
+
+/***PAGE NUMBERS ****/
+.navigation {
+/*   margin-left: 10px; */
+}
+.page-numbers {
+  display: block;
+  padding: 3px 6px;
+  background-color: #f5f5f5;
+  border: 1px solid #ccc;
+  float: left;
+  margin: 0 6px 6px 0;
+  font-size: 10px;
+  font-weight: bold;
+}
+.current {
+  background-color: #000;
+  border-color: #000;
+  color: #fff;
+}
+ul.paging {
+  list-style: none;
+  padding: 0;
+  font-weight: bold;
+  margin-left: 10px;
+}
+ul.paging li {
+  float: left;
+  margin: 0 6px 6px 0;
+  font-size: 10px;
+}
+ul.paging li a,
+ul.paging li.active {
+  display: block;
+  padding: 3px 6px;
+  background-color: #f5f5f5;
+  border: 1px solid #ccc;
+}
+ul.paging li.active {
+  background-color: #000;
+  border-color: #000;
+  color: #fff;
+}
+/*images*/
+.pageImageLeft {
+  width: auto;
+  float: left;
+  margin-right: 1em;
+  margin-bottom: 2.5em;
+  text-indent: 0em;
+  position: relative;
+}
+.pageImageRight {
+  float: right;
+  width: auto;
+  margin-left: 1em;
+  margin-bottom: 2.5em;
+  text-indent: 0em;
+  position: relative;
+}
+/*************FOR BLOG/NEW SECTION*************/
+#NewContent {
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 12px;
+	line-height: 22px;
+	margin-top:25px;
+	margin-left:2em;
+	width:600px;
+	margin-bottom:15px;
+}
+#NewTitle{
+	font-size: 2em;
+	line-height: 1em;
+	text-align: left;
+	font-family: Georgia, "Times New Roman", Times, serif;
+	font-style: normal;
+	color: #000;
+	margin-top:3em;
+}
+#NewTitle a {
+		text-decoration: none;
+		outline: none;
+		color: #000;
+		}	
+#NewTitle a:hover {
+		text-decoration: underline;
+		color: #cc0000;
+		}
+
+
+#NewTitle p{
+	font-size: 10px;
+	line-height: 1.2em;
+	margin-top:1em;
+}
+
+
+/* sets all caps for first line */
+div#NewContent p:first-child:first-line {
+	/*font-variant: small-caps;*/
+	text-transform:uppercase;
+	letter-spacing: .1em;
+	font-size: 18px;
+}
+
+/**************FOR PAGES -CONTRIBUTORS, SUBSCRIBE, ETC *************/
+.archive-title, .page-title {
+	font-weight: bold;
+	font-style: italic;
+	font-size: 1.2em;
+	color: white;
+	background: #666;
+/* 	margin: 2.5em 0 1em 0; */
+	padding: 5px;
+	clear: both;
+	width: 98%;
+	background: -webkit-linear-gradient(left,black,#666);
+	background: -moz-linear-gradient(left,black,#666);
+	background: -o-linear-gradient(left,black,#666);
+	background: -ms-linear-gradient(left,black,#666);
+	background: linear-gradient(left,black,#666);
+	border-radius: 2px;
+	}
+	.small-subhead {
+/*     font-weight: bold; */
+    font-style: italic;
+    font-size: 1.2em;
+    color: white;
+    background: #666;
+    border: 1px solid #ddd;
+    margin: 10px 10px 10px 0;
+    padding: 5px;
+    clear: both;
+    /*width: 98%;*/
+
+    background: -webkit-linear-gradient(left, #666, #ccc);
+    background: -moz-linear-gradient(left, #666, #ccc);
+    background: -o-linear-gradient(left, #000, #666);
+    background: -ms-linear-gradient(left, #000, #666);
+    background: linear-gradient(left, #000, #666);
+    border-radius: 2px; /*opacity:  0.3;
+	*/
+}
+
+
+#page_body{
+    font-size:12px;
+    margin-left:10px;
+    margin-right:10px;
+}
+
+
+/***************THREE COLUMNS, FOR LARGER SIZES BOOKS AND BACK ISSUES ********/
+/*Code for 3 columns, used in back issues section */
+/* for back issues*/
+#issueNumber{
+	font-family: Verdana,Geneva,sans-serif;
+	font-size: 12px;
+	font-weight:bold;
+    text-indent: 0em;
+    margin: 0 0 0 0;
+    line-height:1.6em;
+    text-align: center;
+    max-width: 290px;
+}
+#issueContent{
+	font-family: Verdana,Geneva,sans-serif;
+	font-size: 10px;
+    text-indent: 0em;
+    margin-left:10px;
+    margin-right:10px;
+    line-height:1.6em;
+    max-width: 290px;
+}
+#issueButton{
+	text-align: left;
+	font-size: 12px;
+	margin-right:90px;
+	font-weight:bold;
+	font-style:italic;
+	float:right;
+}
+#issueLink{
+	text-align: left;
+	font-size: 12px;
+	font-weight:bold;
+	font-style:italic;
+	margin-left:10px;
+}
+#issueBuyLink{
+	text-align: center;
+	font-size: 1.2em;
+	font-weight:bold;
+	font-style:italic;
+	float:left; 
+	margin-left:10px;
+}
+#bookTitle{
+	font-family: Verdana,Geneva,sans-serif;
+	font-size: 1.0em;
+	font-weight:bold;
+    text-indent: 0em;
+    margin-right:10px;
+    margin-top:10px;
+    line-height:1.4em;
+    font-style:italic;
+    a {
+    	text-decoration: none;
+		outline: none;
+		color: #000000;
+	}
+	a:hover {
+    	text-decoration: underline;
+		color: #df0000;
+	}
+
+}
+#bookAuthor{
+	font-family: Verdana,Geneva,sans-serif;
+	font-size: 0.9em;
+	font-weight:bold;
+    text-indent: 0em;
+    margin-right:10px;
+    margin-bottom:10px;
+    line-height:1.6em;
+}
+#bookButton{
+	text-align: left;
+	font-size: 0.9em;
+	margin-right:90px;
+	font-style:italic;
+	float:right;
+}
+#bookLink{
+	text-align: left;
+	font-size: 0.9em;
+	font-style:italic;
+	margin-left:0px;
+}
+#bookBuyLink{
+	text-align: left;
+	font-size: 0.9em;
+	font-weight:bold;
+	font-style:italic;
+	float:left;
+	margin-left:10px;
+}
+
+
+#col1 {
+	display:none;
+}
+#col2 {
+	display:none;
+}
+#col3 {
+	display:none;
+}
+#col4 {
+	display:none;
+}
+#col5 {
+	display:none;
+}
+#FiveColumnContainerTop{
+	
+	display:none;
+}
+
+/*for back issues with 3 columns*/
+#threecol1 {
+     margin:1.53em 0;
+
+    img{
+        width:98%;
+        height:auto;
+        max-width:300px;
+    }
+}
+#threecol2 {
+    margin:1.53em 0;
+    img{
+        width:98%;
+        height:auto;
+        max-width:300px;
+    }
+}
+#threecol3 {
+    margin:1.53em 0;
+    img{
+        width:98%;
+        height:auto;
+        max-width:300px;
+    }
+}
+#issueContent{
+    margin: 0 2%;
+}
+#issueNumber{
+    width:98%;
+}
+
+
+
+/**************FOR OLD FRONT PAGES*******************/
+#FrontPageHiddenImage {
+    display:none;
+    margin-left: -9999px;
+}
+#featured-image  img{
+    width:98%;
+    height:auto;
+}
+div.box img{
+    width:98%;
+    height:auto;
+}
+#featured-image p{
+    text-indent:0em;
+}
+.image_box img{
+    width:98%;
+    height:auto;
+}
+#left-side {
+    margin: 0 10px 10px 10px;
+    width: 47%;
+}
+
+#right-side {
+    margin: 0 10px 10px 10px;
+    width: 47%;
+}
+
+div.box {
+    height: auto;
+    width: auto;
+    margin-top:10px;
+    margin-left: 0px;
+    margin-bottom:5px;
+/*-moz-box-shadow: 2px 1px 1px #000;*/
+
+    font-size: 12px;
+}
+
+div.box p {
+    margin: 0 0 4px 0;
+    text-indent: 2em;
+    text-align: left;
+    line-height: 1.6;
+    font-family: Georgia,"Times New Roman",Times,serif;
+}
+div#poem p{
+    text-indent: 0em;
+    margin:0;
+    font-size:1.0em;
+    line-height:1.4em;
+}
+
+/* used for story/poem etc title*/
+div.box h3 {
+    font-family: Georgia,"Times New Roman",Times,serif;
+    font-size: 24px;
+    font-weight: bold;
+    line-height: 1.5em;
+    text-align: center;
+    margin-bottom:0.3em;
+    margin-top:1.5em;
+}
+div.box h3 a {
+    text-decoration: none;
+    outline: none;
+    color: #000000;
+}
+div.box h3 a:hover {
+    text-decoration: underline;
+    color: #aa0000;
+}
+/* used for byline */
+div.box h4 {
+    border-bottom: 1px solid #000000;
+    border-top: 1px solid #000000;
+    display: block;
+    font-family: Georgia,"Times New Roman",Times,serif;
+    font-style: italic;
+    font-weight: bold;
+    margin: 5px 25% 10px;
+    text-align: center;
+}
+/*special size titles for long titles */
+div.box .smallTitle{
+    font-size: 20px;
+}
+div.box .verySmallTitle{
+    font-size: 16px;
+}
+/* used to add "new" boxes, currently in light blue
+NOTE: will be replaced by some sort of slider/box using the loop
+at some point, see NYTimes realty page for example */
+#new {
+    background: #b3c8d9;
+    border: 1px solid #000;
+    padding: 15px;
+}
+/* for presenting the word "new" added to top of story title*/
+#new h2 {
+    text-align: center;
+    font-style: italic;
+    font-size: 24px;
+    color: white;
+    margin-bottom: 10px;
+    font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+#newPoem {
+    background: #b3c8d9;
+    border: 1px solid #000;
+    padding: 15px;
+}
+
+#newPoem h2 {
+    text-align: center;
+    font-style: italic;
+    font-size: 2em;
+    font-wieght: normal;
+    color: white;
+    margin-bottom: 10px;
+    font-family: Georgia, "Times New Roman", Times, serif;
+}
+#new h3 {
+    font-family: Georgia,"Times New Roman",Times,serif;
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 1.5em;
+    text-align: center;
+}
+
+#newPoem p{
+    font-family: Verdana,Geneva,sans-serif;
+    font-size: 12px;
+    text-indent: 0em;
+    margin: 0 0 0 0;
+    line-height:1.6em;
+}
+#new p.postpoem {
+    font-family: Verdana,Geneva,sans-serif;
+    font-size: 12px;
+    line-height: 1.5em;
+    margin-bottom: 1.5em;
+    margin-left: 0px;
+    text-align: left;
+    text-indent: 0em;
+}
+#newPoem .firstLine{
+    margin-top:12px;
+}
+#new .excerpt{
+    display:none;
+}
+#new p.excerpt{
+    display:none;
+}
+#new .startQuote{
+    display:none;
+}
+#new .creditLeft{
+    display:none;
+}
+#new p.creditLeft{
+    display:none;
+}
+#new .creditRight{
+    display:none;
+}
+#new p.creditRight{
+    display:none;
+}
+
+/* for multiple poems, a secondary title */
+#new .poemTitle{
+    display:none;
+}
+
+#new .inline_video_left{
+    display:none;
+}
+
+
+#new .FrontPageHiddenImage{
+    display:none;
+}
+
+/* BLACK TEXT BOX, FOR FRONT PAGE TOC*/
+#TOC ul{
+	font-size:0.9em;
+}
+#TOC .hentry{
+	margin: 0 0 6px;
+	padding-bottom: 6px;
+}
+
+#TOC {
+    width: auto;
+    height: auto;
+    border: 1px solid #ccc;
+    //background: #1A1106;
+    background-color: #ddd;
+    margin-top: 15px;
+    padding: 10px;
+    color: #000;
+    li {
+	    font-size: .8em;
+	    font-weight: bold;
+    }
+}
+/*
+#TOC h3 {
+    font-size: 1.8em;
+    line-height: 1.5em;
+    padding: 0px;
+    text-align: center;
+    margin: 0 px;
+    font-family: Georgia, "Times New Roman", Times, serif;
+    font-style: italic;
+    font-weight:bold;
+    color: #fff;
+}
+
+#TOC h4 {
+    font-size: 11px;
+    line-height: 14px;
+    font-family: Georgia, "Times New Roman", Times, serif;
+    font-weight: bold;
+    display: block;
+    margin: 5px;
+    text-align: left;
+    font-style:italic;
+    color: #fff;
+}
+#TOC h4 a {
+    text-decoration: none;
+    outline: none;
+    color: #cc0000;
+}
+#TOC a:hover {
+    text-decoration: underline;
+    color: #df0000;
+}
+*/
+#new .FrontPageHiddenImage{
+    display:none;
+}
+#hiddenImage{
+    display:none;
+}
+#left-side {
+//    float: left;
+    margin: 0 10px 10px 10px;
+    width: 98%;
+    background-color:white;
+}
+
+#right-side {
+//    float: right;
+    margin: 0 10px 10px 10px;
+    width: 98%;
+    background-color:white;
+}
+
+/////////////////////////////////////
+//easy digital downloads
+///////////////////////////////////////*
+.edd_download{
+	width:100%; 
+	float:left;
+}
+.edd_download_excerpt p{
+	text-indent: 0px;
+	font-size: 0.8em;
+}
+.edd-new-account-wrap p{
+	text-indent: 0px;
+	font-size: 0.8em;
+}
+.edd_download_title{
+	font-size: 1.4em;
+	line-height: 1em;
+	text-align: left;
+	font-family: Georgia, "Times New Roman", Times, serif;
+	font-style: normal;
+	color: #000;
+	margin:4px 3px 0px 3px;
+	//margin-left:3px;
+}
+.edd_download_title a {
+		text-decoration: none;
+		outline: none;
+		color: #000;
+		}	
+.edd_download_title a:hover {
+		text-decoration: underline;
+		color: #cc0000;
+		
+		}
+.edd-cart-added-alert{
+	line-height: 1.1em;
+	font-size: 0.8;
+	font-style:italic;
+}
+
+.edd_download_file{
+	text-indent:0xp;
+	font-style: bold;
+	font-size:1.2em;
+	margin-left:0px !important;
+}
+.edd_download_file a {
+		text-decoration: underline;
+		outline: none;
+		color: #cc0000;
+		font-style: bold;
+		}	
+.edd_download_file a:hover {
+		text-decoration: underline;
+		color: #ff0000;
+		}
+#edd-login-account-wrap, #edd-user-email-wrap, #edd-user-first-name-wrap, #edd-user-last-name-wrap, #edd-user-login-wrap, #edd-user-pass-wrap, #edd-user-pass-confirm-wrap, #edd_final_total_wrap, #edd_terms{
+	text-indent: 0px;
+} 
+
+
+//////////////////////////////////////////////
+//SOUND PLAYER STYLES
+//////////////////////////////////////////////
+
+.sound-player{
+	margin-top:20px; 
+	clear:both;
+}			
+
+.wp-playlist-current-item{
+	font-weight: 800 !important;
+	color: #358fe2 !important;
+	font-size: x-large !important;
+	//display:none !important;
+
+	}
+
+.audio-title {
+font-weight: 700;
+}
+.wp-playlist-caption{
+	//font-size: 36px !important;
+}
+
+

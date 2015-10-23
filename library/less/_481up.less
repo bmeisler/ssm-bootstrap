@@ -1,0 +1,266 @@
+/******************************************************************
+Site Name: 
+Author: 
+
+Stylesheet: 481px and Up Stylesheet
+
+This stylesheet is loaded for larger devices. It's set to 
+481px because at 480px it would load on a landscaped iPhone.
+This isn't ideal because then you would be loading all those
+extra styles on that same mobile connection.  
+
+A word of warning. This size COULD be a larger mobile device,
+so you still want to keep it pretty light and simply expand
+upon your base.less styles.
+
+******************************************************************/
+
+@sans-serif:         "Helvetica Neue", Helvetica, Arial, sans-serif;
+@serif:              "Georgia", Cambria, Times New Roman, Times, serif;
+
+/*********************
+NAVIGATION STYLES
+*********************/
+
+	
+
+/*********************
+POSTS & CONTENT STYLES
+*********************/
+
+/* entry content */
+.entry-content {
+			
+	
+	/* at this larger size, we can start to align images */
+	.alignleft, img.alignleft { 
+		margin-right: 1.5em; 
+		display: inline; 
+		float: left; 
+	}
+	.alignright, img.alignright { 
+		margin-left: 1.5em; 
+		display: inline; 
+		float: right; 
+	}
+	.aligncenter, img.aligncenter { 
+		margin-right: auto; 
+		margin-left: auto; 
+		display: block; 
+		clear: both; 
+	}
+			
+} /* end .entry-content */
+
+/*********************
+FOOTER STYLES
+*********************/
+	
+/*
+check your menus here. do they look good?
+do they need tweaking?
+*/
+
+	
+	
+	
+#col1 {
+	display:none;
+}
+#col2 {
+	display:none;
+}
+#col3 {
+	display:none;
+}
+#col4 {
+	display:none;
+}
+#col5 {
+	display:none;
+}
+#threecol1 {
+    float:left;
+    width:30%;
+    clear:both;
+    border: 1px solid #cccccc;
+    img{
+        width:98%;
+        height:auto;
+    }
+}
+#threecol2 {
+    float:left;
+    width:30%;
+    border: 1px solid #cccccc;
+    margin-left:5px;
+    img{
+        width:98%;
+        height:auto;
+    }
+}
+#threecol3 {
+    float:left;
+    width:30%;
+    border: 1px solid #cccccc;
+    margin-left:5px;
+    img{
+        width:98%;
+        height:auto;
+    }
+}
+
+/********HIDE SIDEBAR ON IPAD! ************/
+.sidebar {
+	display:none;
+}
+
+/* search widget */
+
+#search-form-container{
+	margin:0px;
+	position:absolute;
+	top:15px;
+	right:2%;
+}
+.post-img{
+	float:left; 
+	margin-right:10px;
+	max-width:200px;
+	max-height:133px;
+	width:200px;
+	height:133px; 
+}
+
+figure{
+	width:98%;
+    height:auto;
+	padding-right:5px;
+    text-indent:0 !important;
+    margin-bottom:12px;         
+}
+.figure-medium-left-clear img{//adds an image to the left side of the page, but with no text on the right of it
+		    width:65%;
+		    height:auto;
+		    font-size: 0.9em;
+		    line-height: 1.2em;
+		    text-indent: 0px;		
+		    margin: 0 10px 0 0;
+		    //float:left;
+		    clear:both;
+		}
+
+
+
+
+.post-img img{
+	width:100%;
+	height:100%; 
+}
+
+.post-img-small, .post-img-tn, .post-img-thumb{
+	width:200px;
+	max-width:200px;
+	height:133px;
+	float:left;
+	margin-right:1%;
+}
+.post-img-small img, .post-img-tn img, .post-img-thumb img{
+	width:200px !important;
+	max-width:200px;
+	height:133px;
+	float:left;
+	margin-right:1%;
+}
+.post-img-medium {
+     width:35%;
+     height:auto;
+     padding:0px !important;
+     float:left;   // max-width:300px;
+     margin-right:10px;
+      margin-bottom:0px !important;
+      //max-width:200px;
+ }
+ .post-img-medium img{
+     margin-bottom:0px !important; 
+ }
+ .post-img-medium-right {
+    width:35%;
+     height:auto;
+     padding:0px !important;
+     margin-left:10px;
+      margin-bottom:0px !important;
+ }
+ .post-img-medium-right img{
+     margin-bottom:0px;
+ }
+
+ .post-img-medium-vertical {
+     width:35%;
+     height:auto;
+     padding:0px !important;
+     float:left;   // max-width:300px;
+     margin-right:10px;
+ }
+
+#headerimage{
+		#figure-logo{
+			width:98%;
+		}
+}
+.header {
+	#inner-header {
+	}
+
+	#logo {}
+
+	nav {
+	font-family: @sans-serif;
+	font-size:24px;
+	margin:10px 0 0 10px;
+	padding-right:10px;
+		ul.nav {
+			li {
+				a {}
+
+				&:first-child {}
+
+				&:last-child {}
+			}
+		}
+	}
+	
+/***************SOCIAL BUTTONS****************/
+/*////////SOCIAL MEDIA///////*/
+
+.widget {
+  /*align: right; */
+}
+#social ul {
+  margin-right: 5px;
+}
+#social li {
+  display: inline;
+  text-decoration: none;
+/*   float: right; */
+}
+#social a {
+  padding: 0 16px;
+}
+#social li:hover > a {
+  background: none;
+}
+
+#social-button-youtube-icon{ width:24px; height:24px;   background:url("http://www.sensitiveskinmagazine.com/wp-content/images/socialmediabuttons/social_buttons_sprite-sheet.png") -10px -10px; }
+#social-button-facebook-icon{ width:24px; height:24px;   background:url("http://www.sensitiveskinmagazine.com/wp-content/images/socialmediabuttons/social_buttons_sprite-sheet.png") -44px -10px;}
+#social-button-rss-icon{ width:24px; height:24px; background:url("http://www.sensitiveskinmagazine.com/wp-content/images/socialmediabuttons/social_buttons_sprite-sheet.png") -78px -10px;}
+#social-button-tumblr-icon{ width:24px; height:24px;  background:url("http://www.sensitiveskinmagazine.com/wp-content/images/socialmediabuttons/social_buttons_sprite-sheet.png") -112px -10px;}
+#social-button-google-plus-icon{ width:24px; height:24px;  background:url("http://www.sensitiveskinmagazine.com/wp-content/images/socialmediabuttons/social_buttons_sprite-sheet.png") -146px -10px;}
+#social-button-twitter-icon{ width:24px; height:24px;  background:url("http://www.sensitiveskinmagazine.com/wp-content/images/socialmediabuttons/social_buttons_sprite-sheet.png") -180px -10px;}
+
+
+	
+	
+}
+
+
