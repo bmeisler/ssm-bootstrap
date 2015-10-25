@@ -38,11 +38,22 @@
 		<?php if ( has_post_thumbnail() ) : ?>
 			<a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>">
 			
-			<?php if (has_tag( 'featured')) { 
-				the_post_thumbnail('large');
-			}else{
-				the_post_thumbnail('thumbnail');
-			} ?>
+			<?php if ( has_post_thumbnail() ) { ?>
+                                <figure class="post-img-thumb">
+                                    <a href="<?php the_permalink(); ?>" rel="bookmark">
+                                    	<?php the_post_thumbnail('thumbnail');?>
+                                    </a>
+                                </figure>
+
+                                <?php } else { ?>
+                                <?php $postimageurl = get_post_meta($post->ID, 'post-img', true);
+                                if ($postimageurl) { ?>
+                                    <figure class="post-img">
+                                        <a href="<?php the_permalink(); ?>" rel="bookmark"><img src="<?php  bloginfo( 'wpurl' ); ?>/wp-content/images/tns/<?php echo $postimageurl; ?>" alt="Post Pic"  /></a>
+                                    </figure>
+                                    <?php } ?>
+
+                                <?php } ?>
 			</a>
 		<?php endif; ?>
             <div class="entry">

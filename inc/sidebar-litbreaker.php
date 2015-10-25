@@ -1,4 +1,4 @@
-<aside id="TOC" class="widget widget-litbreaker sidebar-medium-rectangle">
+<aside id="litbreaker" class="widget widget-litbreaker sidebar-medium-rectangle">
 
 <div class="sidebar-medium-rectangle">
 <script src='//d3c3cq33003psk.cloudfront.net/opentag-123939-1670854.js' async defer></script><script type="text/javascript">

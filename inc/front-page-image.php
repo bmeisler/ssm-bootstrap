@@ -1,13 +1,13 @@
 <?php 
 			                          		if (has_tag(array('featured')) ){//If this is a featured post, try to use as large a preview image as possible
-			                          			//echo 'featured';
+			                          			echo 'featured';
 	                                            $img_path =  catch_that_image();
 	                                            
 	                                            if ($img_path != '' && $img_path != null){ //if there is an image in the post, use it and style it according to size
 	                                            $sizes = getimagesize($img_path);
 	                                            $width = $sizes[0];
 	                                            $height = $sizes[1];
-	                                            //echo 'width: '.$width;
+	                                            echo 'width: '.$width;
 /* 		                                            echo '<br>found an image in post'; */
 /* 		                                            echo 'image path:'.$img_path; */
 	                                            ?>
@@ -77,11 +77,12 @@ echo "<br>left<br>";
                                                 
                                          <?php } else{//NOT A FEATURED POST - use a small image
  	                                         //USE A FEATURED IMAGE IF ONE EXISTS
+                                         	echo 'not featured';
  	                                         $postimageurl = get_post_meta($post->ID, 'post-img', true);//DOES IT HAVE A TN?
  	                                         if ( has_post_thumbnail() ) { ?>
 				                                <figure class="post-img-medium">
 				                                    <a href="<?php the_permalink(); ?>" rel="bookmark">
-				                                        <?php the_post_thumbnail('bones-thumb-200');?>
+				                                        <?php the_post_thumbnail('archive-thumb');?>
 				                                    </a>
 				                                </figure>
 				
