@@ -15,7 +15,7 @@
 		$subtitle = get_post_meta($post->ID, 'subtitle', true);
             if (!$subtitle)
             {
-                echo '<h1 id="author">'.bones_get_the_author_posts_link().'</h1>';
+                echo '<h1 id="author">'.get_the_author().'</h1>';
             }
             else if ($subtitle)
             {

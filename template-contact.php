@@ -4,7 +4,7 @@
  *
  * This is the template that displays a contact form.
  *
- * @package bootstrapwp
+ * @package Sensitive_Skin_Bootstrap
  */
 
 if(isset($_POST['submitted'])) {

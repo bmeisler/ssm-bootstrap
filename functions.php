@@ -138,38 +138,54 @@ function sensitive_skin_bootstrap_widgets_init() {
 add_action( 'widgets_init', 'sensitive_skin_bootstrap_widgets_init' );
 
 
+// add_action( 'init', 'prowp_register_my_post_types' );
+
+// function prowp_register_my_post_types() {
+
+//     register_post_type( 'books', array(
+// 		'labels' => array( 'name' => 'Books' ),
+// 		'public' => true, ))
+// };
+
+// }
 /**
 * nRegister custom posts for books
 */
-function sensitive_skin_bootstrap_register_post_types(){
+//function sensitive_skin_bootstrap_register_post_types(){
   
-    $labels = array(
-        'name'=>'Books',
-        'singular_name'=>'Book',
-        'add_new'=>'Add New Book',
-        'edit_item'=>'Edit Book',
-        'new_item'=>'New Book',
-        'all_items'=>'All Books',
-        'view_item'=>'View Book',
-        'search_items'=>'Search Books',
-        'not_found'=>'No Books Found',
-        'not_found_in_trash'=>'No books found in trash.',
-        'menu_name'=>'Books'
-        );
-      $args = array(
-        'labels'=>$labels,
-        'public'=>true,
-        'show_in_nav_menus'=>true,
-        'has_archive'=>true,
-        'taxonomies'=>array('category', 'post_tag'),
-        'rewrite'=>array('slug'=>'books'),
-        'supports'=>array('title', 'editor', 'author', 'thumbnail', 'custom-fields')
-        );
+  //register_post_type('books', $args);
+ //    register_post_type( 'books', array(
+	// 'labels' => array( 'name' => 'Books' ),
+	// 'public' => true, )
+//};
+      //     $labels = array(
+      //   'name'=>'Books',
+      //   'singular_name'=>'Book',
+      //   'add_new'=>'Add New Book',
+      //   'edit_item'=>'Edit Book',
+      //   'new_item'=>'New Book',
+      //   'all_items'=>'All Books',
+      //   'view_item'=>'View Book',
+      //   'search_items'=>'Search Books',
+      //   'not_found'=>'No Books Found',
+      //   'not_found_in_trash'=>'No books found in trash.',
+      //   'menu_name'=>'Books'
+      //   );
+      // $args = array(
+      //   'labels'=>$labels,
+      //   'public'=>true,
+      //   'show_in_nav_menus'=>true,
+      //   'has_archive'=>true,
+      //   'taxonomies'=>array('category', 'post_tag'),
+      //   'rewrite'=>array('slug'=>'books'),
+      //   'supports'=>array('title', 'editor', 'author', 'thumbnail', 'custom-fields')
+      //   );
 
     
-  register_post_type('books', $args);
-}
-add_action ('init', 'sensitive-skin-bootstrap_register_post_types');
+  
+//}
+//add_action ('init', 'sensitive-skin-bootstrap_register_post_types');
+
 /**
  * Enqueue scripts and styles.
  */
@@ -227,3 +243,10 @@ require get_template_directory() . '/inc/jetpack.php';
  * Load Bootstrap Menu.
  */
 require get_template_directory() . '/inc/bootstrap-walker.php';
+
+/**
+ * Load Custom Post Types.
+ */
+require get_template_directory() . '/inc/post-types/CPT.php';
+require get_template_directory() . '/inc/post-types/register-book.php';
+require get_template_directory() . '/inc/post-types/register-backissues.php';
