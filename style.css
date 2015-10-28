@@ -6,9 +6,9 @@ Author URI: http://underscores.me/
 Description: Bootstrap based theme for Sensitive Skin magazine
 Version: 1.0.0
 License: GNU General Public License v2 or later
-License URI: http://www.gnu.org/licenses/gpl-2.0.html
+License URI: http://www.gnu.org/licenses/gpl-2.0.htmlcolcontainer
 Text Domain: sensitive-skin-bootstrap
-Tags:
+Tags:colcontainer
 
 This theme, like WordPress, is licensed under the GPL.
 Use it to make something cool, have fun, and share what you've learned with others.
@@ -92,6 +92,9 @@ Footer
 	padding-top: 25px;
 	background-color: white;
 	margin-bottom:10px;
+}
+#colcontainer{
+	background-color: white;
 }
  
 .bottom-row div{
@@ -365,6 +368,13 @@ img {
 	  border-left: 1px solid #b6b5b4;
 	  color:black;
 	}
+.book-grid-item {
+	  float: left;
+	  width: 33%;
+	  min-width:33%;
+	  background-color: white;
+	  color:black;
+	}
 /* hide the 4th and 5th columns*/
 .grid-item:last-child {
   display:none;
@@ -384,7 +394,7 @@ img {
 	vertical-align: top;
 	background-color:	black;
 	color: white;
-	font-size: 80%;
+	font-size: 90%;
 }
 
 .grid-item--width2 { width: 100%; }
@@ -426,6 +436,7 @@ Media Queries
 	.grid-item:nth-child(3){
 		display:block;
 	}
+
 }
 
 /* Small Devices, Tablets */
@@ -444,6 +455,16 @@ Media Queries
 	
 	.grid-item--width2 { width: 25%; }
 	.grid-item:nth-child(4){
+		display:block;
+	}
+
+	.blogroll .grid-item:nth-child(2){
+		display:block;
+	}
+.blogroll .grid-item:nth-child(3){
+		display:block;
+	}
+.blogroll 	.grid-item:nth-child(4){
 		display:block;
 	}
 }
@@ -525,8 +546,8 @@ aside ul{
 }
 
 
-.book-col1, .book-col2, .book-col3 {float:left; width:49%; height:100% }
-//.col { width:150px; float:left; margin-right:5px; }
+/*.book-col1, .book-col2, .book-col3 {float:left; width:49%; height:100% }
+.col { width:150px; float:left; margin-right:5px; }*/
 
 /* .first, .middle, .last styling of posts on home page for three column */
 /*
@@ -538,6 +559,28 @@ aside ul{
 /*--------------------------------------------------------------
 Book styles 
 --------------------------------------------------------------*/
+
+.single-books .hentry{
+	border-bottom: none;
+}
+
+
+.book img.wp-post-image {
+    margin-bottom: 0;
+    height: auto;  
+}
+
+.book-item {
+	margin: 10px 10px;
+}
+
+.book .thumbnail {
+	margin-bottom: 5px;
+}
+
+.book h4 {
+	margin-top: 5px;
+}
 
 .btn-group-category{
 	float:left;
@@ -665,7 +708,7 @@ Book styles
 	text-transform: uppercase;
 }
 
-.book-item{
+/*.book-item{
 	margin: 0 10px;
-}
+}*/
 

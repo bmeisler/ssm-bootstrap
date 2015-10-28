@@ -4,7 +4,7 @@ $tnCount = 0;
 <div id="FiveColumnContainerTop">
 Previously, on Sensitive Skin!
 </div>
-<div class="grid">
+<div class="grid" id="colcontainer">
 <!-- <div id="colcontainer">
  -->		<?php $current_issue_query = new WP_Query('showposts=5&tag=featured&orderby=rand');?>
 		<?php while ($current_issue_query->have_posts()) : $current_issue_query->the_post(); 

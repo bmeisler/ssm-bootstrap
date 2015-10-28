@@ -27,21 +27,23 @@
 		<?php the_content(); ?>
 
 
+		<div class="row">
+			<div id="primary" class="col-md-12 col-lg-12">
+				<div id="author-block">
+				<figure class='figure-small-left'><img src="<?php the_field('books_author_photo') ?>" /></figure>
+				<div ><?php the_field('books_author_bio') ?></div>
+				</div>
 
-		<div id="author-block">
-		<figure class='figure-small-left'><img src="<?php the_field('books_author_photo') ?>" /></figure>
-		<div ><?php the_field('books_author_bio') ?></div>
-		</div>
-
-		<div id="book-info"><p class="description"><?php the_field('books_paper')?> | 
-		<?php the_field('books_dimensions') ?> | 
-		<?php the_field('books_num_pages') ?> pgs. | 
-		<?php the_field('books_isbn') ?> | 
-		$<?php the_field('books_list') ?> | 
-		release date: <?php the_field('books_release_date') ?>
-		</div>
-        <figure class="figure-50-left"><img src="<?php bloginfo('url'); ?>/wp-content/images/BooksLogosBlack-White_small.jpg" width="268" height="32" alt="Sensitive Skin Books" title="Sensitive Skin Books" /></figure>
-        
+				<div id="book-info"><p class="description"><?php the_field('books_paper')?> | 
+				<?php the_field('books_dimensions') ?> | 
+				<?php the_field('books_num_pages') ?> pgs. | 
+				<?php the_field('books_isbn') ?> | 
+				$<?php the_field('books_list') ?> | 
+				release date: <?php the_field('books_release_date') ?>
+				</div>
+		        <figure class="figure-50-left"><img src="<?php bloginfo('url'); ?>/wp-content/images/BooksLogosBlack-White_small.jpg" width="268" height="32" alt="Sensitive Skin Books" title="Sensitive Skin Books" /></figure>
+        </div>
+    </div>
 							
 	</section> <!-- end article section -->
 	

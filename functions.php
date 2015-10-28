@@ -194,7 +194,7 @@ function sensitive_skin_bootstrap_scripts() {
 	wp_enqueue_style( 'font-awesome', get_template_directory_uri() . '/css/font-awesome.min.css', array(), '4.4.0', 'all' );
 	wp_enqueue_style( 'bootstrap-social', get_template_directory_uri() . '/css/bootstrap-social.min.css', array(), '4.4.0', 'all' );
 
-
+	/* we have particular ssm stles, leftover from older versions - load these BEFORE bootstrap styles, so bootstrap is favored */
 	wp_enqueue_style( 'ssm-styles', get_template_directory_uri() . '/css/ssm.min.css', array(), '1.0', 'all' );
 
 	wp_enqueue_style( 'sensitive-skin-bootstrap-style', get_stylesheet_uri() );
@@ -202,8 +202,10 @@ function sensitive_skin_bootstrap_scripts() {
 	wp_enqueue_script( 'respond-js', get_template_directory_uri() . '/js/respond.min.js', array('jquery'), '1.4.2', true );
 	wp_enqueue_script( 'bootstrap-js', get_template_directory_uri() . '/js/bootstrap.min.js', array('jquery'), '3.3.5', true );
 	wp_enqueue_script( 'sensitive-skin-bootstrap-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20120206', true );
-	wp_enqueue_script( 'sensitive-skin-bootstrap-isotope', get_template_directory_uri() . '/js/isotope.pkgd.min.js', array(), '2.01', true );
-	
+	wp_enqueue_script( 'isotope', get_template_directory_uri() . '/js/isotope.pkgd.min.js', array(), '2.01', true );
+	wp_enqueue_script( 'imagesloaded', get_template_directory_uri() . '/js/imagesloaded.pkgd.min.js', array(), '3.1.8', true );
+
+	/* my custom jquery scripts - handles isotope, etc. */
 	wp_enqueue_script( 'sensitive-skin-bootstrap-main', get_template_directory_uri() . '/js/main.js', array(), '3.3.5', true );
 
 	wp_enqueue_script( 'sensitive-skin-bootstrap-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20130115', true );
