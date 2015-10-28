@@ -11,4 +11,13 @@ jQuery(document).ready(function($){
 		  layoutMode: 'fitRows'
 	  });
 	});
+
+
+
+
+		$('#issue-items').isotope({
+	  // options
+	  	itemSelector: '.item',
+	  	layoutMode: 'fitRows'
+	});
 });

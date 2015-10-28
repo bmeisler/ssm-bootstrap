@@ -1,6 +1,6 @@
 <?php
 /**
- * Template Name: Books Template
+ * Template Name: Issues Template
  *
  * This is the template that displays all the custom Books posts.
  *
@@ -13,10 +13,10 @@
 get_header(); ?>
 
 <div class="container">
-	<div class="row issues">
+	<div class="row">
 
 	<div id="primary" class="col-md-12 col-lg-12">
-		<main id="main" class="site-main" role="main">
+		<main id="main" class="site-main issues" role="main">
 
 			<?php 
 			// the query
@@ -25,23 +25,30 @@ get_header(); ?>
 			<?php if ( $the_query->have_posts() ) : ?>
 
 				<div class="row">
-				<!-- the loop -->
-				<?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
-				
-				
-					<div class="col-sm-6 col-md-3">
-						<a class="thumbnail" href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>">
+					<div id="issue-items">
+
+					<!-- the loop -->
+					<?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
+
+					<div class="col-sm-6 col-md-4 item">
+						<div class="book-item">
+							<a class="thumbnail" href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>">
 							<?php the_post_thumbnail('large'); ?>
+							</a>
+							<h4><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h4>
 							
-						</a> 
-						<h2><?php the_title(); ?></h2>
-						<p><?php the_excerpt(); ?></p>
-						
-					</div><!-- .col -->
+							<p><?php the_field('brief_description') ?></p>
+							<!-- <a href="<?php the_permalink(); ?>" class="btn btn-primary">More info</a></br> -->
+							<a role="button" class="btn btn-primary" role="button" href="<?php the_field('amazon_print_link') ?>" >Buy print</a>
+   		<a role="button" class="btn btn-primary offset5" role="button" href="<?php the_field('kindle_link') ?>" >Buy PDF</a>
+
+						</div>
+					</div>
+					<?php endwhile; ?>
+					<!-- end of the loop -->
+				</div> <!-- .book-items -->
+				</div> <!-- .row -->
 				
-				<?php endwhile; ?>
-				<!-- end of the loop -->
-				</div><!-- .row -->
 
 				<?php wp_reset_postdata(); ?>
 
