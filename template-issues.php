@@ -31,7 +31,7 @@ get_header(); ?>
 					<?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
 
 					<div class="col-sm-6 col-md-4 item">
-						<div class="book-item">
+						<div class="issue-item">
 							<a class="thumbnail" href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>">
 							<?php the_post_thumbnail('large'); ?>
 							</a>
