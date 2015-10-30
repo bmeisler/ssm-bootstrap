@@ -74,6 +74,10 @@ a:active {
 	outline: 0;
 }
 
+.navbar-inverse .navbar-nav > li > a{
+	color:#ddd;
+}
+
 /*--------------------------------------------------------------
 Footer
 --------------------------------------------------------------*/
@@ -190,8 +194,8 @@ Footer
 
 .hentry {
 	margin: 0 0 1.8em;
-	border-bottom: 1px solid #ddd;
-	padding-bottom: 1.8em;
+/*	border-bottom: 1px solid #ddd;
+*/	padding-bottom: 1.8em;
 }
 .enter{
 	text-indent: none;
@@ -223,6 +227,8 @@ Footer
 	clear: both;
 	margin: 0 0 1.5em;
 }
+
+
 
 /*--------------------------------------------------------------
 ## Asides
@@ -395,17 +401,21 @@ img {
 	background-color:	black;
 	color: white;
 	font-size: 90%;
+	width:31%;
 }
 
 .grid-item--width2 { width: 100%; }
 .blogroll .grid-item:nth-child(2){
 		display:none;
+		width:23%;
 	}
 .blogroll .grid-item:nth-child(3){
 		display:none;
+		width:23%;
 	}
 .blogroll 	.grid-item:nth-child(4){
 		display:none;
+		width:23%;
 	}
 /**
 	/* fluid 4 columns */
@@ -461,10 +471,10 @@ Media Queries
 	.blogroll .grid-item:nth-child(2){
 		display:block;
 	}
-.blogroll .grid-item:nth-child(3){
+	.blogroll .grid-item:nth-child(3){
 		display:block;
 	}
-.blogroll 	.grid-item:nth-child(4){
+	.blogroll 	.grid-item:nth-child(4){
 		display:block;
 	}
 }
@@ -490,6 +500,17 @@ Media Queries
 		display:block;
 		min-width:340px;
 	}	
+	/* gives us a centered 'page' with a border and shadow */
+	#container {
+	    -moz-box-shadow: 0 0 5px 5px #888;
+	    -webkit-box-shadow: 0 0 5px 5px#888;
+	    box-shadow: 0 0 5px 5px #888;
+	    width: 1080px; 
+	    position: relative;
+		height: auto;
+		margin: 0px auto;
+	   /* background-color: blue;  */
+	}
 }
 
 /* Large Devices, Wide Screens */

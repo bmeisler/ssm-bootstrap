@@ -17,7 +17,7 @@ if ( ! is_active_sidebar( 'sidebar-1' ) ) {
 		<?php dynamic_sidebar( 'sidebar-1' ); ?>
 		<?php include ('inc/sidebar-litbreaker.php'); ?>
 		<?php include ('inc/sidebar-Animated.php'); ?>
-
+		<?php include ('inc/sidebar-social.php'); ?>
 		<?php include ('inc/sidebar-TOC.php'); ?>
 	</div>	
 </div><!-- #secondary -->

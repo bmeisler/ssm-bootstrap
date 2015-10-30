@@ -46,6 +46,8 @@
 	</footer><!-- #colophon -->
 </div><!-- #page -->
 
+</div> <!-- end #container -->
+
 <?php wp_footer(); ?>
 
 </body>

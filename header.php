@@ -21,6 +21,7 @@
 </head>
 
 <body <?php body_class(); ?>>
+	<div id="container">
 <div id="page" class="hfeed site">
 <!-- 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'sensitive-skin-bootstrap' ); ?></a>
  -->

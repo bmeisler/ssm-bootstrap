@@ -42,8 +42,8 @@ get_header(); ?>
 
 			<?php endwhile; ?>
 <!-- 
-			<?php the_posts_navigation(); ?> --> 
-			<?php sensitive_skin_bootstrap_posts_navigation(); ?> 
+			<?php the_posts_navigation(); ?>  
+			<?php sensitive_skin_bootstrap_posts_navigation(); ?> -->
 
 		<?php else : ?>
 

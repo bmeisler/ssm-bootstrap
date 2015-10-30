@@ -4,7 +4,7 @@
 							<p class="top"><i>Editor-In-Chief:</i> Bernard Meisler</p>
 							<p><i>Associate Editors:</i> Rob Hardin and B. Kold</p>
 							<p><i>Music Editor:</i> Steve Horowitz</p>
-							<p><i>Contributing Editors:</i>Ron Kolm, Tim Beckett, Franklin Mount, Patrick O'Neil</p>
+							<p><i>Contributing Editors:</i>Ron Kolm, Tim Beckett, </br>Franklin Mount, Patrick O'Neil</p>
 						</div>
 						<div class="grid-item grid-item--width2" >
 <!-- Column one start -->
