@@ -22,7 +22,10 @@
 	</header> <!-- end article header -->
 		
 	<section class="entry-content clearfix" itemprop="articleBody">
-		 <div><figure class='figure-50-left'><img src="<?php the_field('cover_image') ?>" /></figure></div>
+		 <!-- <div><figure class='figure-50-left'><img src="<?php the_field('cover_image') ?>" /></figure></div> -->
+		<div><figure class='figure-50-left'> <a class="thumbnail" href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>">
+							<?php the_post_thumbnail('large'); ?>
+							</a></figure></div>
 
 		<?php the_content(); ?>
 

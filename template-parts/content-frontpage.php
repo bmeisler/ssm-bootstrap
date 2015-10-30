@@ -23,7 +23,7 @@
                 	$sizes = getimagesize($img_path);
                     $width = $sizes[0];
                     $height = $sizes[1];
-                    echo 'width: '.$width;
+                    //echo 'width: '.$width;
                 // 
                     if ($width>=200 & $width < 400 || $height > $width){
                     	//echo "medium";
@@ -56,7 +56,8 @@
                         </figure>
                     <?php 
                 	}          
-                } else{//no image found in post, use small thumbnail - eg Hardin's Drone loops
+                }else{//no image found in post, use small thumbnail - eg Hardin's Drone loops
+                	echo "no image found in post, use thumbnail";
                 	if ( has_post_thumbnail() ) { ?>
                 
                 	<figure class="post-img-medium">
@@ -66,12 +67,16 @@
                 	</figure> 
 
             	<?php 
-            		}
+            		
+                	}else{
+                		echo "try something else";
+                	}
                 }
             } else {//NOT A FEATURED POST - use a small image
                  //USE A FEATURED IMAGE IF ONE EXISTS
-         		//echo 'not featured';
-                //$postimageurl = get_post_meta($post->ID, 'post-img', true);//DOES IT HAVE A TN?
+         		echo 'not featured';
+                $postimageurl = get_post_meta($post->ID, 'post-img', true);//DOES IT HAVE A TN?
+                echo $postimageurl;
                 if ( has_post_thumbnail() ) { ?>
                 
                 	<figure class="post-img-medium">
@@ -82,7 +87,7 @@
 
             	<?php 
             	}else{
-            		//echo "get an image";
+            		echo "get an image";
             		$img_path =  catch_that_image();
                 
 	                if ($img_path != '' && $img_path != null){ //if there is an image in the post, use it and style it according to size
@@ -98,6 +103,13 @@
 	                         </a>
                         </figure>
                     <?php    
+	                }else{
+	                	if ($postimageurl){ ?>
+                         <figure class="post-img-medium-right">
+                            <a href="<?php the_permalink(); ?>" rel="bookmark"><img src="<?php  bloginfo( 'wpurl' ); ?>/wp-content/images/tns/<?php echo $postimageurl; ?>" alt="Post Pic"  /></a>
+                         </figure>
+                      <?php 
+                  		}
 	                }
             	}
             }?>
@@ -125,17 +137,6 @@
 
 		<div class="entry-content clearfix">
 			
-
-<!-- 			<?php if ( has_post_thumbnail() ) : ?>
-				<a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>">
-				
-				<?php if (has_tag( 'featured')) { 
-					the_post_thumbnail('large');
-				}else{
-					the_post_thumbnail('thumbnail');
-				} ?>
-				</a>
-			<?php endif; ?> -->
 	            <div class="entry">
 		              <?php the_excerpt() ?>
 		        </div>
