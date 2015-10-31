@@ -14,12 +14,12 @@
 
 		<?php
 			 if (has_tag( 'featured')) { //If this is a featured post, try to use as large a preview image as possible
-      			echo 'featured<br>';
+      			//echo 'featured<br>';
       			
                 $img_path =  catch_that_image();
                 
                 if ($img_path != '' && $img_path != null){ //if there is an image in the post, use it and style it according to size
-                	echo $img_path;
+                //	echo $img_path;
                 	$sizes = getimagesize($img_path);
                     $width = $sizes[0];
                     $height = $sizes[1];
@@ -57,7 +57,7 @@
                     <?php 
                 	}          
                 }else{//no image found in post, use small thumbnail - eg Hardin's Drone loops
-                	echo "no image found in post, use thumbnail";
+                	//echo "no image found in post, use thumbnail";
                 	if ( has_post_thumbnail() ) { ?>
                 
                 	<figure class="post-img-medium">
@@ -69,14 +69,14 @@
             	<?php 
             		
                 	}else{
-                		echo "try something else";
+                		//echo "try something else";
                 	}
                 }
             } else {//NOT A FEATURED POST - use a small image
                  //USE A FEATURED IMAGE IF ONE EXISTS
          		echo 'not featured';
                 $postimageurl = get_post_meta($post->ID, 'post-img', true);//DOES IT HAVE A TN?
-                echo $postimageurl;
+                //echo $postimageurl;
                 if ( has_post_thumbnail() ) { ?>
                 
                 	<figure class="post-img-medium">
@@ -87,7 +87,7 @@
 
             	<?php 
             	}else{
-            		echo "get an image";
+            		//echo "get an image";
             		$img_path =  catch_that_image();
                 
 	                if ($img_path != '' && $img_path != null){ //if there is an image in the post, use it and style it according to size

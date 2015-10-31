@@ -20,7 +20,7 @@ get_header(); ?>
 
 			<?php 
 			// the query
-			$the_query = new WP_Query( array('post_type' => 'issues') ); ?>
+			$the_query = new WP_Query( array('post_type' => 'downloads') ); ?>
 
 			<?php if ( $the_query->have_posts() ) : ?>
 
