@@ -56,7 +56,10 @@ a {
 }
 
 a:visited {
-	color: purple;
+	color: #666;
+}
+a:visited .btn{
+	color: #eee;
 }
 
 a:hover,
@@ -77,7 +80,19 @@ a:active {
 .navbar-inverse .navbar-nav > li > a{
 	color:#ddd;
 }
-
+/*--------------------------------------------------------------
+Downloads/issues
+--------------------------------------------------------------*/
+#history{
+	border-top:1px double #333;
+	padding-top:10px;
+	margin-top:50px;
+}
+.download-title{
+	font-size: 36px;
+	font-weight: 500;
+	font-family: "Helvetica Neue", "Helvetica", "Arial", "sans-serif";
+}
 /*--------------------------------------------------------------
 Footer
 --------------------------------------------------------------*/
