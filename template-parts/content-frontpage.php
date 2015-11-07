@@ -74,7 +74,7 @@
                 }
             } else {//NOT A FEATURED POST - use a small image
                  //USE A FEATURED IMAGE IF ONE EXISTS
-         		echo 'not featured';
+         		//echo 'not featured';
                 $postimageurl = get_post_meta($post->ID, 'post-img', true);//DOES IT HAVE A TN?
                 //echo $postimageurl;
                 if ( has_post_thumbnail() ) { ?>
