@@ -26,7 +26,10 @@
 
 		<?php the_content(); ?>
 			<a class="btn btn-primary" role="button" href="<?php bloginfo('url'); ?>/checkout?edd_action=add_to_cart&download_id=<?php echo get_the_ID(); ?>"><?php edd_price($post->ID);?> Buy the PDF</a>
-			<a class="btn btn-primary" href="<?php the_field('amazon_print_link') ?>" >Buy print edition</a>
+			<!-- <a class="btn btn-primary" href="<?php the_field('amazon_print_link') ?>" >Buy print edition</a> -->
+			<?php if (get_field('amazon_print_link') !== ''){?>
+								<a role="button" class="btn btn-primary" role="button" href="<?php the_field('amazon_print_link') ?>" >Buy print edition</a>
+							<?php } ?>
 
 			<p id="history" class="description"><em>Sensitive Skin,</em> an anthology of post-beat, pre-apocalyptic art, writing, music and whatnot, features work by both world-famous and new-and-emerging artists, writers, and musicians from around the globe.
 		
@@ -35,9 +38,9 @@
 		<p id="bottom" class="description"><em>Sensitive Skin</em> was reborn in the summer of 2010, and has presented original work by such esteemed writers, artists and musicians as Samuel R. Delaney, John Lurie, Gary Indiana, Sharon Mesmer, Charles Gatewood, Gretchen Faust, Alex Katz, Peter Blauner, Hal Sirowitz, Arthur Nersesian, Maggie Estep, Fred Frith, Evelyn Bencicova, Steve Dalachinsky, Marty Thau, Justine Frischmann, Craig Clevenger, Darius James, Stewart Home, Michael A. Gonzales, Drew Hubner, Jonathan Shaw, Melissa Febos, Stephen Lack, Max Blagg, Patricia Eakins, Díre McCain, Rob Roberge, Kurt Wolf, Erika Schickel, John S. Hall, Kevin Rafferty, Elliott Sharp, Mike Hudson, James Greer, Ruby Ray, William S. Burroughs and Allen Ginsberg.
 
 		<p class="description">
-		<?php the_terms( $post->ID, 'download_tag', 'Tags: ', ', ', '' );?>
+		<!--<?php the_terms( $post->ID, 'download_tag', 'Tags: ', ', ', '' );?>-->
 	</br>
-		<?php the_terms( $post->ID, 'download_category', 'Categories: ', ', ', '' );	?>
+		<!--<?php the_terms( $post->ID, 'download_category', 'Categories: ', ', ', '' );	?>-->
 	</p>
 		<?php
 			wp_link_pages( array(

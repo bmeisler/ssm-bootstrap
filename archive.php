@@ -52,7 +52,8 @@ get_header(); ?>
 
 			<?php endwhile; ?>
 
-			<?php the_posts_navigation(); ?>
+			<!--<?php the_posts_navigation(); ?>-->
+			<?php if (function_exists('wp_corenavi')) wp_corenavi(); ?>
 
 		<?php else : ?>
 
