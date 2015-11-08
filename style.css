@@ -65,7 +65,7 @@ a {
 a:hover,
 a:focus,
 a:active {
-	color: midnightblue;
+	color: red;
 }
 
 a:focus {
@@ -126,7 +126,7 @@ Footer
 }
 .footer-menu {
 	margin-left:0;
-	padding:0 0 30px 0;
+	font-size:0.8em;
 }
  
 .footer-menu li {
@@ -145,6 +145,8 @@ Footer
 }
 .copyright{
 	float:left;
+	font-size:0.8em;
+	margin-top: -10px;
 }
 .blogroll{
 	background-color: black;
@@ -442,6 +444,7 @@ img {
 	.no-stack{
 		display:none;
 	}
+	
 
 
 
@@ -488,15 +491,7 @@ Media Queries
 		display:block;
 	}
 
-	.blogroll .grid-item:nth-child(2){
-		display:block;
-	}
-	.blogroll .grid-item:nth-child(3){
-		display:block;
-	}
-	.blogroll 	.grid-item:nth-child(4){
-		display:block;
-	}
+	
 }
 
 /* Medium Devices, Desktops */
@@ -520,6 +515,19 @@ Media Queries
 		display:block;
 		min-width:340px;
 	}	
+	.blogroll .grid-item:nth-child(2){
+		display:block;
+	}
+	.blogroll .grid-item:nth-child(3){
+		display:block;
+	}
+	.blogroll 	.grid-item:nth-child(4){
+		display:block;
+	}
+	.copyright{
+	
+	margin-top: 10px;
+}
 	/* gives us a centered 'page' with a border and shadow */
 	#container {
 	    -moz-box-shadow: 0 0 5px 5px #888;
