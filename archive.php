@@ -17,9 +17,24 @@ get_header(); ?>
 
 			<header class="page-header">
 				<?php
-					the_archive_title( '<h1 class="page-title">', '</h1>' );
-					the_archive_description( '<div class="taxonomy-description">', '</div>' );
+					// the_archive_title( '<h1 class="page-title">', '</h1>' );
+
+					 the_archive_description( '<div class="taxonomy-description">', '</div>' );
 				?>
+				<?php if (is_category()) { ?>
+						    <h1 class="archive-title h2">
+							    <?php single_cat_title(); ?>
+					    	</h1>
+					    
+					    <?php } elseif (is_tag()) { ?> 
+						    <h1 class="archive-title h2"> 
+							   <?php single_tag_title(); ?>
+						    </h1>
+					    
+					    <?php } elseif (is_author()) { 
+					    	global $post;
+					    	$author_id = $post->post_author;
+					    }?>
 			</header><!-- .page-header -->
 
 			<?php /* Start the Loop */ ?>
