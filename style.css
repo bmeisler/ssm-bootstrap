@@ -55,9 +55,9 @@ a {
 	color: royalblue;
 }
 
-a:visited {
+/*a:visited {
 	color: #666;
-}
+}*/
 .btn > a:visited{
 	color: #eee;
 }
