@@ -19,7 +19,7 @@ get_header(); ?>
 
 			<?php 
 			// the query
-			$the_query = new WP_Query( array('post_type' => 'download', 'download_category'=>'print-issues-volume-2') ); ?>
+			$the_query = new WP_Query( array('post_type' => 'download', 'download_category'=>'print-issues-volume-2', 'posts_per_page'=>20) ); ?>
 
 			<?php if ( $the_query->have_posts() ) : ?>
 
