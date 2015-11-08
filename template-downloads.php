@@ -2,7 +2,7 @@
 /**
  * Template Name: Downloads Template
  *
- * This is the template that displays all the custom Books posts.
+ * This is the template that displays all the downloads (back issues) in a grid.
  *
  * @package Sensitive_Skin_Bootstrap
  */
@@ -14,7 +14,6 @@ get_header(); ?>
 
 <div class="container">
 	<div class="row">
-
 	<div id="primary" class="col-md-12 col-lg-12">
 		<main id="main" class="site-main books" role="main">
 
@@ -39,8 +38,15 @@ get_header(); ?>
 							
 							<p><?php the_field('brief_description') ?></p>
 							<!-- <a href="<?php the_permalink(); ?>" class="btn btn-primary">More info</a></br> -->
-							      	<a role="button" class="btn btn-primary" role="button" href="<?php the_field('amazon_print_link') ?>" >Buy it on Amazon</a>
-   		<a role="button" class="btn btn-primary offset5" role="button" href="<?php the_field('kindle_link') ?>" >Buy it on Kindle</a>
+							<?php if (get_field('amazon_print_link') !== ''){?>
+								<a role="button" class="btn btn-primary" role="button" href="<?php the_field('amazon_print_link') ?>" >Buy print version</a>
+							<?php } ?>
+
+							 
+							      	
+<!--    					<a role="button" class="btn btn-primary offset5"  href="<?php the_field('kindle_link') ?>" >Buy it on Kindle</a>
+ -->   					<a role="button" class="btn btn-primary offset5"  href="<?php bloginfo('url'); ?>/checkout?edd_action=add_to_cart&download_id=<?php echo get_the_ID(); ?>"><?php edd_price($post->ID);?> Buy  PDF</a>
+
 
 						</div>
 					</div>
