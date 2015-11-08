@@ -10,7 +10,7 @@
 ?>
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<header class="entry-header">
-		<?php the_title( '<h1 class="entry-title download-title">', '</h1>' ); 
+		<?php the_title( '<h1 class="page-title download-title">', '</h1>' ); 
 		
         ?>
 		<!--<div class="entry-meta">
@@ -32,12 +32,13 @@
 		
 		<p class="description"><em>Sensitive Skin</em> began as a print venture from New York’s Lower East Side in the 1990s, and published such literary luminaries as Richard Hell, Steve Cannon, Jack Micheline, Penny Arcade, Eileen Myles, Lynne Tillman, Patrick McGrath, Bob Holman, Maggie Estep, Emily XYZ, Herbert Huncke and Joel Rose, with art by Andres Serrano, Ari Marcopolis, Andrew Castrucci and James Romberger, to name but a few….
 
-		<p class="description"><em>Sensitive Skin</em> was reborn in the summer of 2010, and has presented original work by such esteemed writers, artists and musicians as Samuel R. Delaney, John Lurie, Gary Indiana, Sharon Mesmer, Charles Gatewood, Gretchen Faust, Alex Katz, Peter Blauner, Hal Sirowitz, Arthur Nersesian, Maggie Estep, Fred Frith, Evelyn Bencicova, Steve Dalachinsky, Marty Thau, Justine Frischmann, Craig Clevenger, Darius James, Stewart Home, Michael A. Gonzales, Drew Hubner, Jonathan Shaw, Melissa Febos, Stephen Lack, Max Blagg, Patricia Eakins, Díre McCain, Rob Roberge, Kurt Wolf, Erika Schickel, John S. Hall, Kevin Rafferty, Elliott Sharp, Mike Hudson, James Greer, Ruby Ray, William S. Burroughs and Allen Ginsberg.
+		<p id="bottom" class="description"><em>Sensitive Skin</em> was reborn in the summer of 2010, and has presented original work by such esteemed writers, artists and musicians as Samuel R. Delaney, John Lurie, Gary Indiana, Sharon Mesmer, Charles Gatewood, Gretchen Faust, Alex Katz, Peter Blauner, Hal Sirowitz, Arthur Nersesian, Maggie Estep, Fred Frith, Evelyn Bencicova, Steve Dalachinsky, Marty Thau, Justine Frischmann, Craig Clevenger, Darius James, Stewart Home, Michael A. Gonzales, Drew Hubner, Jonathan Shaw, Melissa Febos, Stephen Lack, Max Blagg, Patricia Eakins, Díre McCain, Rob Roberge, Kurt Wolf, Erika Schickel, John S. Hall, Kevin Rafferty, Elliott Sharp, Mike Hudson, James Greer, Ruby Ray, William S. Burroughs and Allen Ginsberg.
 
-		
-		<?php the_terms( $post->ID, 'download_tag', 'Tags: ', ', ', '' );
-		the_terms( $post->ID, 'download_category', 'Categories: ', ', ', '' );	?>
-
+		<p class="description">
+		<?php the_terms( $post->ID, 'download_tag', 'Tags: ', ', ', '' );?>
+	</br>
+		<?php the_terms( $post->ID, 'download_category', 'Categories: ', ', ', '' );	?>
+	</p>
 		<?php
 			wp_link_pages( array(
 				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'sensitive-skin-bootstrap' ),
