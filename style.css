@@ -51,31 +51,31 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 /*--------------------------------------------------------------
 ## Links
 --------------------------------------------------------------*/
-a {
+/*a {
 	color: royalblue;
 }
 
 /*a:visited {
 	color: #666;
 }*/
-.btn > a:visited{
+/*.btn > a:visited{
 	color: #eee;
-}
+}*/
 
-a:hover,
+/*a:hover,
 a:focus,
 a:active {
 	color: red;
-}
+}*/
 
-a:focus {
+/*a:focus {
 	outline: thin dotted;
-}
+}*/
 
-a:hover,
+/*a:hover,
 a:active {
 	outline: 0;
-}
+}*/
 
 .navbar-inverse .navbar-nav > li > a{
 	color:#ddd;
@@ -683,10 +683,10 @@ Book styles
     outline: none;
     color: #000;
 }
-.book-category-title a:hover {
+/*.book-category-title a:hover {
     text-decoration: underline;
     color: #cc0000;
-}
+}*/
 .book-category-author{
     font-family: Georgia, "Times New Roman", Times, serif;
 
