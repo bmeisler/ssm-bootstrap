@@ -291,4 +291,4 @@ require get_template_directory() . '/inc/post-types/register-book.php';
  * Easy Digital Downloads - change post type from "download" to "issue"
  */
 require get_template_directory() . '/inc/edd.php';
-define('EDD_SLUG', 'thangs'); 
+define('EDD_SLUG', 'downloads'); 
