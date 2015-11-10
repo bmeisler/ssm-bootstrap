@@ -15,7 +15,18 @@
 
 		<?php if ( 'post' === get_post_type() ) : ?>
 		<div class="entry-meta">
-			<?php sensitive_skin_bootstrap_posted_on(); ?>
+			<?php 
+			// sensitive_skin_bootstrap_posted_on(); 
+			$subtitle = get_post_meta($post->ID, 'subtitle', true);
+            if (!$subtitle)
+            {
+                echo 'by <span class="author">'.get_the_author().'</span>';
+            }
+            else if ($subtitle)
+            {
+                echo 'by <span class="author">'.$subtitle.'</span>';
+            }
+            ?>
 		</div><!-- .entry-meta -->
 		<?php endif; ?>
 	</header><!-- .entry-header -->
