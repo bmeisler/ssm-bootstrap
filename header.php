@@ -50,6 +50,16 @@
 						<span class="icon-bar"></span>
 						<span class="icon-bar"></span>
 					</button>
+					<div id="awesome-social-buttons">
+					<a class="btn btn-social-icon btn-sm btn-twitter" href="http://www.twitter.com/sensitivemag">
+    					<span class="fa fa-twitter"></span>
+  					</a>
+  					<a class="btn btn-social-icon btn-sm btn-facebook" href="http://www.facebook.com/sensitiveskin">
+					    <span class="fa fa-facebook"></span>
+					  </a>
+					  
+
+  				</div>
 <!-- 					<a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a>
  -->					<!-- <a class="navbar-brand" href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php bloginfo( 'name' ) ?>" rel="homepage"><?php bloginfo( 'name' ) ?></a> -->
 				</div>

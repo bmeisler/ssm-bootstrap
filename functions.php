@@ -226,7 +226,7 @@ add_action( 'widgets_init', 'sensitive_skin_bootstrap_widgets_init' );
 function sensitive_skin_bootstrap_scripts() {
 	wp_enqueue_style( 'bootstrap-styles', get_template_directory_uri() . '/css/bootstrap.min.css', array(), '3.3.5', 'all' );
 	wp_enqueue_style( 'font-awesome', get_template_directory_uri() . '/css/font-awesome.min.css', array(), '4.4.0', 'all' );
-	wp_enqueue_style( 'bootstrap-social', get_template_directory_uri() . '/css/bootstrap-social.min.css', array(), '4.4.0', 'all' );
+	wp_enqueue_style( 'bootstrap-social', get_template_directory_uri() . '/css/bootstrap-social.css', array(), '4.4.0', 'all' );
 
 	/* we have particular ssm stles, leftover from older versions - load these BEFORE bootstrap styles, so bootstrap is favored */
 	wp_enqueue_style( 'ssm-styles', get_template_directory_uri() . '/css/ssm.min.css', array(), '1.0', 'all' );
