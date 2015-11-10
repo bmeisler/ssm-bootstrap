@@ -31,7 +31,7 @@
                            $currentAlignment = "left";
                     	?>
                     	<figure class="post-img-medium">
-	                        <a href="<?php the_permalink(); ?>" rel="bookmark">
+	                        <a href="<?php the_permalink(); ?>" class="the-display" rel="bookmark">
 	                            <img src="<?php echo $img_path; ?>"  />
 	                         </a>
                         </figure>
@@ -40,7 +40,7 @@
 	                       	$currentAlignment = "right";
 	                       	?>
 	                       	<figure class="post-img-medium-right">
-	                            <a href="<?php the_permalink(); ?>" rel="bookmark">
+	                            <a href="<?php the_permalink(); ?>" class="the-display" rel="bookmark">
 	                                <img src="<?php echo $img_path; ?>"  />
 	                             </a>
                             </figure>
@@ -50,7 +50,7 @@
                     <?php
                     } else if ($width >= 400){ ?>
                     	<figure class="post-img-large">
-	                        <a href="<?php the_permalink(); ?>" rel="bookmark">
+	                        <a href="<?php the_permalink(); ?>" class="the-display" rel="bookmark">
 	                            <img src="<?php echo $img_path; ?>"  />
 	                        </a>
                         </figure>
@@ -61,7 +61,7 @@
                 	if ( has_post_thumbnail() ) { ?>
                 
                 	<figure class="post-img-medium">
-	                    <a href="<?php the_permalink(); ?>" rel="bookmark">
+	                    <a href="<?php the_permalink(); ?>" class="the-display" rel="bookmark">
 	                        <?php the_post_thumbnail('archive-thumb');?>
 	                    </a>
                 	</figure> 
@@ -80,7 +80,7 @@
                 if ( has_post_thumbnail() ) { ?>
                 
                 	<figure class="post-img-medium">
-	                    <a href="<?php the_permalink(); ?>" rel="bookmark">
+	                    <a href="<?php the_permalink(); ?>" class="the-display" rel="bookmark">
 	                        <?php the_post_thumbnail('archive-thumb');?>
 	                    </a>
                 	</figure> 
@@ -98,7 +98,7 @@
 	                    //echo 'width: '.$width;
 	                    ?>
 	                    <figure class="post-img-medium">
-	                        <a href="<?php the_permalink(); ?>" rel="bookmark">
+	                        <a href="<?php the_permalink(); ?>" class="the-display" rel="bookmark">
 	                            <img src="<?php echo $img_path; ?>"  />
 	                         </a>
                         </figure>
@@ -106,7 +106,7 @@
 	                }else{
 	                	if ($postimageurl){ ?>
                          <figure class="post-img-medium-right">
-                            <a href="<?php the_permalink(); ?>" rel="bookmark"><img src="<?php  bloginfo( 'wpurl' ); ?>/wp-content/images/tns/<?php echo $postimageurl; ?>" alt="Post Pic"  /></a>
+                            <a href="<?php the_permalink(); ?>" class="the-display" rel="bookmark"><img src="<?php  bloginfo( 'wpurl' ); ?>/wp-content/images/tns/<?php echo $postimageurl; ?>" alt="Post Pic"  /></a>
                          </figure>
                       <?php 
                   		}
