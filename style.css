@@ -83,6 +83,18 @@ a:active {
 #awesome-social-buttons{
 	padding-top:10px;
 }
+.input-group{
+	width: 140px;
+}
+.btn-social-icon {
+    color: #fff; 
+    text-decoration: none;
+}
+.btn-social-icon:hover {
+    color: #cc0000; 
+    text-decoration: none;
+}
+
 /*--------------------------------------------------------------
 Downloads/issues
 --------------------------------------------------------------*/

@@ -26,19 +26,21 @@
 <!-- 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'sensitive-skin-bootstrap' ); ?></a>
  -->
 
-
-		<div id="headerimage">
-
-            <?php if (is_home()) { ?> 
-            	<h1>Sensitive Skin Magazine</h1>
-            <?php } else { ?>
-            	<h3>Sensitive Skin Magazine</h3>
-            <?php } ?>
-            <!--LOGO-->
-            <figure id="figure-logo">
-            	<a href="<?php bloginfo('url'); ?>" ><img src="http://www.sensitiveskinmagazine.com/wp-content/images/SensitiveSkinLogo_trimmed_halfsize.png" alt="SensitiveSkinLogo" /></a>
-            </figure>
-        </div>
+ 	<div id="headerimage">
+                    	
+                        <?php if (is_home()) { ?> 
+                        	<h1>Sensitive Skin Magazine</h1>
+                        <?php } else { ?>
+                        	<h3>Sensitive Skin Magazine</h3>
+                        <?php } ?>
+                        <!--LOGO-->
+                        <figure id="figure-logo">
+                        <a href="<?php bloginfo('url'); ?>" >
+                        	<!-- <img src="http://www.sensitiveskinmagazine.com/wp-content/images/SensitiveSkinLogo_trimmed_halfsize.png" alt="SensitiveSkinLogo" /> -->
+                        	<img src="http://www.sensitiveskinmagazine.com/wp-content/images/SSMLogo.svg" />
+                        </a>
+                        </figure>
+                    </div>
 
 		<nav role="navigation">
 		<div class="navbar navbar-static-top navbar-inverse">
@@ -51,15 +53,19 @@
 						<span class="icon-bar"></span>
 					</button>
 					<div id="awesome-social-buttons">
-					<a class="btn btn-social-icon btn-sm btn-twitter" href="http://www.twitter.com/sensitivemag">
-    					<span class="fa fa-twitter"></span>
-  					</a>
-  					<a class="btn btn-social-icon btn-sm btn-facebook" href="http://www.facebook.com/sensitiveskin">
-					    <span class="fa fa-facebook"></span>
-					  </a>
-					  
-
-  				</div>
+						
+					
+						<a class="btn btn-social-icon btn-sm " href="http://www.twitter.com/sensitivemag">
+	    					<span class="fa fa-twitter"></span>
+	  					</a>
+	  					<a class="btn btn-social-icon btn-sm" href="http://www.facebook.com/sensitiveskin">
+						    <span class="fa fa-facebook"></span>
+						</a>
+						<a class="btn btn-social-icon btn-sm btn-google-plus" <a href="//plus.google.com/100022193362098500932?prsrc=3">
+						    <span class="fa fa-google-plus"></span>
+						</a>
+					
+  					</div>
 <!-- 					<a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a>
  -->					<!-- <a class="navbar-brand" href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php bloginfo( 'name' ) ?>" rel="homepage"><?php bloginfo( 'name' ) ?></a> -->
 				</div>
