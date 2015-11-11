@@ -15,19 +15,19 @@ Previously, on Sensitive Skin!
  -->			
  					<div class="grid-item">
 						<?php if ($postimageurl) { ?>
-							<a href="<?php the_permalink(); ?>" rel="bookmark">
+							<a class="the-display" href="<?php the_permalink(); ?>" rel="bookmark">
 								<img class="img-responsive" src="<?php  bloginfo( 'wpurl' ); ?>/wp-content/images/tns/<?php echo $postimageurl; ?>" alt="Post Pic" />
 							</a>
 
 						<?php } else if ( has_post_thumbnail() ) { ?>
-							<a href="<?php the_permalink(); ?>" rel="bookmark">
+							<a class="the-display" href="<?php the_permalink(); ?>" rel="bookmark">
 							<?php
 								the_post_thumbnail('thumbnail', array( 'class' => 'img-responsive' ) ); 
 							?>
 							</a>
 							<?php
 							}else { ?>
-							<a href="<?php the_permalink(); ?>" rel="bookmark">
+							<a class="the-display" href="<?php the_permalink(); ?>" rel="bookmark">
 								<img class="img-responsive" src="/wp-content/images/tns/default-img_inverted.jpg" />
 							</a>
 							

@@ -31,7 +31,7 @@ get_header(); ?>
 
 					<div class="col-sm-6 col-md-4 item">
 						<div class="book-item">
-							<a class="thumbnail" href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>">
+							<a class="thumbnail the-display" href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>">
 							<?php the_post_thumbnail('large'); ?>
 							</a>
 							<h4><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h4>

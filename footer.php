@@ -49,6 +49,11 @@
 </div> <!-- end #container -->
 
 <?php wp_footer(); ?>
+   <script src="<?php bloginfo('wpurl'); ?>/wp-content/js/googleanalytics.js" type="text/javascript"></script>
 
+    <?php if( $_SERVER['SERVER_ADDR'] != '127.0.0.1'){ ?>
+            <?php   echo '<script src="//static.getclicky.com/js" type="text/javascript"></script>';?>
+            <?php   echo '<script type="text/javascript">try{ clicky.init(66421456); }catch(e){}</script>';?>
+            <?php   echo '<noscript><p><img alt="Clicky" width="1" height="1" src="//in.getclicky.com/66421456ns.gif" /></p></noscript>'; }?>
 </body>
 </html>

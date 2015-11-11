@@ -60,9 +60,9 @@
                 	//echo "no image found in post, use thumbnail";
                 	if ( has_post_thumbnail() ) { ?>
                 
-                	<figure class="post-img-medium">
+                	<figure class="post-img-large">
 	                    <a href="<?php the_permalink(); ?>" class="the-display" rel="bookmark">
-	                        <?php the_post_thumbnail('archive-thumb');?>
+	                        <?php the_post_thumbnail('large');?>
 	                    </a>
                 	</figure> 
 
