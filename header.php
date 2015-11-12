@@ -28,7 +28,9 @@
 <div id="page" class="hfeed site">
 <!-- 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'sensitive-skin-bootstrap' ); ?></a>
  -->
-
+<div class="hidden">
+	 <h1>Sensitive Skin Magazine</h1>
+                    </div>
 <!--  	<div id="headerimage">
                     	
                         <?php if (is_home()) { ?> 
@@ -54,7 +56,7 @@
 						<span class="icon-bar"></span>
 
 					</button>
-					<a class="navbar-brand" href="#">
+					<a class="navbar-brand" href="<?php bloginfo('url'); ?>">
 						<img src="http://www.sensitiveskinmagazine.com/wp-content/images/SSMLogo.svg" width="200" height="auto" />
 					</a>
 

@@ -76,16 +76,33 @@ a:active {
 a:active {
 	outline: 0;
 }*/
-
-.navbar-inverse .navbar-nav > li > a{
-	color:#ddd;
+/*--------------------------------------------------------------
+## Navbar
+--------------------------------------------------------------*/
+.nav > li > a{
+	color:#c00;
 }
-.navbar-nav{
+.nav > li > a:hover{
+	color:#c00;
+}
+.navbar {
+	border-bottom: solid 1px #666;
+	margin-bottom: 50px;
+	opacity: 0.96;
+    filter: alpha(opacity=96); /* For IE8 and earlier */
+}
+.nav-form{
+	padding-top: 10px;
+}
+.navbar-header{
+	margin-top: -5px;
+	}
+/*.navbar-nav{
 	padding-top: 10px;
     padding-bottom: 5px;
     background: rgba(245,245,245,0.88);
     box-shadow: 0 0 2px #999;
-}
+}*/
 /*.navbar-brand img{
 	max-width:50%;
 	height: auto;
@@ -95,7 +112,7 @@ a:active {
 }
 
 .btn-social-icon {
-    color: #fff; 
+    color: #333; 
     text-decoration: none;
 }
 .btn-social-icon:hover {
@@ -582,14 +599,13 @@ Media Queries
 }
 	/* gives us a centered 'page' with a border and shadow */
 	#container {
-	    -moz-box-shadow: 0 0 5px 5px #888;
+	    /*-moz-box-shadow: 0 0 5px 5px #888;
 	    -webkit-box-shadow: 0 0 5px 5px#888;
 	    box-shadow: 0 0 5px 5px #888;
-	    width: 1080px; 
+	    width: 1080px; */
 	    position: relative;
 		height: auto;
 		margin: 0px auto;
-	   /* background-color: blue;  */
 	}
 }
 
