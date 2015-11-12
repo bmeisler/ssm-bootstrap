@@ -80,6 +80,16 @@ a:active {
 .navbar-inverse .navbar-nav > li > a{
 	color:#ddd;
 }
+.navbar-nav{
+	padding-top: 10px;
+    padding-bottom: 5px;
+    background: rgba(245,245,245,0.88);
+    box-shadow: 0 0 2px #999;
+}
+/*.navbar-brand img{
+	max-width:50%;
+	height: auto;
+}*/
 #awesome-social-buttons{
 	padding-top:10px;
 }

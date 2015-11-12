@@ -29,33 +29,36 @@
 <!-- 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'sensitive-skin-bootstrap' ); ?></a>
  -->
 
- 	<div id="headerimage">
+<!--  	<div id="headerimage">
                     	
                         <?php if (is_home()) { ?> 
                         	<h1>Sensitive Skin Magazine</h1>
                         <?php } else { ?>
                         	<h3>Sensitive Skin Magazine</h3>
                         <?php } ?>
-                        <!--LOGO-->
                         <figure id="figure-logo">
                         <a href="<?php bloginfo('url'); ?>" >
-                        	<!-- <img src="http://www.sensitiveskinmagazine.com/wp-content/images/SensitiveSkinLogo_trimmed_halfsize.png" alt="SensitiveSkinLogo" /> -->
                         	<img src="http://www.sensitiveskinmagazine.com/wp-content/images/SSMLogo.svg" />
                         </a>
                         </figure>
-                    </div>
+                    </div> -->
 
-		<nav role="navigation">
-		<div class="navbar navbar-static-top navbar-inverse">
-			<div class="container">
-				<!-- .navbar-toggle is used as the toggle for collapsed navbar content -->
+		<nav role="navigation" class="navbar navbar-default navbar-fixed-top">
+		<div class="container-fluid navbar-static-top" ><!-- class="navbar navbar-static-top navbar-inverse" -->
+<!-- 			<div class="container">
+ -->				<!-- .navbar-toggle is used as the toggle for collapsed navbar content -->
 				<div class="navbar-header">
 					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
 						<span class="icon-bar"></span>
 						<span class="icon-bar"></span>
 						<span class="icon-bar"></span>
+
 					</button>
-					<div id="awesome-social-buttons">
+					<a class="navbar-brand" href="#">
+						<img src="http://www.sensitiveskinmagazine.com/wp-content/images/SSMLogo.svg" width="200" height="auto" />
+					</a>
+
+					<!-- <div id="awesome-social-buttons">
 						
 					
 						<a class="btn btn-social-icon btn-sm " href="http://www.twitter.com/sensitivemag">
@@ -68,12 +71,21 @@
 						    <span class="fa fa-google-plus"></span>
 						</a>
 					
-  					</div>
+  					</div> -->
 <!-- 					<a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a>
  -->					<!-- <a class="navbar-brand" href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php bloginfo( 'name' ) ?>" rel="homepage"><?php bloginfo( 'name' ) ?></a> -->
 				</div>
-
+				
 				<div class="navbar-collapse collapse navbar-responsive-collapse">
+
+					<form class="navbar-form navbar-left" role="search">
+			        <div class="form-group">
+			          <input type="text" class="form-control search-query" name="s" placeholder="Search">
+			        </div>
+			        <button type="submit" class="btn btn-default" id="searchsubmit" value="Search">
+			        <span class="glyphicon glyphicon-search" aria-hidden="true"></span></button>
+			      </form>
+
 					<?php
 
 					$args = array(
@@ -90,7 +102,8 @@
 
 					?>
 				</div>
-			</div>
+
+			<!-- </div> -->
 		</div>           
 	</nav>
 	</header><!-- #masthead -->
