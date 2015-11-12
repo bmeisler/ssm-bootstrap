@@ -61,7 +61,7 @@
 						
 					<div class="navbar-collapse collapse navbar-responsive-collapse">
 
-						<form class="navbar-form navbar-left" role="search">
+						<form method="get" class="navbar-form navbar-left form-search" role="search" action="http://www.sensitiveskinmagazine.com">
 				        	<div class="form-group">
 				          		<input type="text" class="form-control search-query" name="s" placeholder="Search">
 				        	</div>
