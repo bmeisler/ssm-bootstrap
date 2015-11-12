@@ -15,7 +15,11 @@
      
 		<!-- <div class="btn-group"> -->
       	<a role="button" class="btn btn-primary" role="button" href="<?php the_field('amazon_print_link') ?>" >Buy it on Amazon</a>
-   		<a role="button" class="btn btn-primary offset5" role="button" href="<?php the_field('kindle_link') ?>" >Buy it on Kindle</a>
+   		
+
+   		<?php if (get_field('kindle_link') !== ''){?>
+								<a role="button" class="btn btn-primary offset5" role="button" href="<?php the_field('kindle_link') ?>" >Buy it on Kindle</a>
+							<?php } ?>
     	<!-- </div> -->
    
 
