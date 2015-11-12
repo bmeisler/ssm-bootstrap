@@ -333,18 +333,18 @@ img {
 	overflow:hidden;
 }
 .the-display img {
-	-webkit-filter:brightness(80%);
-	-moz-filter:brightness(80%);
-	filter:brightness(80%);
+	-webkit-filter:brightness(100%);
+	-moz-filter:brightness(100%);
+	filter:brightness(100%);
 	-webkit-transition:all 0.4s ease-out;
 	-moz-transition:all 0.4s ease-out;
 	-o-transition:all 0.4s ease-out;
 	transition:all 0.4s ease-out;
 }
 .the-display:hover img {
-	-webkit-filter:brightness(100%);
-	-moz-filter:brightness(100%);
-	filter:brightness(100%);
+	-webkit-filter:brightness(110%);
+	-moz-filter:brightness(110%);
+	filter:brightness(110%);
 	transform:scale(1.2);
 }
 
