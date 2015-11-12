@@ -38,7 +38,7 @@
 
 						</button>
 						<a class="navbar-brand" href="<?php bloginfo('url'); ?>">
-							<img src="http://www.sensitiveskinmagazine.com/wp-content/images/SSMLogo.svg" width="200" height="auto" />
+							<img id="logo" src="http://www.sensitiveskinmagazine.com/wp-content/images/SSMLogo.svg" width="200" height="auto" />
 						</a>
 
 							<!-- <div id="awesome-social-buttons">
