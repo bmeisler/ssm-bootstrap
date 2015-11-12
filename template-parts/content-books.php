@@ -4,7 +4,7 @@
  *
  */
 ?>
-
+foo
 <article id="post-<?php the_ID(); ?>" <?php post_class('clearfix'); ?> role="article" itemscope itemtype="http://schema.org/BlogPosting">
 						
 	<header class="article-header">
@@ -18,8 +18,8 @@
    		
 
    		<?php if (get_field('kindle_link') !== ''){?>
-								<a role="button" class="btn btn-primary offset5" role="button" href="<?php the_field('kindle_link') ?>" >Buy it on Kindle</a>
-							<?php } ?>
+				<a role="button" class="btn btn-primary offset5" role="button" href="<?php the_field('kindle_link') ?>" >Buy it on Kindle</a>
+		<?php } ?>
     	<!-- </div> -->
    
 
@@ -27,9 +27,9 @@
 		
 	<section class="entry-content clearfix" itemprop="articleBody">
 		 <!-- <div><figure class='figure-50-left'><img src="<?php the_field('cover_image') ?>" /></figure></div> -->
-		<div><figure class='figure-50-left'> <a class="thumbnail" href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>">
-							<?php the_post_thumbnail('large'); ?>
-							</a></figure></div>
+		<div><figure class='figure-50-left'> <a class="the-display" href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>">
+				<?php the_post_thumbnail('large'); ?>
+				</a></figure></div>
 
 		<?php the_content(); ?>
 

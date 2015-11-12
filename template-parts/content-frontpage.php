@@ -69,7 +69,12 @@
             	<?php 
             		
                 	}else{
-                		//echo "try something else";
+                		if ($postimageurl){ ?>
+                         <figure class="post-img-medium-right">
+                            <a href="<?php the_permalink(); ?>" class="the-display" rel="bookmark"><img src="<?php  bloginfo( 'wpurl' ); ?>/wp-content/images/tns/<?php echo $postimageurl; ?>" alt="Post Pic"  /></a>
+                         </figure>
+                      <?php 
+                  		}
                 	}
                 }
             } else {//NOT A FEATURED POST - use a small image

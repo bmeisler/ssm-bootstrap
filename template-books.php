@@ -52,7 +52,9 @@ get_header(); ?>
 							<p><?php the_field('brief_description') ?></p>
 							<!-- <a href="<?php the_permalink(); ?>" class="btn btn-primary">More info</a></br> -->
 							      	<a role="button" class="btn btn-primary" role="button" href="<?php the_field('amazon_print_link') ?>" >Buy it on Amazon</a>
-   		<a role="button" class="btn btn-primary offset5" role="button" href="<?php the_field('kindle_link') ?>" >Buy it on Kindle</a>
+							      	<?php if (get_field('kindle_link') !== ''){?>
+				<a role="button" class="btn btn-primary offset5" role="button" href="<?php the_field('kindle_link') ?>" >Buy it on Kindle</a>
+		<?php } ?>
 
 						</div>
 					</div>
