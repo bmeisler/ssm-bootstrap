@@ -103,6 +103,18 @@ function sensitive_skin_bootstrap_content_width() {
 add_action( 'after_setup_theme', 'sensitive_skin_bootstrap_content_width', 0 );
 
 
+/*customizing jetpack so it does not place social and like buttons after content automatically
+otherwise the buttons show up in the bottom links area. Added custom code to content-single so 
+social buttons show up before AND after content*/
+function jptweak_remove_share() {
+    remove_filter( 'the_content', 'sharing_display',19 );
+    remove_filter( 'the_excerpt', 'sharing_display',19 );
+    if ( class_exists( 'Jetpack_Likes' ) ) {
+        remove_filter( 'the_content', array( Jetpack_Likes::init(), 'post_likes' ), 30, 1 );
+    }
+}
+ 
+add_action( 'loop_start', 'jptweak_remove_share' );
 /*************************NAVIGATION***********************/
 
 /*great pagination script! no worries about nested categories */
@@ -295,3 +307,5 @@ require get_template_directory() . '/inc/post-types/register-book.php';
  */
 require get_template_directory() . '/inc/edd.php';
 define('EDD_SLUG', 'downloads'); 
+
+

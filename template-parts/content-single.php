@@ -31,8 +31,29 @@
 	</header><!-- .entry-header -->
 
 	<div class="entry-content single-content clearfix">
-		
+		<?php		
+		// custom code to add JetPack social buttons before content
+		if ( function_exists( 'sharing_display' ) ) {
+		    sharing_display( '', true );
+		}
+		 
+		if ( class_exists( 'Jetpack_Likes' ) ) {
+		    $custom_likes = new Jetpack_Likes;
+		    echo $custom_likes->post_likes( '' );
+		}
+		?>
 		<?php the_content(); ?>
+		<?php		
+		// custom code to add JetPack social buttons after content too!
+		if ( function_exists( 'sharing_display' ) ) {
+		    sharing_display( '', true );
+		}
+		 
+		if ( class_exists( 'Jetpack_Likes' ) ) {
+		    $custom_likes = new Jetpack_Likes;
+		    echo $custom_likes->post_likes( '' );
+		}
+		?>
 		<?php
 			wp_link_pages( array(
 				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'sensitive-skin-bootstrap' ),
