@@ -11,7 +11,6 @@
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<div class="archive-content">
-
 		<?php
 			 if (has_tag( 'featured')) { //If this is a featured post, try to use as large a preview image as possible
       			//echo 'featured<br>';
@@ -69,6 +68,7 @@
             	<?php 
             		
                 	}else{
+                		$postimageurl = get_post_meta($post->ID, 'post-img', true);//DOES IT HAVE A TN?
                 		if ($postimageurl){ ?>
                          <figure class="post-img-medium-right">
                             <a href="<?php the_permalink(); ?>" class="the-display" rel="bookmark"><img src="<?php  bloginfo( 'wpurl' ); ?>/wp-content/images/tns/<?php echo $postimageurl; ?>" alt="Post Pic"  /></a>
@@ -79,24 +79,24 @@
                 }
             } else {//NOT A FEATURED POST - use a small image
                  //USE A FEATURED IMAGE IF ONE EXISTS
-         		//echo 'not featured';
+         		 //echo 'not a featured post';
                 $postimageurl = get_post_meta($post->ID, 'post-img', true);//DOES IT HAVE A TN?
-                //echo $postimageurl;
-                if ( has_post_thumbnail() ) { ?>
+                 //echo $postimageurl;
+                // echo "no featured image, get an image";
+            	$img_path =  catch_that_image();
+            	 //echo '$image_path: '.$img_path;
+
+            	if ( has_post_thumbnail() ) { ?>
                 
                 	<figure class="post-img-medium">
 	                    <a href="<?php the_permalink(); ?>" class="the-display" rel="bookmark">
 	                        <?php the_post_thumbnail('archive-thumb');?>
 	                    </a>
                 	</figure> 
-
-            	<?php 
-            	}else{
-            		//echo "get an image";
-            		$img_path =  catch_that_image();
-                
-	                if ($img_path != '' && $img_path != null){ //if there is an image in the post, use it and style it according to size
-	                	//echo $img_path;
+                <?php    
+	            }
+                else if ($img_path !== '' && $img_path !== null && $img_path !== undefined){ //if there is an image in the post, use it and style it according to size
+	                	//echo 'using $img_path'.$img_path;
 	                	$sizes = getimagesize($img_path);
 	                    $width = $sizes[0];
 	                    $height = $sizes[1];
@@ -108,15 +108,18 @@
 	                         </a>
                         </figure>
                     <?php    
-	                }else{
-	                	if ($postimageurl){ ?>
+	                
+
+            	}else if ($postimageurl !== '' && $postimageurl !== null){ 
+					//echo 'using postimageurl'
+            		?>
+
                          <figure class="post-img-medium-right">
                             <a href="<?php the_permalink(); ?>" class="the-display" rel="bookmark"><img src="<?php  bloginfo( 'wpurl' ); ?>/wp-content/images/tns/<?php echo $postimageurl; ?>" alt="Post Pic"  /></a>
                          </figure>
                       <?php 
-                  		}
-	                }
-            	}
+                }
+            	
             }?>
 		<header class="entry-header">
 

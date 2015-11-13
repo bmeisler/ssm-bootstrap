@@ -37,7 +37,7 @@
 	<div class="entry-content clearfix">
 		<?php if ( has_post_thumbnail() ) : ?>
 			<a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>">
-			
+			'goo'
 			<?php if ( has_post_thumbnail() ) { ?>
                                 <figure class="post-img-thumb">
                                     <a href="<?php the_permalink(); ?>" rel="bookmark">
