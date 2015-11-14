@@ -7,6 +7,11 @@
  * @package Sensitive_Skin_Bootstrap
  */
 
+
+?>
+<?php
+//ini_set('display_errors', 'On');
+//error_reporting(E_ALL);
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
@@ -16,9 +21,11 @@
       			//echo 'featured<br>';
       			
                 $img_path =  catch_that_image();
+                //echo '</br>$image_path: '.$img_path;
+
+
                 
                 if ($img_path != '' && $img_path != null){ //if there is an image in the post, use it and style it according to size
-                //	echo $img_path;
                 	$sizes = getimagesize($img_path);
                     $width = $sizes[0];
                     $height = $sizes[1];
@@ -57,7 +64,10 @@
                 	}          
                 }else{//no image found in post, use small thumbnail - eg Hardin's Drone loops
                 	//echo "no image found in post, use thumbnail";
-                	if ( has_post_thumbnail() ) { ?>
+                	if ( has_post_thumbnail() ) { 
+                		//echo 'use thumbnail'
+                		?>
+
                 
                 	<figure class="post-img-large">
 	                    <a href="<?php the_permalink(); ?>" class="the-display" rel="bookmark">
@@ -69,7 +79,8 @@
             		
                 	}else{
                 		$postimageurl = get_post_meta($post->ID, 'post-img', true);//DOES IT HAVE A TN?
-                		if ($postimageurl){ ?>
+
+                		if (@getimagesize('http://www.sensitiveskinmagazine.com/wp-content/images/tns/'.$postimageurl)){ ?>
                          <figure class="post-img-medium-right">
                             <a href="<?php the_permalink(); ?>" class="the-display" rel="bookmark"><img src="<?php  bloginfo( 'wpurl' ); ?>/wp-content/images/tns/<?php echo $postimageurl; ?>" alt="Post Pic"  /></a>
                          </figure>
@@ -81,13 +92,13 @@
                  //USE A FEATURED IMAGE IF ONE EXISTS
          		 //echo 'not a featured post';
                 $postimageurl = get_post_meta($post->ID, 'post-img', true);//DOES IT HAVE A TN?
-                 //echo $postimageurl;
-                // echo "no featured image, get an image";
             	$img_path =  catch_that_image();
-            	 //echo '$image_path: '.$img_path;
 
-            	if ( has_post_thumbnail() ) { ?>
-                
+            	
+            	if ( has_post_thumbnail() ) { 
+            		//echo 'has a thumbnail, use that';
+            		?>
+                	
                 	<figure class="post-img-medium">
 	                    <a href="<?php the_permalink(); ?>" class="the-display" rel="bookmark">
 	                        <?php the_post_thumbnail('archive-thumb');?>
@@ -95,12 +106,10 @@
                 	</figure> 
                 <?php    
 	            }
-                else if ($img_path !== '' && $img_path !== null && $img_path !== undefined){ //if there is an image in the post, use it and style it according to size
-	                	//echo 'using $img_path'.$img_path;
-	                	$sizes = getimagesize($img_path);
-	                    $width = $sizes[0];
-	                    $height = $sizes[1];
-	                    //echo 'width: '.$width;
+                else if //($img_path != '' && $img_path != null){//if there is an image in the post, use it and style it according to size
+	                	(@getimagesize($img_path)){
+	                	//echo 'using $img_path';
+
 	                    ?>
 	                    <figure class="post-img-medium">
 	                        <a href="<?php the_permalink(); ?>" class="the-display" rel="bookmark">
@@ -110,7 +119,8 @@
                     <?php    
 	                
 
-            	}else if ($postimageurl !== '' && $postimageurl !== null){ 
+            	//}else if (file_exists('http://www.sensitiveskinmagazine.com/wp-content/images/tns/'.$postimageurl)){ 
+            		}else if (@getimagesize('http://www.sensitiveskinmagazine.com/wp-content/images/tns/'.$postimageurl)){ 
 					//echo 'using postimageurl'
             		?>
 
