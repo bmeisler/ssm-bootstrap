@@ -154,6 +154,12 @@ function catch_that_image() {
   }
   return $first_img;
 }
+/* used with the old music player system*/
+// function popitup(url, params) {
+//             newwindow=window.open(url,'name', params);
+//             if (window.focus) {newwindow.focus()}
+//             return false;
+//         }
 
 /**
  * Register widget area.
@@ -256,6 +262,7 @@ function sensitive_skin_bootstrap_scripts() {
 
 	wp_enqueue_script( 'sensitive-skin-bootstrap-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20130115', true );
 
+	/* handles drag and drop for Nancy cut up post */
 	wp_enqueue_script('preload', "https://code.createjs.com/createjs-2015.05.21.min.js", array(), '0.6.0', true);
     wp_enqueue_script( 'random-image',  '/wp-content/js/random-image-dnd.js', array('preload', 'underscore'), '1.0.0', true );
 
