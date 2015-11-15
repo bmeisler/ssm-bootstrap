@@ -51,6 +51,17 @@
 <?php wp_footer(); ?>
    <script src="<?php bloginfo('wpurl'); ?>/wp-content/js/googleanalytics.js" type="text/javascript"></script>
 
+       <script language="javascript" type="text/javascript">
+        <!--
+        function popitup(url, params) {
+            newwindow=window.open(url,'name', params);
+            if (window.focus) {newwindow.focus()}
+            return false;
+        }
+
+        // -->
+    </script>
+
     <?php if( $_SERVER['SERVER_ADDR'] != '127.0.0.1'){ ?>
             <?php   echo '<script src="//static.getclicky.com/js" type="text/javascript"></script>';?>
             <?php   echo '<script type="text/javascript">try{ clicky.init(66421456); }catch(e){}</script>';?>
