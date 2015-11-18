@@ -14,7 +14,7 @@
     
      
 		<!-- <div class="btn-group"> -->
-      	<a role="button" class="btn btn-primary" role="button" href="<?php the_field('amazon_print_link') ?>" >Buy in print</a>
+      	<a role="button" class="btn btn-primary" role="button" href="<?php the_field('books_amazon_print_link') ?>" >Buy in print</a>
    		<a role="button" class="btn btn-primary offset5" role="button" href="<?php the_field('kindle_link') ?>" >Buy PDF</a>
     	<!-- </div> -->
    
@@ -35,7 +35,7 @@
 				<?php the_field('books_dimensions') ?> | 
 				<?php the_field('books_num_pages') ?> pgs. | 
 				<?php the_field('books_isbn') ?> | 
-				$<?php the_field('books_list') ?> | 
+				<?php the_field('books_list') ?> | 
 				release date: <?php the_field('books_release_date') ?>
 				</div>
 		        <figure class="figure-50-left"><img src="<?php bloginfo('url'); ?>/wp-content/images/BooksLogosBlack-White_small.jpg" width="268" height="32" alt="Sensitive Skin Books" title="Sensitive Skin Books" /></figure>

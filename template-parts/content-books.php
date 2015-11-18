@@ -5,8 +5,7 @@
  */
 ?>
 foo
-<article id="post-<?php the_ID(); ?>" <?php post_class('clearfix'); ?> role="article" itemscope itemtype="http://schema.org/BlogPosting">
-						
+<article id="post-<?php the_ID(); ?>" <?php post_class('clearfix'); ?> role="article" itemscope itemtype="http://schema.org/BlogPosting">			
 	<header class="article-header">
 	
 		<h2 class="book-title"><?php the_title(); ?></h2>
@@ -14,7 +13,7 @@ foo
     
      
 		<!-- <div class="btn-group"> -->
-      	<a role="button" class="btn btn-primary" role="button" href="<?php the_field('amazon_print_link') ?>" >Buy it on Amazon</a>
+      	<a role="button" class="btn btn-primary" role="button" href="<?php the_field('books_amazon_print_link') ?>" >Buy it on Amazon</a>
    		
 
    		<?php if (get_field('kindle_link') !== ''){?>
@@ -45,7 +44,7 @@ foo
 				<?php the_field('books_dimensions') ?> | 
 				<?php the_field('books_num_pages') ?> pgs. | 
 				<?php the_field('books_isbn') ?> | 
-				$<?php the_field('books_list') ?> | 
+				<?php the_field('books_list') ?> | 
 				release date: <?php the_field('books_release_date') ?>
 				</div>
 		        <figure class="figure-50-left"><img src="<?php bloginfo('url'); ?>/wp-content/images/BooksLogosBlack-White_small.jpg" width="268" height="32" alt="Sensitive Skin Books" title="Sensitive Skin Books" /></figure>
