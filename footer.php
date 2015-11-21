@@ -22,6 +22,20 @@
 			</div><!-- .row -->
 			<div class="row blogroll">
 				<div class="col-md-12 col-lg-12">
+					<div id="awesome-social-buttons">
+								
+							
+								<a class="btn btn-social-icon btn-md " href="http://www.twitter.com/sensitivemag">
+			    					<span class="fa fa-twitter"></span>
+			  					</a>
+			  					<a class="btn btn-social-icon btn-md" href="http://www.facebook.com/sensitiveskin">
+								    <span class="fa fa-facebook"></span>
+								</a>
+								<a class="btn btn-social-icon btn-md btn-google-plus" <a href="//plus.google.com/100022193362098500932?prsrc=3">
+								    <span class="fa fa-google-plus"></span>
+								</a>
+							
+		  					 </div>
 					<?php include('inc/blogRoll.php');?>
 				</div>
 			</div><!-- .row -->
