@@ -85,6 +85,15 @@ a:active {
 .nav > li > a:hover{
 	color:#c00;
 }
+
+.navbar-nav>.active>a
+.navbar-nav>.myactive>a:focus{
+background-color: red !important;
+}
+.navbar-nav>.active>a:hover{
+background-color: #00c;
+
+}
 .navbar {
 	border-bottom: solid 1px #666;
 	margin-bottom: 50px;
@@ -112,8 +121,9 @@ a:active {
 }
 
 .btn-social-icon {
-    color: #333; 
+    color: #fff; 
     text-decoration: none;
+    margin-top:16px;
 }
 .btn-social-icon:hover {
     color: #cc0000; 
@@ -597,6 +607,8 @@ Media Queries
 	
 	margin-top: 10px;
 }
+
+	
 	/* gives us a centered 'page' with a border and shadow */
 	#container {
 	    /*-moz-box-shadow: 0 0 5px 5px #888;
@@ -619,7 +631,8 @@ Media Queries
 
 .nav li, .footer{
 	font-family: "Arial","sans-serif";
-	font-weight: bold;
+	/*font-weight: bold;*/
+	font-size: 12px;
 	text-transform: uppercase;
 	color: #eeeeee;
 }

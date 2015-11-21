@@ -41,10 +41,10 @@
 							<img id="logo" src="http://www.sensitiveskinmagazine.com/wp-content/images/SSMLogo.svg" width="200" height="auto" />
 						</a>
 
-							<!-- <div id="awesome-social-buttons">
+							<!-- <div id="awesome-social-buttons"> -->
 								
 							
-								<a class="btn btn-social-icon btn-sm " href="http://www.twitter.com/sensitivemag">
+								<!-- <a class="btn btn-social-icon btn-sm " href="http://www.twitter.com/sensitivemag">
 			    					<span class="fa fa-twitter"></span>
 			  					</a>
 			  					<a class="btn btn-social-icon btn-sm" href="http://www.facebook.com/sensitiveskin">
@@ -52,9 +52,9 @@
 								</a>
 								<a class="btn btn-social-icon btn-sm btn-google-plus" <a href="//plus.google.com/100022193362098500932?prsrc=3">
 								    <span class="fa fa-google-plus"></span>
-								</a>
+								</a> -->
 							
-		  					</div> -->
+		  					<!-- </div> -->
 		<!-- 					<a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a>
 		 -->					<!-- <a class="navbar-brand" href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php bloginfo( 'name' ) ?>" rel="homepage"><?php bloginfo( 'name' ) ?></a> -->
 					</div><!-- navbar-header -->
@@ -68,6 +68,7 @@
 				        	<button type="submit" class="btn btn-default" id="searchsubmit" value="Search">
 				        	<span class="glyphicon glyphicon-search" aria-hidden="true"></span></button>
 				   	   	</form>
+
 
 						<?php
 
