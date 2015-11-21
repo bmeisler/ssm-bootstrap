@@ -89,6 +89,7 @@ a:active {
 .navbar-nav>.active>a
 .navbar-nav>.myactive>a:focus{
 background-color: red !important;
+color: #cc0000;
 }
 .navbar-nav>.active>a:hover{
 background-color: #00c;
@@ -631,7 +632,7 @@ Media Queries
 
 .nav li, .footer{
 	font-family: "Arial","sans-serif";
-	/*font-weight: bold;*/
+	font-weight: bold;
 	font-size: 12px;
 	text-transform: uppercase;
 	color: #eeeeee;
