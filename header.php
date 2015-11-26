@@ -58,17 +58,21 @@
 		<!-- 					<a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a>
 		 -->					<!-- <a class="navbar-brand" href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php bloginfo( 'name' ) ?>" rel="homepage"><?php bloginfo( 'name' ) ?></a> -->
 					</div><!-- navbar-header -->
-						
+
 					<div class="navbar-collapse collapse navbar-responsive-collapse">
-
+						<div class="row">
 						<form method="get" class="navbar-form navbar-left form-search" role="search" action="http://www.sensitiveskinmagazine.com">
-				        	<div class="form-group">
+				        	<div class="form-group hidden" id="search-field" >
 				          		<input type="text" class="form-control search-query" name="s" placeholder="Search">
+				          		<!-- <div class="side-nav-closer">
+									<a href="javascript:;" onclick="document.getElementById('search-field').className='hide'; document.getElementById('search_btn').className='show btn btn-default search-button';"><i class="fa fa-times"></i></a>
+								</div> -->
 				        	</div>
-				        	<button type="submit" class="btn btn-default" id="searchsubmit" value="Search">
-				        	<span class="glyphicon glyphicon-search" aria-hidden="true"></span></button>
+				        	
 				   	   	</form>
-
+				   	   	<a id="search_btn" href="javascript::" onclick="document.getElementById('search-field').className='show';
+				   	   	document.getElementById('search_btn').className='hide';" class="btn btn-default search-button">
+				        	<span class="fa fa-search" ></span></a>
 
 						<?php
 
@@ -85,6 +89,7 @@
 						}
 
 						?>
+						</div>
 					</div><!-- navbar-collapse -->
 				</div><!-- container-fluid -->           
 			</nav>	
