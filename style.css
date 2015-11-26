@@ -131,6 +131,7 @@ background-color: #00c;
     text-decoration: none;
 }
 
+<<<<<<< HEAD
 /* adapted from .badge class - so category and tags links at bottom of page will look like little pills*/
 .cat-links a{
 	display: inline-block;
@@ -167,6 +168,12 @@ background-color: #00c;
 .tags-links a:hover{
 	background-color:#cc0000;
 }
+=======
+.search-button{
+	margin-top:8px;
+}
+
+>>>>>>> GroovyNav
 /*--------------------------------------------------------------
 Downloads/issues
 --------------------------------------------------------------*/
@@ -422,6 +429,10 @@ img {
 	transform:scale(1.2);
 }
 
+
+.hidden{
+	display: none;
+}
 /*--------------------------------------------------------------
 ## Captions
 --------------------------------------------------------------*/
