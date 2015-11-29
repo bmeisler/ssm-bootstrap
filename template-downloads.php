@@ -38,8 +38,8 @@ get_header(); ?>
 							
 							<p><?php the_field('brief_description') ?></p>
 							<!-- <a href="<?php the_permalink(); ?>" class="btn btn-primary">More info</a></br> -->
-							<?php if (get_field('amazon_print_link') !== ''){?>
-								<a role="button" class="btn btn-primary" role="button" href="<?php the_field('amazon_print_link') ?>" >Buy print version</a>
+							<?php if (get_field('books_amazon_print_link') !== ''){?>
+								<a role="button" class="btn btn-primary" role="button" href="<?php the_field('books_amazon_print_link') ?>" >Buy print version</a>
 							<?php } ?>
 
 							 
