@@ -586,13 +586,20 @@ Media Queries
 
 /* Custom, iPhone Retina */ 
 @media only screen and (min-width : 320px) {
-		/* images fixes*/
+		/* images fixes for front page images*/
 .post-img-medium {
      width:100%;
      height:auto;
      padding:0px !important;
      float:left;  
      margin-right:10px;
+     margin-bottom:0px !important;
+ }
+ .post-img-medium-right {
+    width:100%;
+     height:auto;
+     padding:0px !important;
+     margin-left:10px;
      margin-bottom:0px !important;
  }
 	
@@ -610,6 +617,9 @@ Media Queries
 	/* images fixes*/
 .post-img-medium {
      width:200px;
+ }
+ .post-img-medium-right {
+    width:200px;
  }
 
 }
@@ -632,6 +642,7 @@ Media Queries
 	.grid-item:nth-child(4){
 		display:block;
 	}
+
 
 	
 }
@@ -669,6 +680,14 @@ Media Queries
 	.copyright{
 	
 	margin-top: 10px;
+
+		/* front page images now 50%*/
+	.post-img-medium {
+     width:300px;
+ }
+ .post-img-medium-right {
+    width:300px;
+ }
 }
 
 	
