@@ -432,6 +432,8 @@ img {
 .hidden{
 	display: none;
 }
+
+
 /*--------------------------------------------------------------
 ## Captions
 --------------------------------------------------------------*/
@@ -584,6 +586,15 @@ Media Queries
 
 /* Custom, iPhone Retina */ 
 @media only screen and (min-width : 320px) {
+		/* images fixes*/
+.post-img-medium {
+     width:100%;
+     height:auto;
+     padding:0px !important;
+     float:left;  
+     margin-right:10px;
+     margin-bottom:0px !important;
+ }
 	
 }
 
@@ -596,6 +607,10 @@ Media Queries
 	.grid-item:nth-child(3){
 		display:block;
 	}
+	/* images fixes*/
+.post-img-medium {
+     width:200px;
+ }
 
 }
 
