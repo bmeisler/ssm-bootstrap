@@ -1,15 +1,15 @@
 <?php
 /**
- * The template for displaying posts in the Book post format
+ * The template for displaying individual posts (books) in the Book post format
  *
  */
 ?>
-foo
+
 <article id="post-<?php the_ID(); ?>" <?php post_class('clearfix'); ?> role="article" itemscope itemtype="http://schema.org/BlogPosting">			
 	<header class="article-header">
 	
 		<h2 class="book-title"><?php the_title(); ?></h2>
-    	<h2 class="book-author"><?php the_field('books_prefix'); ?><?php the_author(); ?></h2>
+    	<h2 class="book-author"><?php the_author(); ?></h2>
     
      
 		<!-- <div class="btn-group"> -->

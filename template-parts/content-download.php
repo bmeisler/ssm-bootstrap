@@ -26,9 +26,8 @@
 
 		<?php the_content(); ?>
 			<a class="btn btn-primary" role="button" href="<?php bloginfo('url'); ?>/checkout?edd_action=add_to_cart&download_id=<?php echo get_the_ID(); ?>"><?php edd_price($post->ID);?> Buy the PDF</a>
-			<!-- <a class="btn btn-primary" href="<?php the_field('amazon_print_link') ?>" >Buy print edition</a> -->
-			<?php if (get_field('amazon_print_link') !== ''){?>
-								<a role="button" class="btn btn-primary" role="button" href="<?php the_field('amazon_print_link') ?>" >Buy print edition</a>
+			<?php if (get_field('books_amazon_print_link') !== ''){?>
+								<a role="button" class="btn btn-primary" role="button" href="<?php the_field('books_amazon_print_link') ?>" >Buy print edition</a>
 							<?php } ?>
 
 			<p id="history" class="description"><em>Sensitive Skin,</em> an anthology of post-beat, pre-apocalyptic art, writing, music and whatnot, features work by both world-famous and new-and-emerging artists, writers, and musicians from around the globe.
