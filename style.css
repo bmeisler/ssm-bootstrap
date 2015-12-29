@@ -884,11 +884,10 @@ Book styles
 	font-size: 18px !important;
 	font-style: italic; 
 }
-#book-title{
+.book-title{
 	font-size: 1.8em;
 			line-height: 1.6em;
-			//text-align: center;
-			//margin: -5px;
+			margin-bottom: -20px !important;
 			font-family: @serif;
 			font-weight: bold;
 			color:#333333;

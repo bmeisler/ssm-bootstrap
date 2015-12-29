@@ -9,12 +9,12 @@
 	<header class="article-header">
 	
 		<h2 class="book-title"><?php the_title(); ?></h2>
-    	<h2 class="book-author"><?php the_author(); ?></h2>
-    
-     
+    	<h2 class="book-author"><?php the_field('books_author'); ?></h2>
+
 		<!-- <div class="btn-group"> -->
-      	<a role="button" class="btn btn-primary" role="button" href="<?php the_field('books_amazon_print_link') ?>" >Buy it on Amazon</a>
-   		
+		<?php if (get_field('books_amazon_print_link') !== ''){?>
+      		<a role="button" class="btn btn-primary" role="button" href="<?php the_field('books_amazon_print_link') ?>" >Buy it on Amazon</a>
+   		<?php } ?>
 
    		<?php if (get_field('kindle_link') !== ''){?>
 				<a role="button" class="btn btn-primary offset5" role="button" href="<?php the_field('kindle_link') ?>" >Buy it on Kindle</a>
@@ -36,8 +36,20 @@
 		<div class="row">
 			<div id="primary" class="col-md-12 col-lg-12">
 				<div id="author-block">
-				<figure class='figure-small-left'><img src="<?php the_field('books_author_photo') ?>" /></figure>
-				<div ><?php the_field('books_author_bio') ?></div>
+					<div>
+						<figure class='figure-small-left'><img src="<?php the_field('books_author_photo') ?>" /></figure>
+						<p class="clearfix"><?php the_field('books_author_bio') ?></p>
+					</div>
+				
+
+					<div>
+						<?php if (get_field('books_co_author_bio') !== ''){?><!-- Testing for co_author_bio instead of picture - have to have it if there's a 2nd author -->
+							<figure class='figure-small-left'><img src="<?php the_field('books_co_author_photo') ?>" /></figure>
+						<?php } ?>
+						<?php if (get_field('books_co_author_bio') !== ''){?>
+							<p><?php the_field('books_co_author_bio') ?></p>
+						<?php } ?>
+					</div>
 				</div>
 
 				<div id="book-info"><p class="description"><?php the_field('books_paper')?> | 
