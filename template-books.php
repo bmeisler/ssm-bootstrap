@@ -35,26 +35,20 @@ get_header(); ?>
 							<a class="thumbnail" href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>">
 							<?php the_post_thumbnail('large'); ?>
 							</a>
-							<h4><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h4>
-							<h2 id="book-author">
-								<?php $subtitle = get_post_meta($post->ID, 'subtitle', true);
-						            if (!$subtitle)
-						            {
-						                echo '<h1 class="book-category-author">'.get_the_author().'</h1>';
-						            }
-						            else if ($subtitle)
-						            {
-						                echo '<h1 class="book-category-author">'.$subtitle.'</h1>';
-						            }
-						            ?>
+							<h2 class="book-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h4>
+							
+							<h2 class="book-author"><?php the_field('books_author'); ?></h2>
+								
 
 							</h2>
 							<p><?php the_field('brief_description') ?></p>
-							<!-- <a href="<?php the_permalink(); ?>" class="btn btn-primary">More info</a></br> -->
-							      	<a role="button" class="btn btn-primary" role="button" href="<?php the_field('books_amazon_print_link') ?>" >Buy it on Amazon</a>
-							      	<?php if (get_field('kindle_link') !== ''){?>
-				<a role="button" class="btn btn-primary offset5" role="button" href="<?php the_field('kindle_link') ?>" >Buy it on Kindle</a>
-		<?php } ?>
+							<?php if (get_field('books_amazon_print_link') !== ''){?>
+					      		<a role="button" class="btn btn-primary" role="button" href="<?php the_field('books_amazon_print_link') ?>" >Buy it on Amazon</a>
+					   		<?php } ?>
+
+					   		<?php if (get_field('kindle_link') !== ''){?>
+									<a role="button" class="btn btn-primary offset5" role="button" href="<?php the_field('kindle_link') ?>" >Buy it on Kindle</a>
+							<?php } ?>
 
 						</div>
 					</div>
