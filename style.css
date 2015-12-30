@@ -886,8 +886,7 @@ Book styles
 }
 .book-title{
 	font-size: 1.8em;
-			line-height: 1.6em;
-			margin-bottom: -20px !important;
+			margin-bottom: -15px !important;
 			font-family: @serif;
 			font-weight: bold;
 			color:#333333;
