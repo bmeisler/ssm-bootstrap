@@ -1,6 +1,6 @@
 <?php
 /**
- * Template Name: Books Template
+ * Template Name: Multiple Books Template
  *
  * This is the template that displays all the custom Books posts.
  *
@@ -11,7 +11,6 @@
 
 
 get_header(); ?>
-
 <div class="container">
 	<div class="row">
 
