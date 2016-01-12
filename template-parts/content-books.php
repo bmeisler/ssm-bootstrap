@@ -38,7 +38,7 @@
 				<div id="author-block">
 					<div>
 						<figure class='figure-small-left'><img src="<?php the_field('books_author_photo') ?>" /></figure>
-						<p class="clearfix"><?php the_field('books_author_bio') ?></p>
+						<p><?php the_field('books_author_bio') ?></p>
 					</div>
 				
 
