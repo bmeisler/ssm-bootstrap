@@ -26,18 +26,18 @@ var $nav = $('nav');
 
 //change the navbar depending on the scroll position
  $(document).scroll( function() {
-   var value = $(this).scrollTop();
+  //  var value = $(this).scrollTop();
 
-   if ( value > 100 && navIsBig ){
-      $nav.animate({height:45},"slow");
-      $('nav').css('background-color', 'red');
-      navIsBig = false;
+  //  if ( value > 100 && navIsBig ){
+  //     $nav.animate({height:45},"slow");
+  //     $('nav').css('background-color', 'red');
+  //     navIsBig = false;
 
-   } else if (value <= 100 && !navIsBig ) {
-      $nav.animate({height:100},"slow");
-      $('nav').css('background-color', 'white');
-      navIsBig = true;
-  }
+  //  } else if (value <= 100 && !navIsBig ) {
+  //     $nav.animate({height:100},"slow");
+  //     $('nav').css('background-color', 'white');
+  //     navIsBig = true;
+  // }
  });
  // var isSearchShowing = false;
  // //$('#search-field').hide();
