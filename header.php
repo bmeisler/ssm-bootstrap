@@ -32,43 +32,96 @@
 			<nav role="navigation" class="navbar navbar-default navbar-fixed-top">
 				<div class="container-fluid navbar-static-top" ><!-- class="navbar navbar-static-top navbar-inverse" -->
 					<div class="navbar-header">
-						<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
-							<span class="icon-bar"></span>
-							<span class="icon-bar"></span>
-							<span class="icon-bar"></span>
-
-						</button>
+						<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+        <i class="fa fa-bars"></i>
+      </button>
+       <div class="mobile-icons visible-xs-block">
+        <a data-toggle="collapse" data-target="#search-bar" class="circl"><i class="fa fa-search"></i></a>
+        <a data-toggle="collapse" data-target="#signup-bar" class="circl"><i class="fa fa-user"></i></a>
+      </div>
 						<a class="navbar-brand" href="<?php bloginfo('url'); ?>">
 							<img id="logo" src="http://www.sensitiveskinmagazine.com/wp-content/images/SSMLogo.svg" width="200" height="auto" />
 						</a>
 
-							<!-- <div id="awesome-social-buttons"> -->
-								
-							
-								<!-- <a class="btn btn-social-icon btn-sm " href="http://www.twitter.com/sensitivemag">
-			    					<span class="fa fa-twitter"></span>
-			  					</a>
-			  					<a class="btn btn-social-icon btn-sm" href="http://www.facebook.com/sensitiveskin">
-								    <span class="fa fa-facebook"></span>
-								</a>
-								<a class="btn btn-social-icon btn-sm btn-google-plus" <a href="//plus.google.com/100022193362098500932?prsrc=3">
-								    <span class="fa fa-google-plus"></span>
-								</a> -->
-							
-		  					<!-- </div> -->
-		<!-- 					<a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a>
-		 -->					<!-- <a class="navbar-brand" href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php bloginfo( 'name' ) ?>" rel="homepage"><?php bloginfo( 'name' ) ?></a> -->
+
+<!-- Search -->
+      <div id="search-bar" class="collapse">
+        <div class="container">
+          <div class="row">
+            <div class="search">
+              <form method="get" role="search" action="http://www.sensitiveskinmagazine.com">
+                <div class="form-group">
+                  <input type="text" class="form-control input-lg" name="s" onfocus="this.placeholder=''" onblur="this.placeholder='Type in search here'" placeholder="Type in search here">
+                </div>
+              </form>
+              <a class="search-closer" data-toggle="collapse" data-target="#search-bar"><i class="fa fa-times"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+	   <div id="signup-bar" class="collapse">
+         <h4>Join our mailing list</h4>
+           <div id="mc_embed_floating_signup">
+
+            <form action="http://russsianchamberorch.us2.list-manage1.com/subscribe/post" method="post">
+				<input type="hidden" name="u" value="5e0434478e96f6841daff1690">
+				<input type="hidden" name="id" value="5854671be8"> 
+
+            <div id="mc_embed_signup_scroll">
+
+              <div class="row form-group">
+              	 <div class="col-sm-5 input-lg-left">
+                  <div class="mc-field-group">
+              	<input type="email" value="" name="EMAIL" placeholder="Email Address (required)" onfocus="this.placeholder=''" onblur="this.placeholder='Email Address'" class="required form-control input-lg" id="mce-EMAIL">
+                  </div>
+                </div>
+                <div class="col-sm-3 input-lg-left">
+                  <div class="mc-field-group">
+                    
+                    <input type="text" value="" name="FNAME" placeholder="First Name" onfocus="this.placeholder=''" onblur="this.placeholder='First Name'" class="form-control input-lg" id="mce-FNAME">
+                  </div>
+                </div>
+                <div class="col-sm-3 input-lg-right">
+                  <div class="mc-field-group">
+                    <input type="text" value="" name="LNAME" placeholder="Last Name" onfocus="this.placeholder=''" onblur="this.placeholder='Last Name'" class="form-control input-lg" id="mce-LNAME">
+                  </div>
+                </div>
+                                <div class="col-sm-1 input-lg-right">
+                  <div class="mc-field-group">
+                      <input type="submit" value="Subscribe" name="Join our mailing list" id="mc-embedded-subscribe" class="btn btn-primary">
+
+                  </div>
+                </div>
+                <div id="mce-responses" class="clear">
+                  <div class="response" id="mce-error-response" style="display:none">
+                  </div>
+                  <div class="response" id="mce-success-response" style="display:none">
+                  </div>
+                </div>
+                
+                <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+                <div style="position: absolute; left: -5000px;" aria-hidden="true">
+                  <input type="text" name="b_df2b62f883c43ba3749ff7368_c53aaba024" tabindex="-1" value="">
+                </div>
+                <!-- <div class="clear">
+                  <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="btn btn-default">
+                </div> -->
+              </div>
+            </form>
+          </div>
+        </div>
+  
+  <!--End mc_embed_signup-->
+</div>
+
+
 					</div><!-- navbar-header -->
 
 					<div class="navbar-collapse collapse navbar-responsive-collapse">
-						<!-- <div class="row"> -->
 
-
-						
-				   	   	<!-- href="javascript::"onclick="document.getElementById('search-field').className='show';
-				   	   	document.getElementById('search_btn').className='hide';" -->
-				   	   	<a id="search_btn"   class="btn btn-default search-button" data-toggle="collapse" data-target="#search-row">
-				        	<span class="fa fa-search" ></span></a>
+				   	   	<!-- <a id="search_btn"   class="btn btn-default search-button" data-toggle="collapse" data-target="#search-row">
+				        	<span class="fa fa-search" ></span></a> -->
 
 						<?php
 
@@ -85,6 +138,23 @@
 						}
 
 						?>
+						<ul class="nav navbar-nav navbar-right">
+						<li class="hidden-xs">
+					          <a data-toggle="collapse" data-target="#signup-bar">
+					            <i class="circl crl-left">
+					              <i class="fa fa-user"></i>
+					            </i>
+					          </a>
+					        </li>
+					        <li class="hidden-xs">
+					          <a data-toggle="collapse" data-target="#search-bar">
+					            <i class="circl">
+					              <i class="fa fa-search" ></i>
+					            </i>
+					          </a>
+					          </a>
+					        </li>
+					    </ul>
 						<!-- </div> -->
 
 
@@ -93,7 +163,7 @@
 				</div><!-- container-fluid -->   
 
 			</nav>
-			<div class="container">
+			<!-- <div class="container">
 				<div id="search-row" class="collapse row">
 						<form method="get" class="navbar-form navbar-left form-search" role="search" action="http://www.sensitiveskinmagazine.com">
 				        	<div class="form-group" id="search-field" >
@@ -102,7 +172,7 @@
 				        	
 				   	   	</form>
 					  </div>
-			</div><!-- container -->
+			</div> --><!-- container -->
 
 		</header><!-- #masthead -->
 
