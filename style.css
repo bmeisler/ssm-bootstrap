@@ -435,7 +435,7 @@ img {
 	-webkit-filter:brightness(110%);
 	-moz-filter:brightness(110%);
 	filter:brightness(110%);
-	transform:scale(1.2);
+	transform:scale(1.02);
 }
 
 .hidden{
