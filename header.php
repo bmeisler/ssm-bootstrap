@@ -36,8 +36,8 @@
         <i class="fa fa-bars"></i>
       </button>
        <div class="mobile-icons visible-xs-block">
-        <a data-toggle="collapse" data-target="#search-bar" class="circl"><i class="fa fa-search"></i></a>
-        <a data-toggle="collapse" data-target="#signup-bar" class="circl"><i class="fa fa-user"></i></a>
+        <a data-toggle="collapse" data-target="#search-bar" class="circl" id="small-search-btn"><i class="fa fa-search"></i></a>
+        <a data-toggle="collapse" data-target="#signup-bar" class="circl" id="small-signup-btn"><i class="fa fa-user"></i></a>
       </div>
 						<a class="navbar-brand" href="<?php bloginfo('url'); ?>">
 							<img id="logo" src="http://www.sensitiveskinmagazine.com/wp-content/images/SSMLogo.svg" width="200" height="auto" />
@@ -45,6 +45,7 @@
 
 
 <!-- Search -->
+
       <div id="search-bar" class="collapse">
         <div class="container">
           <div class="row">
@@ -65,32 +66,23 @@
            <div id="mc_embed_floating_signup">
 
             <form action="http://russsianchamberorch.us2.list-manage1.com/subscribe/post" method="post">
-				<input type="hidden" name="u" value="5e0434478e96f6841daff1690">
-				<input type="hidden" name="id" value="5854671be8"> 
+<input type="hidden" name="u" value="5e0434478e96f6841daff1690">
+<input type="hidden" name="id" value="5854671be8"> 
 
             <div id="mc_embed_signup_scroll">
-
+              <div class="mc-field-group">
+                <input type="email" value="" name="EMAIL" placeholder="Email Address (required)" onfocus="this.placeholder=''" onblur="this.placeholder='Email Address'" class="required form-control input-lg" id="mce-EMAIL">
+              </div>
               <div class="row form-group">
-              	 <div class="col-sm-5 input-lg-left">
-                  <div class="mc-field-group">
-              	<input type="email" value="" name="EMAIL" placeholder="Email Address (required)" onfocus="this.placeholder=''" onblur="this.placeholder='Email Address'" class="required form-control input-lg" id="mce-EMAIL">
-                  </div>
-                </div>
-                <div class="col-sm-3 input-lg-left">
+                <div class="col-xs-6 input-lg-left">
                   <div class="mc-field-group">
                     
                     <input type="text" value="" name="FNAME" placeholder="First Name" onfocus="this.placeholder=''" onblur="this.placeholder='First Name'" class="form-control input-lg" id="mce-FNAME">
                   </div>
                 </div>
-                <div class="col-sm-3 input-lg-right">
+                <div class="col-xs-6 input-lg-right">
                   <div class="mc-field-group">
                     <input type="text" value="" name="LNAME" placeholder="Last Name" onfocus="this.placeholder=''" onblur="this.placeholder='Last Name'" class="form-control input-lg" id="mce-LNAME">
-                  </div>
-                </div>
-                                <div class="col-sm-1 input-lg-right">
-                  <div class="mc-field-group">
-                      <input type="submit" value="Subscribe" name="Join our mailing list" id="mc-embedded-subscribe" class="btn btn-primary">
-
                   </div>
                 </div>
                 <div id="mce-responses" class="clear">
@@ -104,9 +96,9 @@
                 <div style="position: absolute; left: -5000px;" aria-hidden="true">
                   <input type="text" name="b_df2b62f883c43ba3749ff7368_c53aaba024" tabindex="-1" value="">
                 </div>
-                <!-- <div class="clear">
-                  <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="btn btn-default">
-                </div> -->
+                <div class="clear">
+                  <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="btn btn-primary">
+                </div>
               </div>
             </form>
           </div>
@@ -114,7 +106,6 @@
   
   <!--End mc_embed_signup-->
 </div>
-
 
 					</div><!-- navbar-header -->
 
@@ -140,14 +131,14 @@
 						?>
 						<ul class="nav navbar-nav navbar-right">
 						<li class="hidden-xs">
-					          <a data-toggle="collapse" data-target="#signup-bar">
+					          <a data-toggle="collapse" data-target="#signup-bar" data-parent="#accordion" aria-expanded="false" id="large-signup-btn">
 					            <i class="circl crl-left">
 					              <i class="fa fa-user"></i>
 					            </i>
 					          </a>
 					        </li>
 					        <li class="hidden-xs">
-					          <a data-toggle="collapse" data-target="#search-bar">
+					          <a data-toggle="collapse" data-target="#search-bar" data-parent="#accordion" aria-expanded="false" id="large-search-btn">
 					            <i class="circl">
 					              <i class="fa fa-search" ></i>
 					            </i>

@@ -24,6 +24,33 @@ jQuery(document).ready(function($){
 var navIsBig = true;
 var $nav = $('nav');
 
+/* hand the icon toggling - 2 at full(large) size, 3 at small size*/
+$('#large-signup-btn').on('click', function () {
+	console.log("clicked large signup button");
+   	$('#search-bar').collapse('hide');
+});
+$('#large-search-btn').on('click', function () {
+	console.log("clicked large signup button");
+   	$('#signup-bar').collapse('hide');
+});
+$('#small-signup-btn').on('click', function () {
+	console.log("clicked large signup button");
+   	$('#search-bar').collapse('hide');
+   	$('.navbar-collapse').collapse('hide');
+   	
+});
+$('#small-search-btn').on('click', function () {
+	console.log("clicked large signup button");
+   	$('#signup-bar').collapse('hide');
+   	$('.navbar-collapse').collapse('hide');
+});
+
+$('.navbar-toggle').on('click', function () {
+	console.log("clicked nav button");
+   	$('#signup-bar').collapse('hide');
+   	$('#search-bar').collapse('hide');
+});
+
 //change the navbar depending on the scroll position
  $(document).scroll( function() {
   //  var value = $(this).scrollTop();
