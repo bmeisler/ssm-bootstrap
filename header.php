@@ -65,7 +65,8 @@
          <h4>Join our mailing list</h4>
            <div id="mc_embed_floating_signup">
 
-            <form action="http://russsianchamberorch.us2.list-manage1.com/subscribe/post" method="post">
+            <form action="//sensitiveskinmagazine.us2.list-manage.com/subscribe/post?u=df2b62f883c43ba3749ff7368&amp;id=c53aaba024" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+
 <input type="hidden" name="u" value="5e0434478e96f6841daff1690">
 <input type="hidden" name="id" value="5854671be8"> 
 
