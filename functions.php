@@ -260,6 +260,8 @@ function sensitive_skin_bootstrap_scripts() {
 	/* my custom jquery scripts - handles isotope, etc. */
 	wp_enqueue_script( 'sensitive-skin-bootstrap-main', get_template_directory_uri() . '/js/main.js', array(), '3.3.5', true );
 
+	wp_enqueue_script( 'jquery-easing', get_template_directory_uri() . '/js/jquery.easing.js', array(), '1.0', true );
+
 	wp_enqueue_script( 'sensitive-skin-bootstrap-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20130115', true );
 
 	/* handles drag and drop for Nancy cut up post */

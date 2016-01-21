@@ -43,6 +43,29 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 	## Captions
 	## Galleries
 --------------------------------------------------------------*/
+/*	================================================================================
+	Section Scroll Revealler
+
+	This makes each page fade in when navigated to
+	================================================================================	*/
+
+.page-transition {
+	-webkit-animation:fadeIn;
+	-moz-animation:fadeIn;
+	-o-animation:fadeIn;
+	animation:fadeIn;
+	-webkit-animation-duration:4s;
+	-moz-animation-duration:4s;
+	-o-animation-duration:4s;
+	animation-duration:4s;
+}
+@-webkit-keyframes fadeIn {0%{opacity:0;}100%{opacity:1;}}
+@-moz-keyframes fadeIn {0%{opacity:0;}100%{opacity:1;}}
+@-o-keyframes fadeIn {0%{opacity:0;}100%{opacity:1;}}
+@keyframes fadeIn {0%{opacity:0;}100%{opacity:1;}}
+
+.page-transition {overflow:hidden;}
+
 
 
 /*--------------------------------------------------------------
