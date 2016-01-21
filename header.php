@@ -62,9 +62,10 @@
       </div>
 
 	   <div id="signup-bar" class="collapse">
-         <h4>Join our mailing list</h4>
-           <div id="mc_embed_floating_signup">
+         <h4>Join our mailing list<span class="pull-right"><a class="search-closer" data-toggle="collapse" data-target="#signup-bar"><i class="fa fa-times"></i></a></span>
+</h4>
 
+           <div id="mc_embed_floating_signup">
             <form action="//sensitiveskinmagazine.us2.list-manage.com/subscribe/post?u=df2b62f883c43ba3749ff7368&amp;id=c53aaba024" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
 
 <input type="hidden" name="u" value="5e0434478e96f6841daff1690">

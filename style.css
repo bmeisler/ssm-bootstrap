@@ -92,11 +92,12 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 	margin-top:15px;
 	padding: 10px 10px 0px 10px;
 }
-#side-signup-bar .input-lg-right{
+#side-signup-bar, #signup-bar .input-lg-right{
 	padding-right:16px;
+	padding-left:0px;
 
 }
-#side-signup-bar .input-lg-left{
+#side-signup-bar, #signup-bar .input-lg-left{
 	padding-right:0px;
 }
 
