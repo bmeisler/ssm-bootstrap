@@ -14,7 +14,8 @@ if ( ! is_active_sidebar( 'sidebar-1' ) ) {
 
 <div id="secondary" class="widget-area col-md-4 col-lg-4" role="complementary">
 	<div class="well no-stack">
-		<?php dynamic_sidebar( 'sidebar-1' ); ?>
+		
+		<?php include ('inc/sidebar-mailing-list.php'); ?>
 		<?php include ('inc/sidebar-litbreaker.php'); ?>
 		<?php include ('inc/sidebar-Animated.php'); ?>
 		<?php include ('inc/sidebar-social.php'); ?>

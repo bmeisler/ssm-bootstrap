@@ -59,6 +59,7 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 	max-height:255px;
 	padding-left:20px;
 }
+
 #signup-bar h4{
 	color:#fff;
 }
@@ -74,6 +75,46 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 	font-size:14px;
 	border-radius: 4px;
 }
+#side-signup-bar .input-lg{
+	height:40px;
+	font-size:14px;
+	border-radius: 4px;
+}
+#side-signup-bar-container .btn{
+	margin-bottom:16px;
+	margin-top:0px !important;
+}
+#side-signup-bar-container{
+	width:auto;
+	height:auto;
+	border:1px solid #ccc;
+	background-color: #ddd;
+	margin-top:15px;
+	padding: 10px 10px 0px 10px;
+}
+#side-signup-bar .input-lg-right{
+	padding-right:16px;
+
+}
+#side-signup-bar .input-lg-left{
+	padding-right:0px;
+}
+
+#side-signup-bar .mc-field-group{
+	padding-right:0px;
+}
+#side-signup-bar .btn{
+	margin-left: 16px;
+}
+
+#secondary{
+	padding-top:10px;
+}
+#secondary .well{
+	padding-top:0px;
+	padding-bottom:0px;
+}
+
 
 /*	================================================================================
 	Media Queries
@@ -979,6 +1020,7 @@ Media Queries
 @media only screen and (min-width : 480px) {
 	#logo{
 		width:200px;
+		padding:0px;
 			-webkit-transition:all 0.4s ease-out;
 	-moz-transition:all 0.4s ease-out;
 	-o-transition:all 0.4s ease-out;

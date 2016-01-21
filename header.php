@@ -132,14 +132,14 @@
 						?>
 						<ul class="nav navbar-nav navbar-right">
 						<li class="hidden-xs">
-					          <a data-toggle="collapse" data-target="#signup-bar" data-parent="#accordion" aria-expanded="false" id="large-signup-btn">
+					          <a data-toggle="collapse" data-target="#signup-bar"  aria-expanded="false" id="large-signup-btn">
 					            <i class="circl crl-left">
 					              <i class="fa fa-user"></i>
 					            </i>
 					          </a>
 					        </li>
 					        <li class="hidden-xs">
-					          <a data-toggle="collapse" data-target="#search-bar" data-parent="#accordion" aria-expanded="false" id="large-search-btn">
+					          <a data-toggle="collapse" data-target="#search-bar" aria-expanded="false" id="large-search-btn">
 					            <i class="circl">
 					              <i class="fa fa-search" ></i>
 					            </i>
