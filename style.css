@@ -70,7 +70,7 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 	background:#333;
 }
 #signup-bar .input-lg{
-	height:36px;
+	height:40px;
 	font-size:14px;
 	border-radius: 4px;
 }
@@ -129,7 +129,7 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 	position:absolute;
 	text-align:center;
 	background:#000;
-	max-height:42px;
+	max-height:50px;
 }
 
 #search-bar .search {
@@ -141,7 +141,7 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 	color:#000;
 	font-size:14px;
 	font-weight:400;
-	height:30px;
+	height:40px;
 }
 #search-bar .search .search-closer {
 	float:right;
@@ -934,7 +934,9 @@ img {
 	.no-stack{
 		display:none;
 	}
-	
+	#logo{
+		width:150px;
+	}
 
 
 
@@ -970,6 +972,9 @@ Media Queries
 
 /* Extra Small Devices, Phones */ 
 @media only screen and (min-width : 480px) {
+	#logo{
+		width:200px;
+	}
 	.grid-item {
 	  width: 33%;
 	  min-width:33%;
