@@ -98,6 +98,29 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 	font-size:14px;
 	border-radius: 4px;
 }
+#signup-bar .search-closer {
+	float:right;
+	margin-right:18px;
+	color:#ccc;
+	font-size:16px;
+	/*margin:-45px 12px 0 0;*/
+	-webkit-transition:all 0.4s ease-out;
+	-moz-transition:all 0.4s ease-out;
+	-o-transition:all 0.4s ease-out;
+	transition:all 0.4s ease-out; 
+	cursor:pointer;
+}
+
+#signup-bar .search-closer:hover {
+	color:#c00;
+	-webkit-transform:rotate(180deg);
+	-moz-transform:rotate(180deg);
+	-o-transform:rotate(180deg);
+	-ms-transform:rotate(180deg);
+	transform:rotate(180deg);
+}
+
+
 #side-signup-bar .input-lg{
 	height:40px;
 	font-size:14px;
@@ -212,19 +235,26 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 	float:right;
 	color:#ccc;
 	font-size:16px;
-	margin:-45px 12px 0 0;
+	/*margin:-45px 12px 0 0;*/
+	margin:0px -18px 0 0;
 	-webkit-transition:all 0.4s ease-out;
 	-moz-transition:all 0.4s ease-out;
 	-o-transition:all 0.4s ease-out;
 	transition:all 0.4s ease-out; 
+	cursor:pointer;
 }
+
 #search-bar .search .search-closer:hover {
-	color:#30bfff;
+	color:#c00;
 	-webkit-transform:rotate(180deg);
 	-moz-transform:rotate(180deg);
 	-o-transform:rotate(180deg);
 	-ms-transform:rotate(180deg);
 	transform:rotate(180deg);
+	cursor:pointer;
+}
+.search-closer{
+	cursor:pointer;
 }
 /* Navigation */
 #top-menu {
@@ -287,7 +317,7 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 	background:transparent;
 }
 .navbar .navbar-nav .active a {
-	color:#30bfff;
+	/*color:#30bfff;*/
 	-webkit-transform:scale(1);
 	-moz-transform:scale(1);
 	-o-transform:scale(1);
@@ -319,7 +349,7 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 .navbar .navbar-nav li a:hover i.circl,
 .navbar .navbar-nav li a:hover i.circl i.fa {
 	border:0;
-	color:#30bfff;
+	/*color:#30bfff;*/
 }
 .navbar .navbar-nav li a i.circl i.fa {
 	/*color:#d8d8d8;*/
@@ -350,7 +380,7 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 	transition:all 0.2s ease-out;
 }
 .navbar .navbar-toggle:hover {
-	color:#30bfff;
+	/*color:#30bfff;*/
 }
 .navbar .navbar-collapse {
 	background:transparent;
@@ -401,7 +431,7 @@ a.navbar-brand a:active,a:focus {
 .navbar .navbar-nav li a:hover i.circl,
 .navbar .navbar-nav li a:hover i.circl i.fa {
 	border:0;
-	color:#30bfff;
+	/*color:#30bfff;*/
 }
 .navbar .navbar-nav li a i.circl i.fa {
 	/*color:#d8d8d8;*/
@@ -456,7 +486,7 @@ header .mobile-icons a.circl {
 header .mobile-icons a.circl:hover,
 header .mobile-icons a.circl:hover i.fa {
 	border:0;
-	color:#30bfff;
+	/*color:#30bfff;*/
 	margin-top:4px;
 }
 header .mobile-icons a {

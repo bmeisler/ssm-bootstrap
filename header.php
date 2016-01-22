@@ -50,19 +50,22 @@
         <div class="container">
           <div class="row">
             <div class="search">
+            	<a class="search-closer" data-toggle="collapse" data-target="#search-bar"><i class="fa fa-times"></i></a>
               <form method="get" role="search" action="http://www.sensitiveskinmagazine.com">
                 <div class="form-group">
                   <input type="text" class="form-control input-lg" name="s" onfocus="this.placeholder=''" onblur="this.placeholder='Type in search here'" placeholder="Type in search here">
                 </div>
               </form>
-              <a class="search-closer" data-toggle="collapse" data-target="#search-bar"><i class="fa fa-times"></i></a>
+              
             </div>
           </div>
         </div>
       </div>
 
 	   <div id="signup-bar" class="collapse">
-         <h4>Join our mailing list<span class="pull-right"><a class="search-closer" data-toggle="collapse" data-target="#signup-bar"><i class="fa fa-times"></i></a></span>
+         <h4>Join our mailing list<span class="pull-right">
+         	<a class="search-closer" data-toggle="collapse" data-target="#signup-bar">
+         	<i class="fa fa-times"></i></a></span>
 </h4>
 
            <div id="mc_embed_floating_signup">
