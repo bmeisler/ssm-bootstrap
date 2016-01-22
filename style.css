@@ -314,6 +314,7 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 	text-align:center;
 	border-radius:50%;
 	border:1px solid #999;
+	cursor:pointer;
 }
 .navbar .navbar-nav li a:hover i.circl,
 .navbar .navbar-nav li a:hover i.circl i.fa {
@@ -395,6 +396,7 @@ a.navbar-brand a:active,a:focus {
 	text-align:center;
 	border-radius:50%;
 	border:1px solid #999;
+	cursor:pointer;
 }
 .navbar .navbar-nav li a:hover i.circl,
 .navbar .navbar-nav li a:hover i.circl i.fa {
@@ -449,6 +451,7 @@ header .mobile-icons a.circl {
 	-moz-transition:all 0.2s ease-out;
 	-o-transition:all 0.2s ease-out;
 	transition:all 0.2s ease-out;
+	cursor:pointer;
 }
 header .mobile-icons a.circl:hover,
 header .mobile-icons a.circl:hover i.fa {
