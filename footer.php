@@ -15,41 +15,17 @@
 
 	<footer id="colophon" class="site-footer" role="contentinfo">
 		<div class="container">
+
+			<!-- Links to previously featured posts -->
 			<div class="row five-column-container">
 				<div class="col-md-12 col-lg-12">
 					<?php include('inc/recentPostsFiveCol.php');?>
 				</div>
 			</div><!-- .row -->
-			<div class="row blogroll">
-				<div class="col-md-6 col-lg-6">
-					
-					<p class="top"><i>Editor-In-Chief:</i> Bernard Meisler</p>
-							<p><i>Associate Editors:</i> Rob Hardin and B. Kold</p>
-							<p><i>Music Editor:</i> Steve Horowitz</p>
-							<p><i>Contributing Editors:</i>Ron Kolm, Tim Beckett, </br>Franklin Mount, Patrick O'Neil</p>
-				</div>
-				<div class="col-md-6 col-lg-6">
-					<p class="copyright">&copy; <?php _e('Copyright', 'bootstrapwp'); ?> <?php echo date('Y'); ?> - <a href="<?php echo home_url(); ?>/" title="<?php bloginfo('name'); ?>" rel="home"><?php bloginfo('name'); ?></a></p>
-				</div>
-				
-			</div><!-- .blogroll -->
-			<div class="row bottom-row">
-				<div class="col-md-12 col-lg-12">
-					<?php if (has_nav_menu('footer-menu', 'sensitive-skin-bootstrap')) { ?>
-		            <nav role="navigation">
-		            <?php wp_nav_menu(array(
-		              'container'       => '',
-		              'menu_class'      => 'footer-menu',
-		              'theme_location'  => 'footer-menu')
-		            ); 
-		            ?>
-		          </nav>
-            	<?php } ?>
-				</div>
-			</div><!-- .row -->
+			
 
 
-	<div class="row blogroll">
+	<div class="row" id="footer-info">
         <div class="col-sm-4 footer-border first-col"><!-- 1st column -->
           <h3 class="mb40">Sensitive</br>
           Skin</br>

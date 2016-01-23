@@ -70,7 +70,14 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 /*	================================================================================
 	Footer
 	================================================================================	*/
-
+	/*replaces blogroll class*/
+#footer-info{
+	background-color: black;
+	border-top: 1px solid #ddd;
+	margin-top: 1px;
+	padding-bottom:25px;
+	color:#eee;
+}
 #footer {
 	background:#000;
 	color:#ddd;
@@ -311,19 +318,19 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 	margin-top:15px;
 	padding: 10px 10px 0px 10px;
 }
-#side-signup-bar, #signup-bar .input-lg-right{
+#side-signup-bar, #signup-bar, #bottom-signup .input-lg-right{
 	padding-right:16px;
 	padding-left:0px;
 
 }
-#side-signup-bar, #signup-bar .input-lg-left{
+#side-signup-bar, #signup-bar, #bottom-signup .input-lg-left{
 	padding-right:0px;
 }
 
 #side-signup-bar .mc-field-group{
 	padding-right:0px;
 }
-#side-signup-bar .btn{
+#side-signup-bar, #bottom-signup .btn{
 	margin-left: 16px;
 }
 
