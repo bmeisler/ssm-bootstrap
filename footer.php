@@ -42,12 +42,13 @@
 
         <div class="col-sm-4 footer-border"><!-- 2nd column -->
           <h3 class="mb40">Contact</h3>
-          <div class="mb40">For general Inquiry
+          <div class="mb40">For general inquiry:
           <br>
           <script type="text/javascript">maillink('info','sensitiveskinmagazine.com')</script>
           </div>
           <!-- social buttons -->
           <div id="awesome-social-buttons">
+            <span class="mb40">Follow us:</span></br>
 				<a class="btn btn-social-icon btn-md " href="http://www.twitter.com/sensitivemag">
 					<span class="fa fa-twitter"></span>
 					</a>
@@ -57,18 +58,23 @@
 				<a class="btn btn-social-icon btn-md btn-google-plus" <a href="//plus.google.com/100022193362098500932?prsrc=3">
 				    <span class="fa fa-google-plus"></span>
 				</a>
+        
 			</div>
-
+      </br>
 			<!-- Mini-menu and copyright -->
-        <div class="menu-desktop small ">
+        <div class="menu-desktop ">
           <nav class="menu">
             <a href="index.php">Home</a>
-            <span></span>
-            <a href="about.php">About</a>
-        	<span></span>
-        	<a href="season-and-tickets.php">Contact</a>
+            <span> | </span>
+            <a href="http://sensitiveskinmagazine.com/our-history">About</a>
+        	<span> | </span>
+        	<a href="http://sensitiveskinmagazine.com/contact">Contact</a>
+          <span> | </span>
+          <a href="http://sensitiveskinmagazine.com/submissions">Submissions</a>
           </nav>
-          Copyright &#169;&nbsp;<script>document.write(new Date().getFullYear())</script><noscript>2015</noscript> Sensitive Skin Magazine. </br>All Rights Reserved.
+          </br>
+          </br>
+          <span class="small">Copyright &#169;&nbsp;<script>document.write(new Date().getFullYear())</script><noscript>2015</noscript> Sensitive Skin Magazine. </br>All Rights Reserved.</span>
         </div>
 
         </div>
@@ -77,6 +83,7 @@
 
         <!-- Subscribe -->
         <h3>Join our mailing list</h3>
+        <p>We'll send you info about our latest issues, books and upcoming events, as well as discount coupons.</p>
 
        <!-- Begin MailChimp Signup Form -->
         <div id="bottom-signup">
