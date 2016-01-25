@@ -248,7 +248,10 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 	margin-top:11px;
 	text-align:center;
 }*/
-
+/* TEMP PATCH - fix all styles in SSMin*/
+.figure-full-left{
+	margin-top:24px;
+}
 
 /*--------------------------------------------------------------
 ## COOLNAVBAR
@@ -276,7 +279,7 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 	background:#333;
 }
 #signup-bar, #bottom-signup .input-lg{
-	height:40px;
+	/*height:40px;*/
 	font-size:14px;
 	border-radius: 4px;
 }
@@ -286,20 +289,20 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 	color:#ccc;
 	font-size:16px;
 	/*margin:-45px 12px 0 0;*/
-	-webkit-transition:all 0.4s ease-out;
+/*	-webkit-transition:all 0.4s ease-out;
 	-moz-transition:all 0.4s ease-out;
 	-o-transition:all 0.4s ease-out;
-	transition:all 0.4s ease-out; 
+	transition:all 0.4s ease-out; */
 	cursor:pointer;
 }
 
 #signup-bar,#bottom-signup .search-closer:hover {
 	color:#c00;
-	-webkit-transform:rotate(180deg);
+/*	-webkit-transform:rotate(180deg);
 	-moz-transform:rotate(180deg);
 	-o-transform:rotate(180deg);
-	-ms-transform:rotate(180deg);
-	transform:rotate(180deg);
+	-ms-transform:rotate(180deg);*/
+	/*transform:rotate(180deg);*/
 }
 
 
@@ -361,8 +364,8 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 	}
 
 	.mc-field-group{
-	padding-right:20px;
-	padding-bottom: 15px;
+		padding-right:20px;
+		padding-bottom: 15px;
 }
 
 	#r-col {
@@ -428,11 +431,11 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 
 #search-bar .search .search-closer:hover {
 	color:#c00;
-	-webkit-transform:rotate(180deg);
-	-moz-transform:rotate(180deg);
+	/*-webkit-transform:rotate(180deg);*/
+/*	-moz-transform:rotate(180deg);
 	-o-transform:rotate(180deg);
 	-ms-transform:rotate(180deg);
-	transform:rotate(180deg);
+	transform:rotate(180deg);*/
 	cursor:pointer;
 }
 .search-closer{
