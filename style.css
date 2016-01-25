@@ -43,6 +43,11 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 	## Captions
 	## Galleries
 --------------------------------------------------------------*/
+
+/* TEMP PATCH - fix all styles in SSMin*/
+.figure-full-left{
+	margin-top:24px;
+}
 /*	================================================================================
 	Section Scroll Revealler
 
