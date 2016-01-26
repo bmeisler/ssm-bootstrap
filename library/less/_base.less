@@ -57,24 +57,16 @@ http://sachagreif.com/sass-color-variables/
 TYPOGRAPHY
 *********************/
 
+/*
 @sans-serif:         "Helvetica Neue", Helvetica, Arial, sans-serif; 
 @serif:              "Georgia", Cambria, Times New Roman, Times, serif; 
+*/
 
 /*********************
 01. GENERAL STYLES
 *********************/
 
-html, body {
-	/* height: 100%; */
-}
-/*
-body {
-	font-family: @serif;
-	font-size: 100%;  
-	line-height: 1.5;
-	color: #565656;
-}
-*/
+
 /*TURN OFF DISQUS SHITE */
 #discovery{
 	visibility:hidden !important;
@@ -172,20 +164,7 @@ h5.storytitle {
 ******************************************************************/
 
 
-h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5 {
-	font-family: @sans-serif;
-	text-rendering: optimizelegibility;
-	font-weight: 400;
-	/*
-	if you're going to use webfonts, be sure to check your weights
-	http://css-tricks.com/watch-your-font-weight/
-	*/
 
-	/* removing text decoration from all headline links */
-	a {
-		text-decoration: none;
-	}
-}
 
 
 
@@ -193,27 +172,12 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5 {
 06. HEADER SYTLES
 *********************/
 
-.header {
-	#inner-header {
-	}
-
-	#logo {}
-
-	
-	
-
-
-	
-	
-}
 
 #headerimage{
 	position:relative;
 	top:10px;
 	left:10px;
 	padding-right:15px;
-/* 	width:98%; */
-/* 	height:98%; */
 	max-width:366px;
 	max-height:48px;
 		h1, h3 {
@@ -256,10 +220,7 @@ STYLES FOR ARCHIVE PAGINATION BOXES
 /*********************
 08. POSTS & CONTENT STYLES
 *********************/
-article{
-/* 	color:blue; */
 
-}
 #content {
 	margin-top: 60px;
 	margin-left:10px;
@@ -876,14 +837,12 @@ p + figcaption{//gets rid of space from empty p tag sometimes added above figcap
             }
 			.poem p{
 				text-indent: 0px;
-				margin-bottom: -0.5em;
-				line-height: 1.0em;
-				
+				margin-bottom: -0.5em;		
+				line-height:1.6em;
+				font-size:0.9em;		
 			}
              p.postpoem, p.poem{
-                text-indent: 0px;
-                line-height: 1.2em;
-                
+                text-indent: 0px;                
             }
 			.poem-title, .poemTitle, .poem-subhead{
 				text-indent:0px;
@@ -1150,33 +1109,6 @@ p + figcaption{//gets rid of space from empty p tag sometimes added above figcap
 
 	} /* end .wp-prev-next */
 
-/******************************************************************
-10. COMMENT STYLES
-******************************************************************/
-
-
-	/*////////////////COMMENTS(see import commen///////////////////
-/////////////////////////////////////////*/
-		
-		
-
-
-/******************************************************************
-11. COMMENT FORM STYLES
-******************************************************************/
-
-
-/*********************
-12. SIDEBARS & ASIDES
-*********************/
-
-
-
-/*********************
-13. FOOTER STYLES
-*********************/
-
-
 
 
 /***************FRONT PAGE AND ARCHIVE SECTIONS ***************/
@@ -1299,12 +1231,7 @@ tns created on the fly from post images, and tns derived from featured images */
 		outline: none;
 		color: #000;
 		}	
-/*
-.archive-post-title a:hover {
-		text-decoration: underline;
-		color: #cc0000;
-		}
-*/
+
 .archive-author{
 	font-family: Georgia, "Times New Roman", Times, serif;
 
@@ -1349,9 +1276,7 @@ tns created on the fly from post images, and tns derived from featured images */
 }
 
 /***PAGE NUMBERS ****/
-.navigation {
-/*   margin-left: 10px; */
-}
+
 .page-numbers {
   display: block;
   padding: 3px 6px;
@@ -1431,12 +1356,7 @@ ul.paging li.active {
 		outline: none;
 		color: #000;
 		}	
-/*
-#NewTitle a:hover {
-		text-decoration: underline;
-		color: #cc0000;
-		}
-*/
+
 
 
 #NewTitle p{
@@ -1448,7 +1368,6 @@ ul.paging li.active {
 
 /* sets all caps for first line */
 div#NewContent p:first-child:first-line {
-	/*font-variant: small-caps;*/
 	text-transform:uppercase;
 	letter-spacing: .1em;
 	font-size: 18px;
@@ -1458,10 +1377,8 @@ div#NewContent p:first-child:first-line {
 .archive-title, .page-title {
 	font-weight: bold;
 	font-style: italic;
-	//font-size: 1.2em;
 	color: white;
 	background: #666;
-/* 	margin: 2.5em 0 1em 0; */
 	padding: 5px;
 	clear: both;
 	width: 98%;
@@ -1474,7 +1391,6 @@ div#NewContent p:first-child:first-line {
 	border-radius: 2px;
 	} 
 	.small-subhead {
-/*     font-weight: bold; */
     font-style: italic;
     font-size: 1.2em;
     color: white;
@@ -1483,7 +1399,6 @@ div#NewContent p:first-child:first-line {
     margin: 10px 10px 10px 0;
     padding: 5px;
     clear: both;
-    /*width: 98%;*/
 
     background: -webkit-linear-gradient(left, #666, #ccc);
     background: -moz-linear-gradient(left, #666, #ccc);
@@ -1496,7 +1411,6 @@ div#NewContent p:first-child:first-line {
 
 
 #page_body{
-    //font-size:12px;
     margin-left:10px;
     margin-right:10px;
 }
@@ -1686,8 +1600,6 @@ div.box {
     margin-top:10px;
     margin-left: 0px;
     margin-bottom:5px;
-/*-moz-box-shadow: 2px 1px 1px #000;*/
-
     font-size: 12px;
 }
 
@@ -1848,7 +1760,6 @@ at some point, see NYTimes realty page for example */
     width: auto;
     height: auto;
     border: 1px solid #ccc;
-    //background: #1A1106;
     background-color: #ddd;
     margin-top: 15px;
     padding: 10px;
@@ -1866,14 +1777,12 @@ at some point, see NYTimes realty page for example */
     display:none;
 }
 #left-side {
-//    float: left;
     margin: 0 10px 10px 10px;
     width: 98%;
     background-color:white;
 }
 
 #right-side {
-//    float: right;
     margin: 0 10px 10px 10px;
     width: 98%;
     background-color:white;
@@ -1902,7 +1811,6 @@ at some point, see NYTimes realty page for example */
 	font-style: normal;
 	color: #000;
 	margin:4px 3px 0px 3px;
-	//margin-left:3px;
 }
 .edd_download_title a {
 		text-decoration: none;
