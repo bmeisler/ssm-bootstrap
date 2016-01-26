@@ -5,5 +5,8 @@
  */
 ?>
 <div class="sidebarAdsAmazon" role="complementary">
+	<h4 class="widget-title">
+		Like Us On Facebook
+	</h4>
 	<div id="fb-root"></div><script src="http://connect.facebook.net/en_US/all.js#xfbml=1"></script><fb:like-box href="http://www.facebook.com/sensitiveskin" width="300" show_faces="true" border_color="#ccc" stream="false" header="true"></fb:like-box>
 </div>
