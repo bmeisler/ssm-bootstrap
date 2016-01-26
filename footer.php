@@ -29,11 +29,13 @@
         <div class="col-sm-4 footer-border first-col"><!-- 1st column -->
           <h3 class="mb40">Sensitive</br>
           Skin</br>
-          Magazine</h3>
+          Magazine</h3></br>
+              <div class="small">
                 <p class="top"><i>Editor-In-Chief:</i> Bernard Meisler</p>
-				<p><i>Associate Editors:</i> Rob Hardin and B. Kold</p>
-				<p><i>Music Editor:</i> Steve Horowitz</p>
-				<p><i>Contributing Editors:</i>Ron Kolm, Tim Beckett, </br>Franklin Mount, Patrick O'Neil</p>
+        				<p><i>Associate Editors:</i> Rob Hardin and B. Kold</p>
+        				<p><i>Music Editor:</i> Steve Horowitz</p>
+        				<p><i>Contributing Editors:</i>Ron Kolm, Tim Beckett, </br>Franklin Mount, Patrick O'Neil</p>
+              </div>
 
         
 
@@ -46,6 +48,7 @@
           <br>
           <script type="text/javascript">maillink('info','sensitiveskinmagazine.com')</script>
           </div>
+          </br>
           <!-- social buttons -->
           <div id="awesome-social-buttons">
             <span class="mb40">Follow us:</span></br>
@@ -83,8 +86,8 @@
 
         <!-- Subscribe -->
         <h3>Join our mailing list</h3>
-        <p>We'll send you info about our latest issues, books and upcoming events, as well as discount coupons.</p>
-
+        <p class="small">We'll send you info about our latest issues, books and upcoming events, as well as discount coupons.</p>
+      </br>
        <!-- Begin MailChimp Signup Form -->
         <div id="bottom-signup">
 
