@@ -20,6 +20,9 @@
 
 <link rel="icon" href="<?php echo get_template_directory_uri(); ?>/favicon.png">
 
+<!--  Handles the emails in the footer -->
+     <script>function maillink(lhs,rhs){document.write("<a href=\"mailto");document.write(":" + lhs + "@");document.write(rhs + "\" >" + lhs + "@" + rhs + "<\/a>");}</script>
+
 
 <?php wp_head(); ?>
 </head>
