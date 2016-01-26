@@ -44,9 +44,19 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 	## Galleries
 --------------------------------------------------------------*/
 
+
 /* TEMP PATCH - fix all styles in SSMin*/
 .figure-full-left{
 	margin-top:24px;
+}
+
+/*to fix jetpack social icons - not enough room on top*/
+.sharedaddy{
+	margin-top:12px;
+}
+/*patch to fix messed up figcaption on Firefox*/
+p + figcaption{
+	margin-top:0px !important;
 }
 /*	================================================================================
 	Section Scroll Revealler
