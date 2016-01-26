@@ -90,7 +90,7 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 }
 .footer-border {
 	margin-top:40px;
-	padding-left:25px;
+	/*padding-left:25px;*/
 	min-height:300px;
 	border-left:2px dotted #555;
 }
@@ -266,6 +266,7 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 	background:#000;
 	max-height:255px;
 	padding-left:20px;
+	margin-right:0px;
 }
 
 #signup-bar h4{
@@ -278,12 +279,12 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 	color:#fff;
 	background:#333;
 }
-#signup-bar, #bottom-signup .input-lg{
+#signup-bar .input-lg{
 	/*height:40px;*/
 	font-size:14px;
 	border-radius: 4px;
 }
-#signup-bar,#bottom-signup .search-closer {
+#signup-bar, #bottom-signup .search-closer {
 	float:right;
 	margin-right:18px;
 	color:#ccc;
@@ -305,6 +306,21 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 	/*transform:rotate(180deg);*/
 }
 
+#bottom-signup .mc-field-group{
+	padding-right: 0px;
+}
+#bottom-signup .input-lg{
+	/*height:40px;*/
+	font-size:14px;
+	border-radius: 4px;
+}
+#bottom-signup .input-lg-left{
+	padding-right:6px;
+}
+#bottom-signup .input-lg-right{
+	padding-left:6px;
+}
+
 
 #side-signup-bar .input-lg{
 	height:40px;
@@ -323,12 +339,12 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 	margin-top:15px;
 	padding: 10px 10px 0px 10px;
 }
-#side-signup-bar, #signup-bar, #bottom-signup .input-lg-right{
+#side-signup-bar, #signup-bar .input-lg-right{
 	padding-right:16px;
 	padding-left:0px;
 
 }
-#side-signup-bar, #signup-bar, #bottom-signup .input-lg-left{
+#side-signup-bar, #signup-bar .input-lg-left{
 	padding-right:0px;
 }
 
@@ -361,6 +377,7 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 		width:350px;
 		border-bottom-left-radius:15px;
 		padding-right:20px;
+		margin-right:0px;
 	}
 
 	.mc-field-group{
@@ -420,7 +437,6 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 	float:right;
 	color:#ccc;
 	font-size:16px;
-	/*margin:-45px 12px 0 0;*/
 	margin:0px -18px 0 0;
 	-webkit-transition:all 0.4s ease-out;
 	-moz-transition:all 0.4s ease-out;
@@ -438,8 +454,15 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 	transform:rotate(180deg);*/
 	cursor:pointer;
 }
-.search-closer{
+#signup-bar .search-closer{
 	cursor:pointer;
+	margin-right:18px;
+}
+#signup-bar a{
+	color:#ccc;
+}
+#signup-bar a:hover{
+	color:#c00;
 }
 /* Navigation */
 #top-menu {
@@ -1303,15 +1326,15 @@ Media Queries
 	.grid-item:nth-child(4){
 		display:block;
 	}
-		#signup-bar {
+/*	#signup-bar {
 		width:100%;
 		border-bottom-left-radius:0px;
 		padding-right:0px;
-	}
+	}*/
  	#signup-bar {
 		width:350px;
 		border-bottom-left-radius:15px;
-		padding-right:20px;
+		padding-right:0px;
 	}
 
 	.mc-field-group{
