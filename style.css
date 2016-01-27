@@ -489,29 +489,7 @@ img {
 	border-left:none;
 }
 
-.blogroll .grid-item{
-	border-left: none;
-	vertical-align: top;
-	background-color:	black;
-	color: white;
-	font-size: 90%;
-	width:31%;
-}
-
 .grid-item--width2 { width: 100%; }
-	.blogroll .grid-item:nth-child(2){
-		display:none;
-		width:23%;
-	}
-	.blogroll .grid-item:nth-child(3){
-		display:none;
-		width:23%;
-	}
-	.blogroll 	.grid-item:nth-child(4){
-		display:none;
-		width:23%;
-	}
-/**
 	/* fluid 4 columns */
 	.no-stack{
 		display:none;
@@ -552,9 +530,6 @@ Media Queries
 	     margin-left:10px;
 	     margin-bottom:0px !important;
 	 }
-
-
-	
 }
 
 /* Extra Small Devices, Phones */ 
@@ -562,10 +537,10 @@ Media Queries
 	#logo{
 		width:200px;
 		padding:0px;
-			-webkit-transition:all 0.4s ease-out;
-	-moz-transition:all 0.4s ease-out;
-	-o-transition:all 0.4s ease-out;
-	transition:all 0.4s ease-out; 
+		-webkit-transition:all 0.4s ease-out;
+		-moz-transition:all 0.4s ease-out;
+		-o-transition:all 0.4s ease-out;
+		transition:all 0.4s ease-out; 
 	}
 	.grid-item {
 	  width: 33%;
@@ -611,9 +586,6 @@ Media Queries
 /* Medium Devices, Desktops */
 @media only screen and (min-width : 992px) {
 
-	.copyright {
-		float: right;
-	}
 	 /*Isotope styles -show all five columns*/
 	.grid-item {
 	  width: 20%;
@@ -632,19 +604,6 @@ Media Queries
 		display:block;
 		min-width:340px;
 	}	
-	.blogroll .grid-item:nth-child(2){
-		display:block;
-	}
-	.blogroll .grid-item:nth-child(3){
-		display:block;
-	}
-	.blogroll 	.grid-item:nth-child(4){
-		display:block;
-	}
-	.copyright{
-	
-	margin-top: 10px;
-
 		/* front page images now 50%*/
 	.post-img-medium {
 	     width:300px;
@@ -659,10 +618,6 @@ Media Queries
 	
 	/* gives us a centered 'page' with a border and shadow */
 	#container {
-	    /*-moz-box-shadow: 0 0 5px 5px #888;
-	    -webkit-box-shadow: 0 0 5px 5px#888;
-	    box-shadow: 0 0 5px 5px #888;
-	    width: 1080px; */
 	    position: relative;
 		height: auto;
 		margin: 0px auto;
@@ -697,8 +652,6 @@ Media Queries
 .single-content p{
 	text-indent: 20px;
 	max-width:600px;
-	/*margin-top:0px;*/
-	/*font-family:        "Georgia", "Cambria", "Times New Roman", "Times", "serif"; */
 }
 .enter-header{
 	max-width:600px;
