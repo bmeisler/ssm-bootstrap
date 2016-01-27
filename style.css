@@ -193,65 +193,7 @@ Downloads/issues
 	font-weight: bold;
 	font-family: "Helvetica Neue", "Helvetica", "Arial", "sans-serif";
 }
-/*--------------------------------------------------------------
-Footer
---------------------------------------------------------------*/
-#colophon {
-	margin-top: 50px;
-}
-/*#colophon a {
-	color: white;
-}*/
-/*#colophon p {
-	color: white;
-}*/
- 
-#colophon .container {
-	border: 1px solid #ddd;
-	padding-top: 25px;
-	background-color: white;
-	margin-bottom:10px;
-}
-#colcontainer{
-	background-color: white;
-}
- 
-.bottom-row div{
-	max-height:50px;
-}
-.footer-menu {
-	margin-left:0;
-	font-size:0.8em;
-}
- 
-.footer-menu li {
-	display:inline;
-	list-style-type:none;
-}
- 
-.footer-menu li a {
-	border-left:1px solid #ddd;
-	padding: 0 8px;
-}
- 
-.footer-menu > li:first-child > a {
-	border-left:none;
-	padding:0 8px 0 0;
-}
-.copyright{
-	float:left;
-	font-size:0.8em;
-	margin-top: -10px;
-}
-.blogroll{
-	background-color: black;
-	border-top: 1px solid #ddd;
-	margin-top:1px;
-	padding-top:25px;
-	padding-bottom:25px;
-	font-size: 80%;
-	color:	white;
-}
+
 
 /*--------------------------------------------------------------
 # Alignments
@@ -557,15 +499,15 @@ img {
 }
 
 .grid-item--width2 { width: 100%; }
-.blogroll .grid-item:nth-child(2){
+	.blogroll .grid-item:nth-child(2){
 		display:none;
 		width:23%;
 	}
-.blogroll .grid-item:nth-child(3){
+	.blogroll .grid-item:nth-child(3){
 		display:none;
 		width:23%;
 	}
-.blogroll 	.grid-item:nth-child(4){
+	.blogroll 	.grid-item:nth-child(4){
 		display:none;
 		width:23%;
 	}
@@ -577,10 +519,10 @@ img {
 	#logo{
 		width:150px;
 		padding-top:5px;
-			-webkit-transition:all 0.4s ease-out;
-	-moz-transition:all 0.4s ease-out;
-	-o-transition:all 0.4s ease-out;
-	transition:all 0.4s ease-out; 
+		-webkit-transition:all 0.4s ease-out;
+		-moz-transition:all 0.4s ease-out;
+		-o-transition:all 0.4s ease-out;
+		transition:all 0.4s ease-out; 
 	}
 
 
@@ -595,21 +537,21 @@ Media Queries
 /* Custom, iPhone Retina */ 
 @media only screen and (min-width : 320px) {
 		/* images fixes for front page images*/
-.post-img-medium {
-     width:100%;
-     height:auto;
-     padding:0px !important;
-     float:left;  
-     margin-right:10px;
-     margin-bottom:0px !important;
- }
- .post-img-medium-right {
-    width:100%;
-     height:auto;
-     padding:0px !important;
-     margin-left:10px;
-     margin-bottom:0px !important;
- }
+	.post-img-medium {
+	     width:100%;
+	     height:auto;
+	     padding:0px !important;
+	     float:left;  
+	     margin-right:10px;
+	     margin-bottom:0px !important;
+	 }
+	 .post-img-medium-right {
+	    width:100%;
+	     height:auto;
+	     padding:0px !important;
+	     margin-left:10px;
+	     margin-bottom:0px !important;
+	 }
 
 
 	
@@ -633,12 +575,12 @@ Media Queries
 		display:block;
 	}
 	/* images fixes*/
-.post-img-medium {
-     width:200px;
- }
- .post-img-medium-right {
-    width:200px;
- }
+	.post-img-medium {
+	     width:200px;
+	 }
+	 .post-img-medium-right {
+	    width:200px;
+	 }
 
 }
 
@@ -662,18 +604,7 @@ Media Queries
 	.grid-item--width2 { width: 25%; }
 	.grid-item:nth-child(4){
 		display:block;
-	}
-
- 	#signup-bar {
-		width:350px;
-		border-bottom-left-radius:15px;
-		padding-right:0px;
-	}
-
-	.mc-field-group{
-	padding-right:20px;
-	padding-bottom: 15px;
-}
+	} 
 	
 }
 
@@ -716,11 +647,11 @@ Media Queries
 
 		/* front page images now 50%*/
 	.post-img-medium {
-     width:300px;
- }
- .post-img-medium-right {
-    width:300px;
- }
+	     width:300px;
+	 }
+	 .post-img-medium-right {
+	    width:300px;
+	 }
 
 
 }
@@ -746,13 +677,7 @@ Media Queries
 	}
 }
 
-.nav li, .footer{
-	font-family: "Arial","sans-serif";
-	font-weight: bold;
-	font-size: 12px;
-	text-transform: uppercase;
-	color: #eeeeee;
-}
+
 
 .entry-content img{
 	float: left;
@@ -795,198 +720,5 @@ aside ul{
 }
 .thumbnails .col-md-3 img {
  max-height:200px;
-}
-
-
-/*.book-col1, .book-col2, .book-col3 {float:left; width:49%; height:100% }
-.col { width:150px; float:left; margin-right:5px; }*/
-
-/* .first, .middle, .last styling of posts on home page for three column */
-/*
-.first, .middle, .last { width: 32%; float:left; clear:none!important; }
-.first { margin-right: 2%; clear:both!important; }
-.middle { margin-right: 2%; } 
-*/
-
-/*--------------------------------------------------------------
-Book styles 
---------------------------------------------------------------*/
-
-.single-issues .hentry{
-	border-bottom: none;
-}
-
-
-
-.issues img.wp-post-image {
-    margin-bottom: 0;
-    height: auto;  
-}
-
-.issue-item {
-	margin: 10px 10px;
-}
-
-.issues .thumbnail {
-	margin-bottom: 5px;
-}
-
-.issues h4 {
-	margin-top: 5px;
-}
-
-
-.single-books .hentry{
-	border-bottom: none;
-}
-
-
-.book img.wp-post-image {
-    margin-bottom: 0;
-    height: auto;  
-}
-
-.book-item {
-	margin: 10px 10px;
-}
-
-.book .thumbnail {
-	margin-bottom: 5px;
-}
-
-.book h4 {
-	margin-top: 5px;
-}
-
-.btn-group-category{
-	float:left;
-}
-.book-category-excerpt{
-	text-indent:0 !important;
-	font-size: 0.9em !important;
-}
-.book-category-title{
-    font-size: 1.2em;
-    line-height: 1em;
-    text-align: left;
-    font-family: Georgia, "Times New Roman", Times, serif;
-    font-style: bold;
-    color: #000;
-    margin-top:6px;
-    margin-right:6px;
-    margin-left:3px;
-}
-.book-category-title a {
-    text-decoration: none;
-    outline: none;
-    color: #000;
-}
-/*.book-category-title a:hover {
-    text-decoration: underline;
-    color: #cc0000;
-}*/
-.book-category-author{
-    font-family: Georgia, "Times New Roman", Times, serif;
-
-    font-style: italic;
-    font-size: 0.8em;
-    margin-left:3px;
-    margin-bottom:6px;
-    margin-top:6px;
-    font-style: italic;
-    font-weight:bold;
-    color: #A28F62;
-    line-height: 1.2em;
-    text-transform: uppercase;
-}
-.book-category-title{
-	font-size: 1.8em;
-			line-height: 1.6em;
-			//text-align: center;
-			//margin: -5px;
-			font-family: @serif;
-			font-weight: bold;
-			color:#333333;
-
-}
-
-.book-excerpt{
-	text-indent:0 !important;
-	font-size: 100% !important;
-	font-style: italic; 
-}
-.book-title{
-	font-size: 1.8em;
-			margin-bottom: -15px !important;
-			font-family: @serif;
-			font-weight: bold;
-			color:#333333;
-
-}
-#author-block{
-	border-top-style: double;
-}
-#book-info{
-	margin-top: 10px;
-	border-top-style: double;
-
-	float: left;
-}
-.book-author{
-	font-family: Georgia, "Times New Roman", Times, serif;
-	margin-bottom: 14px;
-	font-style: italic; 
-	font-size: 0.9em;
-	line-height: 1em;
-	margin-left:3px;
-	margin-bottom:6px;
-	font-style: italic;
-	font-weight:bold;
-	color: #A28F62;
-	line-height: 1.2em;
-	text-transform: uppercase;
-}
-
-#book-title{
-	font-size: 1.8em;
-			line-height: 1.6em;
-			//text-align: center;
-			//margin: -5px;
-			font-family: @serif;
-			font-weight: bold;
-			color:#333333;
-
-}
-#author-block{
-	border-top-style: double;
-}
-#book-info{
-	margin-top: 10px;
-	border-top-style: double;
-
-	float: left;
-}
-#book-author{
-	margin-top: -14px;
-	font-family: Georgia, "Times New Roman", Times, serif;
-	margin-bottom: 14px;
-	font-style: italic; 
-	font-size: 0.9em;
-	line-height: 1em;
-	margin-left:3px;
-	margin-bottom:6px;
-	font-style: italic;
-	font-weight:bold;
-	color: #A28F62;
-	line-height: 1.2em;
-	text-transform: uppercase;
-}
-
-.blurb{
-	font-size: 100% !important;
-	margin-bottom:-10px;
-	margin-right:-18px;
-	margin-left:24px;
-	text-align: justify;
 }
 

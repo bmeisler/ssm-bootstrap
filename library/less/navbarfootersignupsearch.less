@@ -1,6 +1,63 @@
 /*	================================================================================
 	Footer
 	================================================================================	*/
+.nav li, .footer{
+	font-family: "Arial","sans-serif";
+	font-weight: bold;
+	font-size: 12px;
+	text-transform: uppercase;
+	color: #eeeeee;
+}
+#colophon {
+	margin-top: 50px;
+}
+ 
+#colophon .container {
+	border: 1px solid #ddd;
+	padding-top: 25px;
+	background-color: white;
+	margin-bottom:10px;
+}
+#colcontainer{
+	background-color: white;
+}
+ 
+.bottom-row div{
+	max-height:50px;
+}
+.footer-menu {
+	margin-left:0;
+	font-size:0.8em;
+}
+ 
+.footer-menu li {
+	display:inline;
+	list-style-type:none;
+}
+ 
+.footer-menu li a {
+	border-left:1px solid #ddd;
+	padding: 0 8px;
+}
+ 
+.footer-menu > li:first-child > a {
+	border-left:none;
+	padding:0 8px 0 0;
+}
+.copyright{
+	float:left;
+	font-size:0.8em;
+	margin-top: -10px;
+}
+.blogroll{
+	background-color: black;
+	border-top: 1px solid #ddd;
+	margin-top:1px;
+	padding-top:25px;
+	padding-bottom:25px;
+	font-size: 80%;
+	color:	white;
+}
 	/*replaces blogroll class*/
 #footer-info{
 	background-color: black;
@@ -159,26 +216,7 @@
 	border:none;
 }
 
-/*.spin {
-	position:fixed;
-	left:50%;
-	top:50%;
-	width:83px;
-	height:82px;
-	color:#30bfff;
-	font-size:60px;
-	border-radius:50%;
-	background:rgba(0,0,0,0.4);
-	margin:-70px 0 0 -45px;
-	-moz-box-shadow:0 0 7px 1px #d0d0d0;
-	-webkit-box-shadow:0 0 7px 1px #d0d0d0;
-	box-shadow:0 0 7px 1px #d0d0d0;
-}
-.spin .fa {
-	display:block;
-	margin-top:11px;
-	text-align:center;
-}*/
+
 /* TEMP PATCH - fix all styles in SSMin*/
 .figure-full-left{
 	margin-top:24px;
@@ -319,7 +357,7 @@
 	#r-col {
 	padding-left:15px;
 	}
-}
+} 
 /*	================================================================================
 	768px - Max
 	================================================================================	*/
@@ -337,6 +375,22 @@
 	.content .text .mt60 {
 		text-align:center;	
 	}
+}
+
+/* Small Devices, Tablets */
+@media only screen and (min-width : 768px) {
+
+ 	#signup-bar {
+		width:350px;
+		border-bottom-left-radius:15px;
+		padding-right:0px;
+	}
+
+	.mc-field-group{
+		padding-right:20px;
+		padding-bottom: 15px;
+	}
+	
 }
 /*	================================================================================
 	Search
