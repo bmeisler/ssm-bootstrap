@@ -658,6 +658,9 @@ Media Queries
 	.grid-item .bottom-links-title a{
 		color: black;
 	}
+	.grid-item .bottom-links-title a:hover{
+		color: #c00;
+	}
 	.grid-item:nth-child(4){
 		display:block;
 	}
@@ -666,11 +669,7 @@ Media Queries
 	.grid-item:nth-child(4){
 		display:block;
 	}
-/*	#signup-bar {
-		width:100%;
-		border-bottom-left-radius:0px;
-		padding-right:0px;
-	}*/
+
  	#signup-bar {
 		width:350px;
 		border-bottom-left-radius:15px;
@@ -697,6 +696,9 @@ Media Queries
 	}
 	.grid-item .bottom-links-title a{
 		color: black;
+	}
+	.grid-item .bottom-links-title a:hover{
+		color: #c00;
 	}
 	.grid-item:last-child {
 	  display:block;

@@ -58,7 +58,8 @@ mobile. Make sure to double check these!
 .poem p{
 	text-indent: 0px;
 	margin-bottom: -0.5em;
-	line-height:1.6em;
+	line-height: 1.6em;
+	font-size: 0.9em;
 }
 
 /************ for sidebar ads ***************/
@@ -213,6 +214,76 @@ mobile. Make sure to double check these!
 }
 
 
+/**********FIVE BOX LAYOUT FOR BOTTOM**************/
+/****HEEDS RESPONSIVENESS - 3 BOXES? SMALLER BOXES? leaving it here for now...*/
+
+.bottom-links-title{
+	font-size: 1.2em;
+    line-height: 1em;
+    text-align: left;
+    font-family: Georgia, "Times New Roman", Times, serif;
+    font-style: bold;
+    color: #000;
+    margin-top:6px;
+    margin-right:6px;
+    margin-left:3px;
+    a {
+	    text-decoration: none;
+	    outline: none;
+	    color: #000;
+    }
+}
+#footer-container{
+	display:block;
+	background-color: black;
+	width:100%;  
+	margin:10px auto;
+    clear:both; 
+    border-left:solid 1px #ccc; 
+	border-right:solid 1px #ccc; 
+	} 
+	
+	
+.twocol{
+	width:20%;
+} 
+#colcontainer{
+	background-color: black;
+	margin-bottom:2%;
+	width:100%;
+	float:left;
+	padding-top:5px;
+	img{
+		width:100%;
+		max-height:150px;
+ 		height:auto;
+	}
+}
+#FiveColumnContainerTop{
+	width:100%;
+	background:#fff;
+	float:left;
+	border-top: double 3px #ccc;
+	border-bottom: double 3px #ccc;
+	//margin-bottom:10px;
+	padding:4px;
+	font-family: Georgia, "Times New Roman", Times, serif;
+	font-size:18px;
+	font-weight:bold;
+	font-style:italic;
+ 	display:block;
+}
+
+#FiveColumnContainerBottom{
+	width:952px;
+	background:#fff;
+	float:left;
+	border-top: double 3px #ccc;
+	margin-left:2px;
+	margin-top:-10px
+}
+
+
 
 
 
@@ -264,6 +335,34 @@ mobile. Make sure to double check these!
 
 }	
 
+#footer {
+	clear: both;  
+	font-size: .6em; 
+	background-color: #000;
+	width: 100%;
+	
+	margin-bottom:20px;
+	padding-top:10px;
+	padding-bottom:15px;
+}
+
+.footer-col{
+    background-color: black;
+    line-height:1.5em;
+    padding-bottom:8px;
+    display:block;
+}
+#footer p {
+	color: #fff; 
+	padding: 0px;
+	line-height:1.5em;
+}
+#footer p.top {
+	line-height:0em;
+	margin-top:7px;
+}
+
+
 	
 .article-header{
 	margin-top: 8px;
@@ -292,6 +391,57 @@ mobile. Make sure to double check these!
 
 
 
+#social {
+  display:block;
+  position: absolute;
+  float:left;
+  right:0px;
+  top:5px;
+  margin:0px;
+}
+/***************THREE COLUMNS, FOR LARGER SIZES BOOKS AND BACK ISSUES ********/
+/*Code for 3 columns, used in back issues section */
+#threecolcontainer1 {
+    float:left;
+    width:100%;
+    background:#fff;
+    margin-top:20px;
+    margin-bottom:20px;
+    #threecolcontainer2 {
+	}
+	#threecolcontainer3 {
+	}
+	
+	#threecol1 {
+	   float:left;
+	   width:32%;
+	   border: 1px solid #cccccc;
+        img{
+            width:100%;
+            height:auto;
+        }
+	}
+	#threecol2 {
+	    float:left;
+	    width:32%;
+	    border: 1px solid #cccccc;
+	    margin-left:10px;
+        img{
+            width:100%;
+            height:auto;
+        }
+	}
+	#threecol3 {
+	    float:left;
+	    width:32%;
+	    border: 1px solid #cccccc;
+	    margin-left:10px;
+        img{
+            width:100%;
+            height:auto;
+        }
+	}
+}
 
 /* for back issues*/
 #issueNumber{
@@ -334,6 +484,36 @@ mobile. Make sure to double check these!
 	float:left;
 	margin-left:10px;
 }
+/* for books */
+#threecolBook1 {
+   float:left;
+   width:31%;
+   /*border: 1px solid #cccccc;*/
+   margin-left:0px;
+   background:white;
+   height:auto;
+   padding-top:10px;
+}
+#threecolBook2 {
+    float:left;
+    width:31%;
+    background:white;
+    /*border: 1px solid #cccccc;*/
+    margin-left:25px;
+     height:auto;
+     padding-top:10px;
+}
+#threecolBook3 {
+    float:left;
+    width:31%;
+    background:white;
+    /*border: 1px solid #cccccc;*/
+    margin-left:25px;
+     height:auto;
+     padding-top:10px;
+}
+
+
 
 h3 #comments {
 	text-align: left; 
