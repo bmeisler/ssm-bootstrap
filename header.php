@@ -34,18 +34,21 @@
  -->	<header>
 			<nav role="navigation" class="navbar navbar-default navbar-fixed-top">
 				<div class="container-fluid navbar-static-top" ><!-- class="navbar navbar-static-top navbar-inverse" -->
-					<div class="navbar-header">
-						<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-        <i class="fa fa-bars"></i>
-      </button>
-       <div class="mobile-icons visible-xs-block">
-        <a data-toggle="collapse" data-target="#search-bar" class="circl" id="small-search-btn"><i class="fa fa-search"></i></a>
-        <a data-toggle="collapse" data-target="#signup-bar" class="circl" id="small-signup-btn"><i class="fa fa-user"></i></a>
-      </div>
-						<a class="navbar-brand" href="<?php bloginfo('url'); ?>">
-							<img id="logo" src="http://www.sensitiveskinmagazine.com/wp-content/images/SSMLogo.svg" width="200" height="auto" />
-						</a>
 
+					<div class="navbar-header">
+						<!-- minified menu icons - 3 horizontal bars -->
+						<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+				        	<i class="fa fa-bars"></i>
+				      	</button>
+				     <!-- minified search and signup icons -->
+				     <div class="mobile-icons visible-xs-block">
+				        <a data-toggle="collapse" data-target="#search-bar" class="circl" id="small-search-btn"><i class="fa fa-search"></i></a>
+				        <a data-toggle="collapse" data-target="#signup-bar" class="circl" id="small-signup-btn"><i class="fa fa-user"></i></a>
+				     </div>
+				     <!-- logo -->
+					  <a class="navbar-brand" href="<?php bloginfo('url'); ?>">
+							<img id="logo" src="http://www.sensitiveskinmagazine.com/wp-content/images/SSMLogo.svg" width="200" height="auto" />
+					   </a>
 
 <!-- Search -->
 
@@ -117,7 +120,9 @@
 
 					</div><!-- navbar-header -->
 
-					<div class="navbar-collapse collapse navbar-responsive-collapse">
+					<div id="collapsing-navbar" class="navbar-collapse collapse navbar-responsive-collapse">
+						
+
 
 				   	   	<!-- <a id="search_btn"   class="btn btn-default search-button" data-toggle="collapse" data-target="#search-row">
 				        	<span class="fa fa-search" ></span></a> -->
