@@ -72,126 +72,18 @@ p + figcaption{
 #TOC{
 	padding:0px;
 }
-/*	================================================================================
-	Section Scroll Revealler
-
-	This makes each page fade in when navigated to
-	================================================================================	*/
-
-.page-transition {
-	-webkit-animation:fadeIn;
-	-moz-animation:fadeIn;
-	-o-animation:fadeIn;
-	animation:fadeIn;
-	-webkit-animation-duration:4s;
-	-moz-animation-duration:4s;
-	-o-animation-duration:4s;
-	animation-duration:4s;
-}
-@-webkit-keyframes fadeIn {0%{opacity:0;}100%{opacity:1;}}
-@-moz-keyframes fadeIn {0%{opacity:0;}100%{opacity:1;}}
-@-o-keyframes fadeIn {0%{opacity:0;}100%{opacity:1;}}
-@keyframes fadeIn {0%{opacity:0;}100%{opacity:1;}}
-
-.page-transition {overflow:hidden;}
-
-
 
 
 
 /*--------------------------------------------------------------
 ## Links
 --------------------------------------------------------------*/
-/*a {
-	color: royalblue;
-}
 
-/*a:visited {
-	color: #666;
-}*/
-/*.btn > a:visited{
-	color: #eee;
-}*/
 
 a:hover,
 a:focus,
 a:active {
 	color: #cc0000;
-}
-
-
-
-
-/*a:focus {
-	outline: thin dotted;
-}*/
-
-/*a:hover,
-a:active {
-	outline: 0;
-}*/
-
-
-
-/* adapted from .badge class - so category and tags links at bottom of page will look like little pills*/
-.cat-links a{
-	display: inline-block;
-    min-width: 10px;
-    padding: 3px 7px;
-    font-size: 12px;
-    font-weight: 400;
-    line-height: 1;
-    color: #fff;
-    text-align: center;
-    white-space: nowrap;
-    vertical-align: middle;
-    background-color: #337ab7;
-    border-radius: 10px;
-}
-.cat-links a:hover{
-	background-color:#cc0000;
-}
-
-.tags-links a{
-	display: inline-block;
-    min-width: 10px;
-    padding: 3px 7px;
-    font-size: 12px;
-    font-weight: 400;
-    line-height: 1;
-    color: #fff;
-    text-align: center;
-    white-space: nowrap;
-    vertical-align: middle;
-    background-color: #337ab7;
-    border-radius: 10px;
-}
-.tags-links a:hover{
-	background-color:#cc0000;
-}
-
-.search-button{
-	margin-top:8px;
-}
-
-
-/*--------------------------------------------------------------
-Downloads/issues
---------------------------------------------------------------*/
-#history{
-	border-top:1px double #333;
-	padding-top:10px;
-	margin-top:50px;
-}
-#bottom{
-	border-bottom:1px double #333;
-	padding-bottom:10px;
-	margin-bottom:10px;
-}
-.download-title{
-	font-size: 20px;
-	font-weight: bold;
-	font-family: "Helvetica Neue", "Helvetica", "Arial", "sans-serif";
 }
 
 
@@ -248,9 +140,7 @@ Downloads/issues
 	margin-top: -5px;
 }
 
-/*--------------------------------------------------------------
-# Content
---------------------------------------------------------------*/
+
 /*--------------------------------------------------------------
 ## Posts and pages
 --------------------------------------------------------------*/
@@ -349,32 +239,7 @@ img {
 	max-width: 100%;
 }
 
-/*sergey's code*/
-.the-display {
-	display:block;
-	width:100%;
-	height:100%;
-	overflow:hidden;
-}
-.the-display img {
-	-webkit-filter:brightness(100%);
-	-moz-filter:brightness(100%);
-	filter:brightness(100%);
-	-webkit-transition:all 0.4s ease-out;
-	-moz-transition:all 0.4s ease-out;
-	-o-transition:all 0.4s ease-out;
-	transition:all 0.4s ease-out;
-}
-.the-display:hover img {
-	-webkit-filter:brightness(110%);
-	-moz-filter:brightness(110%);
-	filter:brightness(110%);
-	transform:scale(1.02);
-}
 
-.hidden{
-	display: none;
-}
 
 
 /*--------------------------------------------------------------
@@ -502,11 +367,7 @@ img {
 		-o-transition:all 0.4s ease-out;
 		transition:all 0.4s ease-out; 
 	}
-
-
-
-	
-Media QueriesCSS
+}
 
 /*--------------------------------------------------------------
 Media Queries 

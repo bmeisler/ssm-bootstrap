@@ -46,11 +46,6 @@ and will be used across all viewports.
 @link-color:        #cc0000;
 @link-hover:        darken(@link-color, 9%);
 
-/*
-Here's a great tutorial on how to
-use color variables properly:
-http://sachagreif.com/sass-color-variables/
-*/
 
 
 /*********************
@@ -72,53 +67,7 @@ TYPOGRAPHY
 	visibility:hidden !important;
 	display:none !important;
 }
-//this will overrid the default in the _grid file, which I don't want to edit at all
-/*
-.eightcol{
-	min-height: 2720px; 
-}
-*/
-/********************
-02. WORDPRESS BODY CLASSES
-    style a page via class
-********************/
 
-.rtl {}                           /* for sites that are read right to left (i.e. hebrew) */
-.home {}                          /* home page */
-.blog {}                          /* blog template page */
-.archive {}                       /* archive page */
-.date {}                          /* date archive page */
-	.date-paged-1 {}                /* replace the number to the corresponding page number */
-.search {
-}                        /* search page */
-	.search-results {}              /* search result page */
-	.search-no-results {}           /* no results search page */
-	.search-paged-1 {}              /* individual paged search (i.e. body.search-paged-3) */
-.error404 {}                      /* 404 page */
-.single {}                        /* single post page */
-	.postid-1 {}                    /* individual post page by id (i.e. body.postid-73) */
-	.single-paged-1 {}              /* individual paged single (i.e. body.single-paged-3) */
-.attachment {}                    /* attatchment page */
-	.attachmentid-1 {}              /* individual attatchment page (i.e. body.attachmentid-763) */
-	.attachment-mime-type {}        /* style mime type pages */
-.author {}                        /* author page */
-	.author-nicename {}             /* user nicename (i.e. body.author-samueladams) */
-	.author-paged-1 {}              /* paged author archives (i.e. body.author-paged-4) for page 4 */
-.category {}                      /* category page */
-	.category-1 {}                  /* individual category page (i.e. body.category-6) */
-	.category-paged-1 {}            /* replace the number to the corresponding page number */
-.tag {}                           /* tag page */
-	.tag-slug {}                    /* individual tag page (i.e. body.tag-news) */
-	.tag-paged-1 {}                 /* replace the number to the corresponding page number */
-.page-template {}                 /* custom page template page */
-	.page-template-page-php {}      /* individual page template (i.e. body.page-template-contact-php */
-	.page-paged-1 {}                /* replace the number to the corresponding page number */
-	.page-parent {}                 /* parent page template */
-	.page-child {}                  /* child page template */
-	.parent-pageid-1 {}             /* replace the number to the corresponding page number */
-.logged-in {}                     /* if user is logged in */
-.paged {}                         /* paged items like search results or archives */
-	.paged-1 {}                     /* individual paged (i.e. body.paged-3) */
 
 /*********************
 03. LAYOUT & GRID STYLES
@@ -194,21 +143,6 @@ h5.storytitle {
 		}
 }
 
-
-
-
-
-/*********************
-07. NAVIGATION STYLES
-*********************/
-
-/*
-all navs have a .nav class applied via
-the wp_menu function; this is so we can
-easily write one group of styles for
-the navs on the site so our css is cleaner
-and more scalable.
-*/
 
 /*///////////////////////////////////////////////////////////
 STYLES FOR ARCHIVE PAGINATION BOXES
@@ -322,39 +256,7 @@ STYLES FOR ARCHIVE PAGINATION BOXES
 			color: #999;
 			time {}
 		}
-		.book{
-		text-indent:0px;
-				line-height:1.2em;
-				font-size: 0.9em;
-				font-family: @sans-serif;
-				color:black;
-			p{
-							}
-			.info{
-				text-indent:0px;
-				font-size:0.9em;
-				}
-			.blurb{
-				text-indent: 0px;
-				font-size:0.9em;
-				color:black;
-			}
-			.blurb-quote{
-				text-align: right;
-				color:black;
-				font-size:0.9em;
-				margin-top:-0.5em;
-			}
-
-		}
 		
-		.isbn{
-				font-size:0.8em;
-				margin-top:-0.5em;
-			}
-		#book-logo{
-			margin-top:30px;
-		}
 		p.vcard{
 			font-style: italic;
 			font-size:0.9em;
@@ -395,8 +297,9 @@ STYLES FOR ARCHIVE PAGINATION BOXES
     margin: 20px 20px 20px 0px;
     float:left;
 }
-/////
-//WE HAVE FOUR IMAGE SIZES - FULL (98%/600px), MEDIUM (67%/400px) 50 (50%/300px) and SMALL (33%/200px)
+
+/*WE HAVE FOUR IMAGE SIZES - FULL (98%/600px), MEDIUM (67%/400px) 50 (50%/300px) and SMALL (33%/200px)*/
+
 figure{
 	width:100%;
     height:auto;
@@ -654,9 +557,9 @@ p + figcaption{//gets rid of space from empty p tag sometimes added above figcap
 			}
 
 			 
-//KEY DEFINITIONS HERE - PARAGRAPH, ETC.
+/*KEY DEFINITIONS HERE - PARAGRAPH, ETC.
 
-			//	EASY DIGITAL DOWNLOAD OVERRIDES
+EASY DIGITAL DOWNLOAD OVERRIDES*/
 			p.edd_has_purchased, p.edd_error{
 					text-indent: 0px;
 				}
@@ -1420,6 +1323,41 @@ div#NewContent p:first-child:first-line {
 /***************THREE COLUMNS, FOR LARGER SIZES BOOKS AND BACK ISSUES ********/
 /*Code for 3 columns, used in back issues section */
 /* for back issues*/
+
+.book{
+	text-indent:0px;
+			line-height:1.2em;
+			font-size: 0.9em;
+			font-family: @sans-serif;
+			color:black;
+		p{
+						}
+		.info{
+			text-indent:0px;
+			font-size:0.9em;
+			}
+		.blurb{
+			text-indent: 0px;
+			font-size:0.9em;
+			color:black;
+		}
+		.blurb-quote{
+			text-align: right;
+			color:black;
+			font-size:0.9em;
+			margin-top:-0.5em;
+		}
+
+	}
+	
+	.isbn{
+			font-size:0.8em;
+			margin-top:-0.5em;
+		}
+	#book-logo{
+		margin-top:30px;
+	}
+		
 #issueNumber{
 	font-family: Verdana,Geneva,sans-serif;
 	font-size: 12px;
@@ -2048,5 +1986,117 @@ Book styles
 	margin-left:24px;
 	text-align: justify;
 }
+
+/* TAG AND CATEGORY BUTTONS AT BOTTOM OF PAGE*/
+/* adapted from .badge class - so category and tags links at bottom of page will look like little pills*/
+.cat-links a{
+	display: inline-block;
+    min-width: 10px;
+    padding: 3px 7px;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 1;
+    color: #fff;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    background-color: #337ab7;
+    border-radius: 10px;
+}
+.cat-links a:hover{
+	background-color:#cc0000;
+}
+
+.tags-links a{
+	display: inline-block;
+    min-width: 10px;
+    padding: 3px 7px;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 1;
+    color: #fff;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    background-color: #337ab7;
+    border-radius: 10px;
+}
+.tags-links a:hover{
+	background-color:#cc0000;
+}
+
+.search-button{
+	margin-top:8px;
+}
+
+/*--------------------------------------------------------------
+Downloads/issues
+--------------------------------------------------------------*/
+#history{
+	border-top:1px double #333;
+	padding-top:10px;
+	margin-top:50px;
+}
+#bottom{
+	border-bottom:1px double #333;
+	padding-bottom:10px;
+	margin-bottom:10px;
+}
+.download-title{
+	font-size: 20px;
+	font-weight: bold;
+	font-family: "Helvetica Neue", "Helvetica", "Arial", "sans-serif";
+}
+
+/*CODE TO MAKE IMAGES BRIGHTER, BIGGER ON ROLLOVER*/
+.the-display {
+	display:block;
+	width:100%;
+	height:100%;
+	overflow:hidden;
+}
+.the-display img {
+	-webkit-filter:brightness(100%);
+	-moz-filter:brightness(100%);
+	filter:brightness(100%);
+	-webkit-transition:all 0.4s ease-out;
+	-moz-transition:all 0.4s ease-out;
+	-o-transition:all 0.4s ease-out;
+	transition:all 0.4s ease-out;
+}
+.the-display:hover img {
+	-webkit-filter:brightness(110%);
+	-moz-filter:brightness(110%);
+	filter:brightness(110%);
+	transform:scale(1.02);
+}
+
+.hidden{
+	display: none;
+}
+
+/*	================================================================================
+	Section Scroll Revealler
+
+	This makes each page fade in when navigated to
+	================================================================================	*/
+
+.page-transition {
+	-webkit-animation:fadeIn;
+	-moz-animation:fadeIn;
+	-o-animation:fadeIn;
+	animation:fadeIn;
+	-webkit-animation-duration:4s;
+	-moz-animation-duration:4s;
+	-o-animation-duration:4s;
+	animation-duration:4s;
+}
+@-webkit-keyframes fadeIn {0%{opacity:0;}100%{opacity:1;}}
+@-moz-keyframes fadeIn {0%{opacity:0;}100%{opacity:1;}}
+@-o-keyframes fadeIn {0%{opacity:0;}100%{opacity:1;}}
+@keyframes fadeIn {0%{opacity:0;}100%{opacity:1;}}
+
+.page-transition {overflow:hidden;}
+
 
 
