@@ -12,7 +12,7 @@
 	//echo 'match'; 
 	?>
 	<ul class="toc"
-<?php post_class() ?>
+<?php post_class().' ';?>
 	id="post- 
 <?php the_ID(); ?>
 	">
@@ -25,8 +25,8 @@
 <?php
 }else { ?>
 <ul 
-<?php post_class() ?>
-id="post- 
+<?php post_class().' ';?>
+ id="post- 
 <?php the_ID(); ?>
 ">
 <li class="storytitle">
