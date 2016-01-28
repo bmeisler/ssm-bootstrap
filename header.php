@@ -47,7 +47,7 @@
 					     </div>
 					     <!-- logo -->
 						  <a class="navbar-brand" href="<?php bloginfo('url'); ?>">
-								<img id="logo" src="http://www.sensitiveskinmagazine.com/wp-content/images/SSMLogo.svg" width="200" height="auto" alt="sensitive skin magazine logo" />
+								<img id="logo" src="http://www.sensitiveskinmagazine.com/wp-content/images/SSMLogo.svg" width="200" height="28" alt="sensitive skin magazine logo" />
 						  </a>
 
 					<!-- Search -->
