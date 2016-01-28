@@ -2,7 +2,8 @@
 /**
  * Template Name: Another Books Template
  *
- * This is the template that displays all the custom Books posts.
+ * This is the template that displays all the custom Books posts. That is - multiple books on the page, in rows and columns.
+ * Individual books use template/parts/content-books
  *
  * @package Sensitive_Skin_Bootstrap
  */
@@ -34,15 +35,13 @@ get_header(); ?>
 							<a class="thumbnail" href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>">
 							<?php the_post_thumbnail('large'); ?>
 							</a>
-							<h2 class="book-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h4>
+							<h2 class="book-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
 							
 							<h2 class="book-author"><?php the_field('books_author'); ?></h2>
-								
 
-							</h2>
 							<p><?php the_field('brief_description') ?></p>
 							<?php if (get_field('books_amazon_print_link') !== ''){?>
-					      		<a role="button" class="btn btn-primary" role="button" href="<?php the_field('books_amazon_print_link') ?>" >Buy it on Amazon</a>
+					      		<a role="button" class="btn btn-primary" href="<?php the_field('books_amazon_print_link') ?>" >Buy it on Amazon</a>
 					   		<?php } ?>
 
 					   		<?php if (get_field('kindle_link') !== ''){?>
