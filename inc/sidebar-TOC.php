@@ -13,8 +13,7 @@
 	?>
 	<ul class="toc"
 <?php post_class().' ';?>
-	id="post- 
-<?php the_ID(); ?>
+	id="post-<?php the_ID(); ?>
 	">
 	<li class="currentStoryTitle">
 <em><?php $subtitle = get_post_meta($post->ID, 'subtitle', true);
@@ -26,8 +25,7 @@
 }else { ?>
 <ul 
 <?php post_class().' ';?>
- id="post- 
-<?php the_ID(); ?>
+ id="post-<?php the_ID(); ?>
 ">
 <li class="storytitle">
 <em><?php $subtitle = get_post_meta($post->ID, 'subtitle', true);
