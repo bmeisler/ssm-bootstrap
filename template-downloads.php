@@ -34,7 +34,7 @@ get_header(); ?>
 							<a class="thumbnail the-display" href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>">
 							<?php the_post_thumbnail('large'); ?>
 							</a>
-							<h4><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h4>
+							<h4 class="issue-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h4>
 							
 							<?php the_field('brief_description') ?>
 							<!-- <a href="<?php the_permalink(); ?>" class="btn btn-primary">More info</a></br> -->
