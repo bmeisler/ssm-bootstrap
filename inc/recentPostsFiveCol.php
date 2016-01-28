@@ -36,7 +36,7 @@ Previously, on Sensitive Skin!
 							<a href="<?php the_permalink() ?>"><?php echo the_title(); ?></a>
 						</div> 		
 					    <?php $subtitle = get_post_meta($post->ID, 'subtitle', true);
-						if($subtitle) echo '<div id="SmallArchiveAuthor">'.$subtitle.'</div>'; ?>
+						if($subtitle) echo '<div class="bottom-links-author">'.$subtitle.'</div>'; ?>
 						<div class="archive-copy">
 							<?php the_excerpt(25) ?>
 						</div>
