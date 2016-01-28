@@ -36,7 +36,7 @@ get_header(); ?>
 							</a>
 							<h4><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h4>
 							
-							<p><?php the_field('brief_description') ?></p>
+							<?php the_field('brief_description') ?>
 							<!-- <a href="<?php the_permalink(); ?>" class="btn btn-primary">More info</a></br> -->
 							<?php if (get_field('books_amazon_print_link') !== ''){?>
 								<a role="button" class="btn btn-primary" href="<?php the_field('books_amazon_print_link') ?>" >Buy print version</a>
