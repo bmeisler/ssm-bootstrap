@@ -70,10 +70,16 @@
             <a href="index.php">Home</a>
             <span> | </span>
             <a href="http://sensitiveskinmagazine.com/our-history">About</a>
-        	<span> | </span>
-        	<a href="http://sensitiveskinmagazine.com/contact">Contact</a>
-          <span> | </span>
-          <a href="http://sensitiveskinmagazine.com/submissions">Submissions</a>
+          	<span> | </span>
+          	<a href="http://sensitiveskinmagazine.com/contact">Contact</a>
+            <span> | </span>
+            <a href="http://sensitiveskinmagazine.com/submissions">Submissions</a>
+            </br>
+            <a href="http://sensitiveskinmagazine.com/back-issues">Issues</a>
+            <span> | </span>
+            <a href="http://sensitiveskinmagazine.com/sensitive-skin-books">Books</a>
+            <span> | </span>
+            <a href="http://sensitiveskinmagazine.com/checkout/purchase-history">Purchase History</a>
           </nav>
           </br>
           </br>
