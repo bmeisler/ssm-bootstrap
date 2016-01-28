@@ -13,11 +13,11 @@
 
 		<!-- <div class="btn-group"> -->
 		<?php if (get_field('books_amazon_print_link') !== ''){?>
-      		<a role="button" class="btn btn-primary" role="button" href="<?php the_field('books_amazon_print_link') ?>" >Buy it on Amazon</a>
+      		<a role="button" class="btn btn-primary" href="<?php the_field('books_amazon_print_link') ?>" >Buy it on Amazon</a>
    		<?php } ?>
 
    		<?php if (get_field('kindle_link') !== ''){?>
-				<a role="button" class="btn btn-primary offset5" role="button" href="<?php the_field('kindle_link') ?>" >Buy it on Kindle</a>
+				<a role="button" class="btn btn-primary offset5" href="<?php the_field('kindle_link') ?>" >Buy it on Kindle</a>
 		<?php } ?>
     	<!-- </div> -->
    
