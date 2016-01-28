@@ -12,7 +12,7 @@
 ?>
 	</div><!-- #content -->
 
-	<footer id="colophon" class="site-footer" role="contentinfo">
+	<footer id="colophon" class="site-footer">
 		<div class="container">
 
 			<!-- Links to previously featured posts -->
@@ -26,14 +26,14 @@
 
 	<div class="row" id="footer-info">
         <div class="col-sm-4 footer-border first-col"><!-- 1st column -->
-          <h3 class="mb40">Sensitive</br>
-          Skin</br>
-          Magazine</h3></br>
+          <h3 class="mb40">Sensitive<br/>
+          Skin<br/>
+          Magazine</h3><br/>
               <div class="small">
                 <p class="top"><i>Editor-In-Chief:</i> Bernard Meisler</p>
         				<p><i>Associate Editors:</i> Rob Hardin and B. Kold</p>
         				<p><i>Music Editor:</i> Steve Horowitz</p>
-        				<p><i>Contributing Editors:</i>Ron Kolm, Tim Beckett, </br>Franklin Mount, Patrick O'Neil</p>
+        				<p><i>Contributing Editors:</i>Ron Kolm, Tim Beckett, <br/>Franklin Mount, Patrick O'Neil</p>
               </div>
 
         
@@ -44,13 +44,13 @@
         <div class="col-sm-4 footer-border"><!-- 2nd column -->
           <h3 class="mb40">Contact</h3>
           <div class="mb40">For general inquiry:
-          <br>
+          <br/>
           <script type="text/javascript">maillink('info','sensitiveskinmagazine.com')</script>
           </div>
-          </br>
+          <br/>
           <!-- social buttons -->
           <div id="awesome-social-buttons">
-            <span class="mb40">Follow us:</span></br>
+            <span class="mb40">Follow us:</span><br/>
 				      <a class="btn btn-social-icon btn-md" href="http://www.twitter.com/sensitivemag">
 					     <span class="fa fa-twitter"></span>
 					   </a>
@@ -62,7 +62,7 @@
     				</a>
         
 			</div>
-      </br>
+      <br/>
 			<!-- Mini-menu and copyright -->
         <div class="menu-desktop ">
           <nav class="menu">
@@ -73,16 +73,16 @@
           	<a href="http://sensitiveskinmagazine.com/contact">Contact</a>
             <span> | </span>
             <a href="http://sensitiveskinmagazine.com/submissions">Submissions</a>
-            </br>
+            <br/>
             <a href="http://sensitiveskinmagazine.com/back-issues">Issues</a>
             <span> | </span>
             <a href="http://sensitiveskinmagazine.com/sensitive-skin-books">Books</a>
             <span> | </span>
             <a href="http://sensitiveskinmagazine.com/checkout/purchase-history">Purchase History</a>
           </nav>
-          </br>
-          </br>
-          <span class="small">Copyright &#169;&nbsp;<script>document.write(new Date().getFullYear())</script><noscript>2015</noscript> Sensitive Skin Magazine. </br>All Rights Reserved.</span>
+          <br/>
+          <br/>
+          <span class="small">Copyright &#169;&nbsp;<script>document.write(new Date().getFullYear())</script><noscript>2015</noscript> Sensitive Skin Magazine. <br/>All Rights Reserved.</span>
         </div>
 
         </div>
@@ -92,12 +92,12 @@
         <!-- Subscribe -->
         <h3>Join our mailing list</h3>
         <p class="small">We'll send you info about our latest issues, books and upcoming events, as well as discount coupons.</p>
-      </br>
+      <br/>
        <!-- Begin MailChimp Signup Form -->
         <div id="bottom-signup">
 
             <?php include('inc/mailchimp-signup-form.php');?>
-            
+
         </div>
 		</div><!-- end 3rd column -->
       </div><!-- row -->
@@ -113,7 +113,7 @@
 <?php wp_footer(); ?>
    <script src="<?php bloginfo('wpurl'); ?>/wp-content/js/googleanalytics.js" type="text/javascript"></script>
 
-       <script language="javascript" type="text/javascript">
+       <script type="text/javascript">
         <!--
         function popitup(url, params) {
             newwindow=window.open(url,'name', params);
