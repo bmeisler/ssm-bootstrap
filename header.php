@@ -75,7 +75,7 @@
 							</h4>
 
 					           <?php include('inc/mailchimp-signup-form.php');?>
-					           
+
 					        </div><!-- signup-bar -->
 
 					</div><!-- navbar-header -->
@@ -113,7 +113,7 @@
 					       
 					        </li>
 					    </ul>
-					</br>
+					<br/>
 						<!-- </div> -->
 
 
