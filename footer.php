@@ -51,15 +51,15 @@
           <!-- social buttons -->
           <div id="awesome-social-buttons">
             <span class="mb40">Follow us:</span></br>
-				<a class="btn btn-social-icon btn-md " href="http://www.twitter.com/sensitivemag">
-					<span class="fa fa-twitter"></span>
-					</a>
-					<a class="btn btn-social-icon btn-md" href="http://www.facebook.com/sensitiveskin">
-				    <span class="fa fa-facebook"></span>
-				</a>
-				<a class="btn btn-social-icon btn-md btn-google-plus" <a href="//plus.google.com/100022193362098500932?prsrc=3">
-				    <span class="fa fa-google-plus"></span>
-				</a>
+				      <a class="btn btn-social-icon btn-md" href="http://www.twitter.com/sensitivemag">
+					     <span class="fa fa-twitter"></span>
+					   </a>
+					   <a class="btn btn-social-icon btn-md" href="http://www.facebook.com/sensitiveskin">
+				        <span class="fa fa-facebook"></span>
+				      </a>
+				    <a class="btn btn-social-icon btn-md btn-google-plus" href="//plus.google.com/100022193362098500932?prsrc=3">
+    				    <span class="fa fa-google-plus"></span>
+    				</a>
         
 			</div>
       </br>
@@ -99,8 +99,8 @@
            <div id="mc_embed_floating_signup">
             <form action="//sensitiveskinmagazine.us2.list-manage.com/subscribe/post?u=df2b62f883c43ba3749ff7368&amp;id=c53aaba024" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
 
-<input type="hidden" name="u" value="5e0434478e96f6841daff1690">
-<input type="hidden" name="id" value="5854671be8"> 
+            <input type="hidden" name="u" value="5e0434478e96f6841daff1690">
+            <input type="hidden" name="id" value="5854671be8"> 
 
             <div id="mc_embed_signup_scroll">
               <div class="mc-field-group">
