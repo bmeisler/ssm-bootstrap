@@ -16,7 +16,7 @@ get_header(); ?>
 	<div class="row">
 
 	<div id="primary" class="col-md-12 col-lg-12">
-		<main id="main" class="site-main books" role="main">
+		<main id="main" class="site-main books">
 
 			<?php 
 			// the query
@@ -45,7 +45,7 @@ get_header(); ?>
 					   		<?php } ?>
 
 					   		<?php if (get_field('kindle_link') !== ''){?>
-									<a role="button" class="btn btn-primary offset5" role="button" href="<?php the_field('kindle_link') ?>" >Buy it on Kindle</a>
+									<a role="button" class="btn btn-primary offset5" href="<?php the_field('kindle_link') ?>" >Buy it on Kindle</a>
 							<?php } ?>
 
 						</div>
