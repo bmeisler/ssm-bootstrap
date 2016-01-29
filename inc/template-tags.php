@@ -69,13 +69,13 @@ function sensitive_skin_bootstrap_entry_footer() {
 
 	// Hide category and tag text for pages.
 	if ( 'post' === get_post_type() ) {
-		echo '</br>';
+		echo '<br/>';
 		/* translators: used between list items, there is a space after the comma */
 		//$categories_list = get_the_category_list( esc_html__( ', ', 'sensitive-skin-bootstrap' ) );
 		$categories_list = get_the_category_list( esc_html__( ' ', 'sensitive-skin-bootstrap' ) );
 		if ( $categories_list && sensitive_skin_bootstrap_categorized_blog() ) {
 			// printf( '<span class="cat-links">' . esc_html__( 'Posted in %1$s', 'sensitive-skin-bootstrap' ) . '</span></br>', $categories_list );
-			printf( '<span class="cat-links">' . esc_html__( ' %1$s', 'sensitive-skin-bootstrap' ) . '</span></br>', $categories_list );
+			printf( '<span class="cat-links">' . esc_html__( ' %1$s', 'sensitive-skin-bootstrap' ) . '</span><br/>', $categories_list );
 		}
 
 		/* translators: used between list items, there is a space after the comma */
@@ -83,7 +83,7 @@ function sensitive_skin_bootstrap_entry_footer() {
 		$tags_list = get_the_tag_list( '', esc_html__( ' ', 'sensitive-skin-bootstrap' ) );
 		if ( $tags_list ) {
 			//printf( '<span class="tags-links">' . esc_html__( 'Tagged %1$s', 'sensitive-skin-bootstrap' ) . '</span></br>', $tags_list ); 
-			printf( '<span class="tags-links">' . esc_html__( ' %1$s', 'sensitive-skin-bootstrap' ) . '</span></br>', $tags_list ); // WPCS: XSS OK.
+			printf( '<span class="tags-links">' . esc_html__( ' %1$s', 'sensitive-skin-bootstrap' ) . '</span><br/>', $tags_list ); // WPCS: XSS OK.
 		}
 	}
 
