@@ -274,6 +274,9 @@ function sensitive_skin_bootstrap_scripts() {
 }
 add_action( 'wp_enqueue_scripts', 'sensitive_skin_bootstrap_scripts' );
 
+/** allows external files to access the JSON file */
+header("Access-Control-Allow-Origin: *");
+
 /**
  * Implement the Custom Header feature.
  */
