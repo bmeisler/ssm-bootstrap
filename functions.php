@@ -102,7 +102,23 @@ function sensitive_skin_bootstrap_content_width() {
 }
 add_action( 'after_setup_theme', 'sensitive_skin_bootstrap_content_width', 0 );
 
+function qod_remove_extra_data( $data, $post, $context ) {
+  // We only want to modify the 'view' context, for reading posts
+  if ( $context !== 'view' || is_wp_error( $data ) ) {
+    return $data;
+  }
+  
+  // Here, we unset any data we don't want to see on the front end:
+  unset( $data['author'] );
+  unset( $data['status'] );
+  unset( $data['date_gmt'] );
+  unset( $data['modified'] );
+  // continue unsetting whatever other fields you want
 
+  return $data;
+}
+
+add_filter( 'json_prepare_post', 'qod_remove_extra_data', 12, 3 );
 /*customizing jetpack so it does not place social and like buttons after content automatically
 otherwise the buttons show up in the bottom links area. Added custom code to content-single so 
 social buttons show up before AND after content*/
@@ -238,6 +254,16 @@ add_action( 'widgets_init', 'sensitive_skin_bootstrap_widgets_init' );
 //}
 //add_action ('init', 'sensitive-skin-bootstrap_register_post_types');
 
+/**THIS WILL ADD THE FEATURED THUMBNAIL TO THE JSON DATA*/
+function my_rest_prepare_post( $data, $post, $request ) {
+	$_data = $data->data;
+	$thumbnail_id = get_post_thumbnail_id( $post->ID );
+	$thumbnail = wp_get_attachment_image_src( $thumbnail_id, 'category-medium' );
+	$_data['featured_image_thumbnail_url'] = $thumbnail[0];
+	$data->data = $_data;
+	return $data;
+}
+add_filter( 'rest_prepare_post', 'my_rest_prepare_post', 10, 3 );
 /**
  * Enqueue scripts and styles.
  */
@@ -275,7 +301,7 @@ function sensitive_skin_bootstrap_scripts() {
 add_action( 'wp_enqueue_scripts', 'sensitive_skin_bootstrap_scripts' );
 
 /** allows external files to access the JSON file */
-header("Access-Control-Allow-Origin: *");
+//header("Access-Control-Allow-Origin: *");
 
 /**
  * Implement the Custom Header feature.
