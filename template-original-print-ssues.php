@@ -1,8 +1,8 @@
 <?php
 /**
- * Template Name: Downloads Template
+ * Template Name: Original Print Issues Template
  *
- * This is the template that displays all the downloads (back issues) in a grid.
+ * This is the template that displays all the Peau Sensible issues in a grid.
  *
  * @package Sensitive_Skin_Bootstrap
  */
@@ -16,13 +16,21 @@ get_header(); ?>
 	<div class="row">
 	<div id="primary" class="col-md-12 col-lg-12">
 		<main id="main" class="site-main books">
+			<div class="row">
+				<div class="col-md-12 col-lg-12">
+				<h2>Peau Sensible</h2>
+				<p class="description">Here they are, warts and all - scanned versions of the original print run of <em>Peau Sensible/Sensitive Skin</em>, from 1991 - 1994. 8.5" x 11", in glorious black and white, these look great on an iPad or whatever, or you can print them out for yourself, if that's the sort of thing you like to do.
 
+<p class="description">Jam-packed with downtown NYC superstars, writers, musicians and artists, including <strong>Richard Hell, Herbert Huncke, Ann Rower, Richard Kern, Chris Kraus, Eileen Myles, Jack Micheline, Emily XYZ, Patrick McGrath, Taylor Mead</strong> and many, many more. Check out the individual issues for more details.
+<br style:clear="both">
+				</div><!-- col -->
+				</div><!-- row -->
 			<?php 
 			// the query
-			$the_query = new WP_Query( array('post_type' => 'download', 'download_category'=>'print-issues-volume-2', 'download_category'=>'print-issues-volume-2','posts_per_page'=>20) ); ?>
+			$the_query = new WP_Query( array('post_type' => 'download', 'download_category'=>'original-print-issues', 'posts_per_page'=>10) ); ?>
 
 			<?php if ( $the_query->have_posts() ) : ?>
-
+				
 				<div class="row">
 					<div id="book-items">
 
@@ -56,13 +64,6 @@ get_header(); ?>
 				
 
 				<?php wp_reset_postdata(); ?>
-				<hr/>
-				<h3>Looking for the original run of <em><a href="http://sensitiveskinmagazine.com/original-print-issues/" target="_blank">Peau Sensible/Sensitive Skin</a></em> from the 1990s?</h3>
-				<p class="description"><a href="http://sensitiveskinmagazine.com/original-print-issues/" target="_blank">Here they are</a>, warts and all - scanned versions of the original print run of <em>Peau Sensible/Sensitive Skin</em>, from 1991 - 1994. 8.5" x 11", in glorious black and white, these look great on an iPad or whatever, or you can print them out for yourself, if that's the sort of thing you like to do.</p>
-
-<p class="description">Jam-packed with downtown NYC superstars, writers, musicians and artists, including <strong>Richard Hell, Herbert Huncke, Ann Rower, Richard Kern, Chris Kraus, Eileen Myles, Jack Micheline, Emily XYZ, Patrick McGrath, Taylor Mead</strong> and many, many more. Check out the individual issues for more details.</p>
-
-					
 
 			<?php else : ?>
 				<p><?php _e( 'Sorry, no posts matched your criteria.' ); ?></p>

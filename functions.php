@@ -262,8 +262,10 @@ function my_rest_prepare_post( $data, $post, $request ) {
 	$_data['featured_image_thumbnail_url'] = $thumbnail[0];
 	$theAuthor = get_the_author();
 	$subtitle = get_post_meta($post->ID, 'subtitle', true);
+	$postimageurl = get_post_meta($post->ID, 'post-img', true)
 	$_data['theAuthor']=$theAuthor;
 	$_data['theSubtitleAuthor']=$subtitle;
+	$_data['post_image']=$postimageurl;
 	$data->data = $_data;
 	return $data;
 }
