@@ -105,6 +105,30 @@ function sensitive_skin_bootstrap_entry_footer() {
 }
 endif;
 
+
+
+if ( ! function_exists( 'sensitive_skin_bootstrap_archive_entry_footer' ) ) :
+/**
+ * Prints HTML with meta information for the categories only - for front page and archives.
+ */
+function sensitive_skin_bootstrap_archive_entry_footer() {
+
+	// Hide category and tag text for pages.
+	if ( 'post' === get_post_type() ) {
+		echo '<br/>';
+		/* translators: used between list items, there is a space after the comma */
+		//$categories_list = get_the_category_list( esc_html__( ', ', 'sensitive-skin-bootstrap' ) );
+		$categories_list = get_the_category_list( esc_html__( ' ', 'sensitive-skin-bootstrap' ) );
+		if ( $categories_list && sensitive_skin_bootstrap_categorized_blog() ) {
+			// printf( '<span class="cat-links">' . esc_html__( 'Posted in %1$s', 'sensitive-skin-bootstrap' ) . '</span></br>', $categories_list );
+			printf( '<span class="cat-links">' . esc_html__( ' %1$s', 'sensitive-skin-bootstrap' ) . '</span><br/>', $categories_list );
+		}
+
+	}
+
+}
+endif;
+
 /**
  * Returns true if a blog has more than 1 category.
  *

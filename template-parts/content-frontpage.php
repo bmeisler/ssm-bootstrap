@@ -153,12 +153,14 @@
 			<?php endif; ?>
 		</header><!-- .entry-header -->
 
-		<div class="entry-content clearfix">
+		<div class="archive-entry-content clearfix">
 			
 	            <div class="entry">
 		              <?php the_excerpt() ?>
 		        </div>
-
+                <div class="archive-entry-footer">
+                    <?php sensitive_skin_bootstrap_archive_entry_footer(); ?>
+                 </div>
 				<?php
 				// the_content( sprintf(
 				// 	/* translators: %s: Name of current post. */
