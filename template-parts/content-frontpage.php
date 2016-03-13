@@ -22,7 +22,7 @@
       			
                 $img_path =  catch_that_image();
                 //echo '</br>$image_path: '.$img_path;
-
+                $post_img_large = false;
 
                 
                 if ($img_path != '' && $img_path != null){ //if there is an image in the post, use it and style it according to size
@@ -47,7 +47,7 @@
 	                       	?>
 	                       	<figure class="post-img-medium-right">
 	                            <a href="<?php the_permalink(); ?>" class="the-display" rel="bookmark">
-	                                <img src="<?php echo $img_path; ?>"  />
+	                                <img src="<?php echo $img_path; $post_img_large=true; ?>"  />
 	                             </a>
                             </figure>
                         <?php
@@ -57,7 +57,7 @@
                     } else if ($width >= 400){ ?>
                     	<figure class="post-img-large">
 	                        <a href="<?php the_permalink(); ?>" class="the-display" rel="bookmark">
-	                            <img src="<?php echo $img_path; ?>"  />
+	                            <img src="<?php echo $img_path; $post_img_large=true;?>"  />
 	                        </a>
                         </figure>
                     <?php 
@@ -71,7 +71,7 @@
                 
                 	<figure class="post-img-large">
 	                    <a href="<?php the_permalink(); ?>" class="the-display" rel="bookmark">
-	                        <?php the_post_thumbnail('large');?>
+	                        <?php the_post_thumbnail('large'); $post_img_large=true;?>
 	                    </a>
                 	</figure> 
 
@@ -82,7 +82,7 @@
 
                 		if (@getimagesize('http://www.sensitiveskinmagazine.com/wp-content/images/tns/'.$postimageurl)){ ?>
                          <figure class="post-img-medium-right">
-                            <a href="<?php the_permalink(); ?>" class="the-display" rel="bookmark"><img src="<?php  bloginfo( 'wpurl' ); ?>/wp-content/images/tns/<?php echo $postimageurl; ?>" alt="Post Pic"  /></a>
+                            <a href="<?php the_permalink(); $post_img_large=true;?>" class="the-display" rel="bookmark"><img src="<?php  bloginfo( 'wpurl' ); ?>/wp-content/images/tns/<?php echo $postimageurl; ?>" alt="Post Pic"  /></a>
                          </figure>
                       <?php 
                   		}
@@ -125,7 +125,7 @@
             		?>
 
                          <figure class="post-img-medium-right">
-                            <a href="<?php the_permalink(); ?>" class="the-display" rel="bookmark"><img src="<?php  bloginfo( 'wpurl' ); ?>/wp-content/images/tns/<?php echo $postimageurl; ?>" alt="Post Pic"  /></a>
+                            <a href="<?php the_permalink(); $post_img_large=true;?>" class="the-display" rel="bookmark"><img src="<?php  bloginfo( 'wpurl' ); ?>/wp-content/images/tns/<?php echo $postimageurl; ?>" alt="Post Pic"  /></a>
                          </figure>
                       <?php 
                 }
@@ -158,9 +158,18 @@
 	            <div class="entry">
 		              <?php the_excerpt() ?>
 		        </div>
-                <div class="archive-entry-footer">
-                    <?php sensitive_skin_bootstrap_archive_entry_footer(); ?>
-                 </div>
+                
+                <?php
+                if ($post_img_large===true){ ?>
+                     <div class="archive-entry-footer-large">
+                        <?php sensitive_skin_bootstrap_archive_entry_footer(); ?>
+                    </div>
+                <?php }else{ ?>
+                     <div class="archive-entry-footer">
+                        <?php sensitive_skin_bootstrap_archive_entry_footer(); ?>
+                    </div>
+                <?php } ?>
+               
 				<?php
 				// the_content( sprintf(
 				// 	/* translators: %s: Name of current post. */
