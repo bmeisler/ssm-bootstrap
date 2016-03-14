@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Custom template tags for this theme.
  *
@@ -118,7 +119,7 @@ function sensitive_skin_bootstrap_archive_entry_footer() {
 		echo '<br/>';
 		/* translators: used between list items, there is a space after the comma */
 		//$categories_list = get_the_category_list( esc_html__( ', ', 'sensitive-skin-bootstrap' ) );
-		$categories_list = get_the_category_list( esc_html__( ' ', 'sensitive-skin-bootstrap' ) );
+		$categories_list = get_the_category_list_excludedCat( esc_html__( ' ', 'sensitive-skin-bootstrap' ) );
 		if ( $categories_list && sensitive_skin_bootstrap_categorized_blog() ) {
 			// printf( '<span class="cat-links">' . esc_html__( 'Posted in %1$s', 'sensitive-skin-bootstrap' ) . '</span></br>', $categories_list );
 			printf( '<span class="cat-links">' . esc_html__( ' %1$s', 'sensitive-skin-bootstrap' ) . '</span><br/>', $categories_list );

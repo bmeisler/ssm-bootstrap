@@ -270,6 +270,131 @@ function my_rest_prepare_post( $data, $post, $request ) {
 	// return $data;
 }
 add_filter( 'rest_prepare_post', 'my_rest_prepare_post', 10, 3 );
+
+
+/**
+ * Retrieve category list in either HTML list or custom format.
+ *
+ * @since 1.5.1
+ *
+ * @global WP_Rewrite $wp_rewrite
+ *
+ * @param string $separator Optional, default is empty string. Separator for between the categories.
+ * @param string $parents Optional. How to display the parents.
+ * @param int $post_id Optional. Post ID to retrieve categories.
+ * @return string
+ */
+function get_the_category_list_excludedCat( $separator = '', $parents='', $post_id = false ) {
+	global $wp_rewrite;
+	if ( ! is_object_in_taxonomy( get_post_type( $post_id ), 'category' ) ) {
+		/** This filter is documented in wp-includes/category-template.php */
+		return apply_filters( 'the_category', '', $separator, $parents );
+	}
+
+	$categories = get_the_category_excludedCat( $post_id );
+	if ( empty( $categories ) ) {
+		/** This filter is documented in wp-includes/category-template.php */
+		return apply_filters( 'the_category', __( 'Uncategorized' ), $separator, $parents );
+	}
+
+	$rel = ( is_object( $wp_rewrite ) && $wp_rewrite->using_permalinks() ) ? 'rel="category tag"' : 'rel="category"';
+
+	$thelist = '';
+	if ( '' == $separator ) {
+		$thelist .= '<ul class="post-categories">';
+		foreach ( $categories as $category ) {
+			$thelist .= "\n\t<li>";
+			switch ( strtolower( $parents ) ) {
+				case 'multiple':
+					if ( $category->parent )
+						$thelist .= get_category_parents( $category->parent, true, $separator );
+					$thelist .= '<a href="' . esc_url( get_category_link( $category->term_id ) ) . '" ' . $rel . '>' . $category->name.'</a></li>';
+					break;
+				case 'single':
+					$thelist .= '<a href="' . esc_url( get_category_link( $category->term_id ) ) . '"  ' . $rel . '>';
+					if ( $category->parent )
+						$thelist .= get_category_parents( $category->parent, false, $separator );
+					$thelist .= $category->name.'</a></li>';
+					break;
+				case '':
+				default:
+					$thelist .= '<a href="' . esc_url( get_category_link( $category->term_id ) ) . '" ' . $rel . '>' . $category->name.'</a></li>';
+			}
+		}
+		$thelist .= '</ul>';
+	} else {
+		$i = 0;
+		foreach ( $categories as $category ) {
+			if ( 0 < $i )
+				$thelist .= $separator;
+			switch ( strtolower( $parents ) ) {
+				case 'multiple':
+					if ( $category->parent )
+						$thelist .= get_category_parents( $category->parent, true, $separator );
+					$thelist .= '<a href="' . esc_url( get_category_link( $category->term_id ) ) . '" ' . $rel . '>' . $category->name.'</a>';
+					break;
+				case 'single':
+					$thelist .= '<a href="' . esc_url( get_category_link( $category->term_id ) ) . '" ' . $rel . '>';
+					if ( $category->parent )
+						$thelist .= get_category_parents( $category->parent, false, $separator );
+					$thelist .= "$category->name</a>";
+					break;
+				case '':
+				default:
+					$thelist .= '<a href="' . esc_url( get_category_link( $category->term_id ) ) . '" ' . $rel . '>' . $category->name.'</a>';
+			}
+			++$i;
+		}
+	}
+
+	/**
+	 * Filter the category or list of categories.
+	 *
+	 * @since 1.2.0
+	 *
+	 * @param array  $thelist   List of categories for the current post.
+	 * @param string $separator Separator used between the categories.
+	 * @param string $parents   How to display the category parents. Accepts 'multiple',
+	 *                          'single', or empty.
+	 */
+	return apply_filters( 'the_category', $thelist, $separator, $parents );
+}
+/**
+ * Retrieve post categories.
+ *
+ * This tag may be used outside The Loop by passing a post id as the parameter.
+ *
+ * Note: This function only returns results from the default "category" taxonomy.
+ * For custom taxonomies use get_the_terms().
+ *
+ * @since 0.71
+ *
+ * @param int $id Optional, default to current post ID. The post ID.
+ * @return array Array of objects, one for each category assigned to the post.
+ */
+function get_the_category_excludedCat( $id = false ) {
+	$categories = get_the_terms( $id, 'category' );
+	if ( ! $categories || is_wp_error( $categories ) )
+		$categories = array();
+        //print_r ($categories);
+    unset($categories[10]);
+
+
+	$categories = array_values( $categories );
+
+	foreach ( array_keys( $categories ) as $key ) {
+		_make_cat_compat( $categories[$key] );
+	}
+
+	/**
+	 * Filter the array of categories to return for a post.
+	 *
+	 * @since 3.1.0
+	 *
+	 * @param array $categories An array of categories to return for the post.
+	 */
+	return apply_filters( 'get_the_categories', $categories );
+}
 /**
  * Enqueue scripts and styles.
  */
