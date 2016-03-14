@@ -17,12 +17,14 @@
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<div class="archive-content">
 		<?php
+             $post_img_large = false;
+             $currentAlignment = "left";
 			 if (has_tag( 'featured')) { //If this is a featured post, try to use as large a preview image as possible
       			//echo 'featured<br>';
       			
                 $img_path =  catch_that_image();
                 //echo '</br>$image_path: '.$img_path;
-                $post_img_large = false;
+               
 
                 
                 if ($img_path != '' && $img_path != null){ //if there is an image in the post, use it and style it according to size

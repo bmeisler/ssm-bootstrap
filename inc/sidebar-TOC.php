@@ -8,7 +8,7 @@
 //print_r($post->ID);
 //print_r($orig_post->ID);
  ?>
-<?php if( $post->ID == $orig_post->ID ){
+<?php if( $orig_post!==null && $post->ID == $orig_post->ID ){
 	//echo 'match'; 
 	?>
 	<ul class="toc"
