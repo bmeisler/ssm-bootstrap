@@ -303,12 +303,13 @@ function get_the_category_list_excludedCat( $separator = '', $parents='', $post_
 	if ( '' == $separator ) {
 		$thelist .= '<ul class="post-categories">';
 		foreach ( $categories as $category ) {
+            //print_r($category->term_id);
 			$thelist .= "\n\t<li>";
 			switch ( strtolower( $parents ) ) {
 				case 'multiple':
 					if ( $category->parent )
 						$thelist .= get_category_parents( $category->parent, true, $separator );
-					$thelist .= '<a href="' . esc_url( get_category_link( $category->term_id ) ) . '" ' . $rel . '>' . $category->name.'</a></li>';
+					    $thelist .= '<a href="' . esc_url( get_category_link( $category->term_id ) ) . '" ' . $rel . '>' . $category->name.'</a></li>';
 					break;
 				case 'single':
 					$thelist .= '<a href="' . esc_url( get_category_link( $category->term_id ) ) . '"  ' . $rel . '>';
@@ -325,6 +326,8 @@ function get_the_category_list_excludedCat( $separator = '', $parents='', $post_
 	} else {
 		$i = 0;
 		foreach ( $categories as $category ) {
+             //print_r($category->name);
+             //print_r($category->parent);
 			if ( 0 < $i )
 				$thelist .= $separator;
 			switch ( strtolower( $parents ) ) {
@@ -341,7 +344,12 @@ function get_the_category_list_excludedCat( $separator = '', $parents='', $post_
 					break;
 				case '':
 				default:
-					$thelist .= '<a href="' . esc_url( get_category_link( $category->term_id ) ) . '" ' . $rel . '>' . $category->name.'</a>';
+                //NOTE: this is awkard but does the trick - if I actually remove the category from the list, I will
+                //get little empty buttons with no text, because template-tags uses the original string!
+                    if($category->name!=="Art" && $category->name!=="Writing"){
+                        $thelist .= '<a href="' . esc_url( get_category_link( $category->term_id ) ) . '" ' . $rel . '>' . $category->name.'</a>';
+
+                    }
 			}
 			++$i;
 		}
@@ -375,16 +383,26 @@ function get_the_category_list_excludedCat( $separator = '', $parents='', $post_
 function get_the_category_excludedCat( $id = false ) {
 	$categories = get_the_terms( $id, 'category' );
 	if ( ! $categories || is_wp_error( $categories ) )
+    
 		$categories = array();
-        //print_r ($categories);
-    unset($categories[10]);
+       // print_r ($categories);
 
 
 	$categories = array_values( $categories );
 
 	foreach ( array_keys( $categories ) as $key ) {
+        //print_r($key);
+        //NOTE: you think this would work! It DOES remove the unwanted category from the list
+        //BUT STUPID PHP uses the string back in the original callee in template-tags, NOT this array,
+        //to generate the buttons - so I would get little empty buttons with no text
+        //so I fixed it in get_the_category_list_excludedCat
+        if($categories[$key]->name=="Art" || $categories[$key]->name=="Writing"){
+            //unset($categories[$key]);
+        }
 		_make_cat_compat( $categories[$key] );
 	}
+    // print_r($categories[0]);
+     
 
 	/**
 	 * Filter the array of categories to return for a post.

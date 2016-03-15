@@ -65,6 +65,7 @@ endif;
 if ( ! function_exists( 'sensitive_skin_bootstrap_entry_footer' ) ) :
 /**
  * Prints HTML with meta information for the categories, tags and comments.
+ * Added to the bottom of every individual post
  */
 function sensitive_skin_bootstrap_entry_footer() {
 
@@ -111,6 +112,8 @@ endif;
 if ( ! function_exists( 'sensitive_skin_bootstrap_archive_entry_footer' ) ) :
 /**
  * Prints HTML with meta information for the categories only - for front page and archives.
+ * Can certain categories and tags!
+ * Used for excerpts of posts on the front page and archive sections
  */
 function sensitive_skin_bootstrap_archive_entry_footer() {
 
