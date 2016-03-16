@@ -47,7 +47,7 @@
 					     </div>
 					     <!-- logo -->
 						  <a class="navbar-brand" href="<?php bloginfo('url'); ?>">
-								<img id="logo" src="http://www.sensitiveskinmagazine.com/wp-content/images/SSMLogo.svg" width="200" height="28" alt="sensitive skin magazine logo" />
+								<img id="logo" src="<?php bloginfo('wpurl'); ?>/wp-content/images/SSMLogo.svg" width="200" height="28" alt="sensitive skin magazine logo" />
 						  </a>
 
 					<!-- Search -->
@@ -57,7 +57,7 @@
 					          <div class="row">
 					            <div class="search">
 					            	<a class="search-closer" data-toggle="collapse" data-target="#search-bar"><i class="fa fa-times"></i></a>
-					              <form method="get" role="form" action="http://www.sensitiveskinmagazine.com">
+					              <form method="get" role="form" action="<?php bloginfo('wpurl'); ?>">
 					                <div class="form-group">
 					                  <input type="text" class="form-control input-lg" name="s" onfocus="this.placeholder=''" onblur="this.placeholder='Type in search here'" placeholder="Type in search here">
 					                </div>
