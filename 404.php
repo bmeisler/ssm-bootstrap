@@ -18,7 +18,7 @@ get_header(); ?>
 					<h1 class="page-title"><?php esc_html_e( 'Hey, where\'s the party?', 'sensitive-skin-bootstrap' ); ?></h1>
 				</header><!-- .page-header -->
  <figure class="figure-left">
-                                    <img style="max-width:186px" src="http://www.sensitiveskinmagazine.com/wp-content/images/404/bukowski-party.jpg"/>
+                                    <img style="max-width:186px" src="<?php bloginfo('wpurl'); ?>/wp-content/images/404/bukowski-party.jpg"/>
                                 </figure>
 				<div class="page-content">
 					<p><?php esc_html_e( 'It looks like nothing was found at this location. Maybe try one of the links below or a search?', 'sensitive-skin-bootstrap' ); ?></p>

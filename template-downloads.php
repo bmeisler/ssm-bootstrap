@@ -57,8 +57,8 @@ get_header(); ?>
 
 				<?php wp_reset_postdata(); ?>
 				<hr/>
-				<h3>Looking for the original run of <em><a href="http://sensitiveskinmagazine.com/original-print-issues/" target="_blank">Peau Sensible/Sensitive Skin</a></em> from the 1990s?</h3>
-				<p class="description"><a href="http://sensitiveskinmagazine.com/original-print-issues/" target="_blank">Here they are</a>, warts and all - scanned versions of the original print run of <em>Peau Sensible/Sensitive Skin</em>, from 1991 - 1994. 8.5" x 11", in glorious black and white, these look great on an iPad or whatever, or you can print them out for yourself, if that's the sort of thing you like to do.</p>
+				<h3>Looking for the original run of <em><a href="<?php bloginfo('wpurl'); ?>/original-print-issues/" target="_blank">Peau Sensible/Sensitive Skin</a></em> from the 1990s?</h3>
+				<p class="description"><a href="<?php bloginfo('wpurl'); ?>/original-print-issues/" target="_blank">Here they are</a>, warts and all - scanned versions of the original print run of <em>Peau Sensible/Sensitive Skin</em>, from 1991 - 1994. 8.5" x 11", in glorious black and white, these look great on an iPad or whatever, or you can print them out for yourself, if that's the sort of thing you like to do.</p>
 
 <p class="description">Jam-packed with downtown NYC superstars, writers, musicians and artists, including <strong>Richard Hell, Herbert Huncke, Ann Rower, Richard Kern, Chris Kraus, Eileen Myles, Jack Micheline, Emily XYZ, Patrick McGrath, Taylor Mead</strong> and many, many more. Check out the individual issues for more details.</p>
 

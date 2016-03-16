@@ -509,32 +509,32 @@ do they need tweaking?
 .header #social-button-youtube-icon {
   width: 24px;
   height: 24px;
-  background: url("http://www.sensitiveskinmagazine.com/wp-content/images/socialmediabuttons/social_buttons_sprite-sheet.png") -10px -10px;
+  background: url("<?php bloginfo('wpurl'); ?>/wp-content/images/socialmediabuttons/social_buttons_sprite-sheet.png") -10px -10px;
 }
 .header #social-button-facebook-icon {
   width: 24px;
   height: 24px;
-  background: url("http://www.sensitiveskinmagazine.com/wp-content/images/socialmediabuttons/social_buttons_sprite-sheet.png") -44px -10px;
+  background: url("<?php bloginfo('wpurl'); ?>/wp-content/images/socialmediabuttons/social_buttons_sprite-sheet.png") -44px -10px;
 }
 .header #social-button-rss-icon {
   width: 24px;
   height: 24px;
-  background: url("http://www.sensitiveskinmagazine.com/wp-content/images/socialmediabuttons/social_buttons_sprite-sheet.png") -78px -10px;
+  background: url("<?php bloginfo('wpurl'); ?>/wp-content/images/socialmediabuttons/social_buttons_sprite-sheet.png") -78px -10px;
 }
 .header #social-button-tumblr-icon {
   width: 24px;
   height: 24px;
-  background: url("http://www.sensitiveskinmagazine.com/wp-content/images/socialmediabuttons/social_buttons_sprite-sheet.png") -112px -10px;
+  background: url("<?php bloginfo('wpurl'); ?>/wp-content/images/socialmediabuttons/social_buttons_sprite-sheet.png") -112px -10px;
 }
 .header #social-button-google-plus-icon {
   width: 24px;
   height: 24px;
-  background: url("http://www.sensitiveskinmagazine.com/wp-content/images/socialmediabuttons/social_buttons_sprite-sheet.png") -146px -10px;
+  background: url("<?php bloginfo('wpurl'); ?>/wp-content/images/socialmediabuttons/social_buttons_sprite-sheet.png") -146px -10px;
 }
 .header #social-button-twitter-icon {
   width: 24px;
   height: 24px;
-  background: url("http://www.sensitiveskinmagazine.com/wp-content/images/socialmediabuttons/social_buttons_sprite-sheet.png") -180px -10px;
+  background: url("<?php bloginfo('wpurl'); ?>/wp-content/images/socialmediabuttons/social_buttons_sprite-sheet.png") -180px -10px;
 }
 /* import grid */
 /******************************************************************

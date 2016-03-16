@@ -50,7 +50,7 @@ Sensitive Skin Player
 <?php
   if ($js = get_post_meta($post->ID, 'js', true)) {
     
-     echo '<script type="text/javascript" src="http://www.sensitiveskinmagazine.com/wp-content/audio/playlists/' .$js. '"></script>';
+     echo '<script type="text/javascript" src="<?php bloginfo('wpurl'); ?>/wp-content/audio/playlists/' .$js. '"></script>';
   }
 ?>
 
