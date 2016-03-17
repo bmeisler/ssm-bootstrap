@@ -174,11 +174,11 @@ function sensitive_skin_bootstrap_entry_excluded_tag_footer() {
         remove_filter('get_the_terms', 'exclude_terms');
         
         
-		if ( $new_list ) {
+		if ( $tags_list ) {
             
             
 			//printf( '<span class="tags-links">' . esc_html__( 'Tagged %1$s', 'sensitive-skin-bootstrap' ) . '</span></br>', $tags_list ); 
-			printf( '<span class="tags-links">' . esc_html__( ' %1$s', 'sensitive-skin-bootstrap' ) . '</span><br/>', $new_list ); // WPCS: XSS OK.
+			printf( '<span class="tags-links">' . esc_html__( ' %1$s', 'sensitive-skin-bootstrap' ) . '</span><br/>', $tags_list ); // WPCS: XSS OK.
 		}
 	}
     if ( ! is_single() && ! post_password_required() && ( comments_open() || get_comments_number() ) ) {
