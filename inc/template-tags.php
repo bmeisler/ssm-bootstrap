@@ -107,7 +107,19 @@ function sensitive_skin_bootstrap_entry_footer() {
 }
 endif;
 
+ /* the function that get_the_tag_list looks for - we can exclude tags by id */
+ function exclude_cats($terms) {
+    $exclude_terms = array(806, 10); //put cat ids here to remove! - Art and Writing
+    if (!empty($terms) && is_array($terms)) {
+        foreach ($terms as $key => $term) {
+            if (in_array($term->term_id, $exclude_terms)) {
+                unset($terms[$key]);
+            }
+        }
+    }
 
+    return $terms;
+}
 
 if ( ! function_exists( 'sensitive_skin_bootstrap_archive_entry_footer' ) ) :
 /**
@@ -121,8 +133,10 @@ function sensitive_skin_bootstrap_archive_entry_footer() {
 	if ( 'post' === get_post_type() ) {
 		echo '<br/>';
 		/* translators: used between list items, there is a space after the comma */
-		//$categories_list = get_the_category_list( esc_html__( ', ', 'sensitive-skin-bootstrap' ) );
-		$categories_list = get_the_category_list_excludedCat( esc_html__( ' ', 'sensitive-skin-bootstrap' ) );
+        add_filter('get_the_terms', 'exclude_cats');
+		$categories_list = get_the_category_list( esc_html__( ' ', 'sensitive-skin-bootstrap' ) );
+        remove_filter('get_the_terms', 'exclude_cats');
+		//$categories_list = get_the_category_list_excludedCat( esc_html__( ' ', 'sensitive-skin-bootstrap' ) );
 		if ( $categories_list && sensitive_skin_bootstrap_categorized_blog() ) {
 			// printf( '<span class="cat-links">' . esc_html__( 'Posted in %1$s', 'sensitive-skin-bootstrap' ) . '</span></br>', $categories_list );
 			printf( '<span class="cat-links">' . esc_html__( ' %1$s', 'sensitive-skin-bootstrap' ) . '</span><br/>', $categories_list );
