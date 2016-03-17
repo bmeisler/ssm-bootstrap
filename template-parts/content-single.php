@@ -63,7 +63,9 @@
 	</div><!-- .entry-content -->
 
 	<footer class="entry-footer">
-		<?php sensitive_skin_bootstrap_entry_footer(); ?>
+		<?php //sensitive_skin_bootstrap_entry_footer(); ?>
+        <!--custom function based on core to exclude featured-->
+        <?php sensitive_skin_bootstrap_entry_excluded_tag_footer() ?>
 	</footer><!-- .entry-footer -->
 </article><!-- #post-## -->
 

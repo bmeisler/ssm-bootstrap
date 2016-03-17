@@ -65,7 +65,7 @@ endif;
 if ( ! function_exists( 'sensitive_skin_bootstrap_entry_footer' ) ) :
 /**
  * Prints HTML with meta information for the categories, tags and comments.
- * Added to the bottom of every individual post
+ * ORIGINALLY dded to the bottom of every individual post and the bottom of front page and excerpts - now use two functions below instead, respectively
  */
 function sensitive_skin_bootstrap_entry_footer() {
 
@@ -111,8 +111,8 @@ endif;
 
 if ( ! function_exists( 'sensitive_skin_bootstrap_archive_entry_footer' ) ) :
 /**
- * Prints HTML with meta information for the categories only - for front page and archives.
- * Can certain categories and tags!
+ * Prints HTML with meta information for the categories only - FOR FRONT PAGE AND ARCHIVES.
+ * Can exclude certain categories! CURRENTLY EXCLUDES 'ART' AND 'WRITING'
  * Used for excerpts of posts on the front page and archive sections
  */
 function sensitive_skin_bootstrap_archive_entry_footer() {
@@ -132,6 +132,73 @@ function sensitive_skin_bootstrap_archive_entry_footer() {
 
 }
 endif;
+
+if ( ! function_exists( 'sensitive_skin_bootstrap_entry_excluded_tag_footer' ) ) :
+/**
+ * Prints HTML with meta information for the categories, tags and comments. EXCLUDES 'FEATURED' TAG
+ * Added to the bottom of every individual post
+ */
+ 
+ /* the function that get_the_tag_list looks for - we can exclude tags by id */
+ function exclude_terms($terms) {
+    $exclude_terms = array(220); //put term ids here to remove!
+    if (!empty($terms) && is_array($terms)) {
+        foreach ($terms as $key => $term) {
+            if (in_array($term->term_id, $exclude_terms)) {
+                unset($terms[$key]);
+            }
+        }
+    }
+
+    return $terms;
+}
+
+function sensitive_skin_bootstrap_entry_excluded_tag_footer() {
+
+	// Hide category and tag text for pages.
+	if ( 'post' === get_post_type() ) {
+		echo '<br/>';
+		
+        /* translators: used between list items, there is a space after the comma */
+		//$categories_list = get_the_category_list( esc_html__( ', ', 'sensitive-skin-bootstrap' ) );
+		$categories_list = get_the_category_list( esc_html__( ' ', 'sensitive-skin-bootstrap' ) );
+		if ( $categories_list && sensitive_skin_bootstrap_categorized_blog() ) {
+			// printf( '<span class="cat-links">' . esc_html__( 'Posted in %1$s', 'sensitive-skin-bootstrap' ) . '</span></br>', $categories_list );
+			printf( '<span class="cat-links">' . esc_html__( ' %1$s', 'sensitive-skin-bootstrap' ) . '</span><br/>', $categories_list );
+		}
+        
+		/* translators: used between list items, there is a space after the comma */
+        
+        add_filter('get_the_terms', 'exclude_terms');
+		$tags_list = get_the_tag_list( '', esc_html__( ' ', 'sensitive-skin-bootstrap' ) );
+        remove_filter('get_the_terms', 'exclude_terms');
+        
+        
+		if ( $new_list ) {
+            
+            
+			//printf( '<span class="tags-links">' . esc_html__( 'Tagged %1$s', 'sensitive-skin-bootstrap' ) . '</span></br>', $tags_list ); 
+			printf( '<span class="tags-links">' . esc_html__( ' %1$s', 'sensitive-skin-bootstrap' ) . '</span><br/>', $new_list ); // WPCS: XSS OK.
+		}
+	}
+    if ( ! is_single() && ! post_password_required() && ( comments_open() || get_comments_number() ) ) {
+		echo '<span class="comments-link">';
+		comments_popup_link( esc_html__( 'Leave a comment', 'sensitive-skin-bootstrap' ), esc_html__( '1 Comment', 'sensitive-skin-bootstrap' ), esc_html__( '% Comments', 'sensitive-skin-bootstrap' ) );
+		echo '</span>';
+	}
+
+	edit_post_link(
+		sprintf(
+			/* translators: %s: Name of current post */
+			esc_html__( 'Edit %s', 'sensitive-skin-bootstrap' ),
+			the_title( '<span class="screen-reader-text">"', '"</span>', false )
+		),
+		'<span class="edit-link">',
+		'</span>'
+	);
+}
+endif;
+
 
 /**
  * Returns true if a blog has more than 1 category.
