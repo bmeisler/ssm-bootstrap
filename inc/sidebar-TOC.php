@@ -1,6 +1,6 @@
 <aside id="TOC" class="widget widget-TOC">
 	<h4 class="widget-title">
-		Popular Posts bitch
+		Popular Posts
 	</h4>
 <?php global $orig_post; //print_r($orig_post->ID); ?>
 <?php $current_issue_query = new WP_Query('showposts=25&tag=featured&orderby=rand');?>
