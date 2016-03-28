@@ -1,4 +1,6 @@
+
 <?php 
+/** DEPRECATED */
 			                          		if (has_tag(array('featured')) ){//If this is a featured post, try to use as large a preview image as possible
 			                          			echo 'featured';
 	                                            $img_path =  catch_that_image();

@@ -1,6 +1,6 @@
 <aside id="TOC" class="widget widget-TOC">
 	<h4 class="widget-title">
-		Popular Posts
+		Popular Posts bitch
 	</h4>
 <?php global $orig_post; //print_r($orig_post->ID); ?>
 <?php $current_issue_query = new WP_Query('showposts=25&tag=featured&orderby=rand');?>
@@ -16,8 +16,19 @@
 	id="post-<?php the_ID(); ?>
 	">
 	<li class="currentStoryTitle">
-<em><?php $subtitle = get_post_meta($post->ID, 'subtitle', true);
-					if($subtitle) echo $subtitle.' - ';?>  </em>
+                <?php 
+				
+				$subtitle = get_post_meta($post->ID, 'subtitle', true);
+	            if (!$subtitle)
+	            {
+                    $author = get_the_author();
+	                echo $author.' - ';
+	            }
+	            else if ($subtitle)
+	            {
+	                echo $subtitle.' - ';
+	            }?>
+                                    
 <?php echo the_title(); ?>
 	</li>
 </ul>
@@ -27,9 +38,19 @@
 <?php post_class().' ';?>
  id="post-<?php the_ID(); ?>
 ">
-<li class="storytitle">
-<em><?php $subtitle = get_post_meta($post->ID, 'subtitle', true);
-					if($subtitle) echo $subtitle.' - ';?>  </em>
+<li class="storytitle"><em>
+                     <?php 
+				
+				$subtitle = get_post_meta($post->ID, 'subtitle', true);
+	            if (!$subtitle)
+	            {
+                    $author = get_the_author();
+	                echo $author.' - ';
+	            }
+	            else if ($subtitle)
+	            {
+	                echo $subtitle.' - ';
+	            }?></em>
 	<a href="<?php the_permalink() ?>" rel="bookmark">
 <?php the_title(); ?>
 	</a>
