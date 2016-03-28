@@ -272,7 +272,16 @@ function my_rest_prepare_post( $data, $post, $request ) {
 add_filter( 'rest_prepare_post', 'my_rest_prepare_post', 10, 3 );
 
 
-
+/** uses the Google CDN version of Jquery instead of the WP version, and does NOT load it in the Head*/
+add_action( 'wp_enqueue_scripts', 'register_jquery' );
+function register_jquery() {
+    if (!is_admin() && $GLOBALS['pagenow'] != 'wp-login.php') {
+        // comment out the next two lines to load the local copy of jQuery
+        wp_deregister_script('jquery');
+        wp_register_script('jquery', 'http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js', false, '1.11.2');
+        wp_enqueue_script('jquery');
+    }
+}
 /**
  * Enqueue scripts and styles.
  */
