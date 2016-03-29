@@ -273,6 +273,7 @@ add_filter( 'rest_prepare_post', 'my_rest_prepare_post', 10, 3 );
 
 
 /** uses the Google CDN version of Jquery instead of the WP version, and does NOT load it in the Head*/
+/*
 add_action( 'wp_enqueue_scripts', 'register_jquery' );
 function register_jquery() {
     if (!is_admin() && $GLOBALS['pagenow'] != 'wp-login.php') {
@@ -282,6 +283,7 @@ function register_jquery() {
         wp_enqueue_script('jquery');
     }
 }
+*/
 /**
  * Enqueue scripts and styles.
  */
