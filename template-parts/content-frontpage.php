@@ -103,7 +103,7 @@
                 	
                 	<figure class="post-img-medium">
 	                    <a href="<?php the_permalink(); ?>" class="the-display" rel="bookmark">
-	                        <?php the_post_thumbnail('archive-thumb');?>
+	                        <?php the_post_thumbnail('category-medium');?>
 	                    </a>
                 	</figure> 
                 <?php    
