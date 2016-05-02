@@ -68,7 +68,7 @@
           <nav class="menu">
             <a href="index.php">Home</a>
             <span> | </span>
-            <a href="<?php bloginfo('wpurl'); ?>/our-history">About</a>
+            <a href="<?php bloginfo('wpurl'); ?>/about-sensitive-skin">About</a>
           	<span> | </span>
           	<a href="<?php bloginfo('wpurl'); ?>/contact">Contact</a>
             <span> | </span>
