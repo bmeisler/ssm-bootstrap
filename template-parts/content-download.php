@@ -30,7 +30,9 @@
 								<a role="button" class="btn btn-primary" href="<?php the_field('books_amazon_print_link') ?>" >Buy print edition</a>
 							<?php } ?>
 
-			<p id="history" class="description"><em>Sensitive Skin,</em> an anthology of post-beat, pre-apocalyptic art, writing, music and whatnot, features work by both world-famous and new-and-emerging artists, writers, and musicians from around the globe.
+			<p id="history" class="description"><em>Sensitive Skin</em> features art, writing and music, without rules or boundaries, by both famous and emerging artists, writers, and musicians from around the globe.
+
+
 		
 		<p class="description"><em>Sensitive Skin</em> began as a print venture from New York’s Lower East Side in the 1990s, and published such literary luminaries as Richard Hell, Steve Cannon, Jack Micheline, Penny Arcade, John Farris, Eileen Myles, Lynne Tillman, Patrick McGrath, Bob Holman, Maggie Estep, Emily XYZ, Herbert Huncke and Joel Rose, with art by Andres Serrano, Ari Marcopolis, Andrew Castrucci and James Romberger, to name but a few….
 
