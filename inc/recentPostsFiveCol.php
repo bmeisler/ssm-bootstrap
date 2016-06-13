@@ -35,8 +35,20 @@ Previously, on Sensitive Skin!
 						<div class="bottom-links-title">
 							<a href="<?php the_permalink() ?>"><?php echo the_title(); ?></a>
 						</div> 		
-					    <?php $subtitle = get_post_meta($post->ID, 'subtitle', true);
-						if($subtitle) echo '<div class="bottom-links-author">'.$subtitle.'</div>'; ?>
+					    <?php //$subtitle = get_post_meta($post->ID, 'subtitle', true);
+						//if($subtitle) echo '<div class="bottom-links-author">'.$subtitle.'</div>'; ?>
+						
+						<?php $subtitle = get_post_meta($post->ID, 'subtitle', true);
+							if (!$subtitle)
+							{
+								echo '<div class="bottom-links-author">'.get_the_author().'</div>';
+							}
+							else if ($subtitle)
+							{
+								echo '<div class="bottom-links-author">'.$subtitle.'</div>';
+							}
+							?>
+			
 						<div class="archive-copy">
 							<?php the_excerpt(25) ?>
 						</div>
