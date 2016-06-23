@@ -19,6 +19,11 @@
    		<?php if (get_field('kindle_link') !== ''){?>
 				<a role="button" class="btn btn-primary offset5" href="<?php the_field('kindle_link') ?>" >Buy it on Kindle</a>
 		<?php } ?>
+
+		<?php if (get_field('pdf_link') !== ''){?>
+							<a class="btn btn-primary" role="button" href="<?php bloginfo('url'); ?>/checkout?edd_action=add_to_cart&download_id=<?php echo get_the_ID(); ?>"><?php edd_price($post->ID);?> Buy the PDF</a>
+
+		<?php } ?>
     	<!-- </div> -->
    
 
