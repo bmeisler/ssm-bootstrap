@@ -25,8 +25,12 @@
 									?>
 									<a class="btn btn-primary" role="button" href="<?php bloginfo('url'); ?>/checkout?edd_action=add_to_cart&download_id=<?php the_field('pdf_link') ?>; ?>"><?php edd_price($postID);?> Buy the PDF</a>
 							<?php } ?>
+		
+		<?php if (get_field('manual_link') !== ''){?>
+				<?php the_field('manual_link') ?>
+		<?php } ?>
     	<!-- </div> -->
-   
+
 
 	</header> <!-- end article header -->
 		
