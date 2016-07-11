@@ -255,21 +255,21 @@ add_action( 'widgets_init', 'sensitive_skin_bootstrap_widgets_init' );
 //add_action ('init', 'sensitive-skin-bootstrap_register_post_types');
 
 /**THIS WILL ADD THE FEATURED THUMBNAIL, author and custom field subtitle TO THE JSON DATA*/
-function my_rest_prepare_post( $data, $post, $request ) {
-	$_data = $data->data;
-	$thumbnail_id = get_post_thumbnail_id( $post->ID );
-	$thumbnail = wp_get_attachment_image_src( $thumbnail_id, 'category-medium' );
-	$_data['featured_image_thumbnail_url'] = $thumbnail[0];
-	$theAuthor = get_the_author();
-	$subtitle = get_post_meta($post->ID, 'subtitle', true);
-	$postimageurl = get_post_meta($post->ID, 'post-img', true);
-	$_data['theAuthor']=$theAuthor;
-	$_data['theSubtitleAuthor']=$subtitle;
-	$_data['post_image']=$postimageurl;
-	$data->data = $_data;
-	return $data;
-};
-add_filter( 'rest_prepare_post', 'my_rest_prepare_post', 10, 3 );
+// function my_rest_prepare_post( $data, $post, $request ) {
+// 	$_data = $data->data;
+// 	$thumbnail_id = get_post_thumbnail_id( $post->ID );
+// 	$thumbnail = wp_get_attachment_image_src( $thumbnail_id, 'category-medium' );
+// 	$_data['featured_image_thumbnail_url'] = $thumbnail[0];
+// 	$theAuthor = get_the_author();
+// 	$subtitle = get_post_meta($post->ID, 'subtitle', true);
+// 	$postimageurl = get_post_meta($post->ID, 'post-img', true);
+// 	$_data['theAuthor']=$theAuthor;
+// 	$_data['theSubtitleAuthor']=$subtitle;
+// 	$_data['post_image']=$postimageurl;
+// 	$data->data = $_data;
+// 	return $data;
+// };
+//add_filter( 'rest_prepare_post', 'my_rest_prepare_post', 10, 3 );
 
 
 /** uses the Google CDN version of Jquery instead of the WP version, and does NOT load it in the Head*/
