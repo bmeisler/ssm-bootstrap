@@ -14,7 +14,7 @@
          
            <div id="mc_embed_floating_signup">
 
-            <form action="//sensitiveskinmagazine.us2.list-manage.com/subscribe/post?u=df2b62f883c43ba3749ff7368&amp;id=c53aaba024" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+            <form action="//sensitiveskinmagazine.us2.list-manage.com/subscribe/post?u=df2b62f883c43ba3749ff7368&amp;id=0d8f665f5d" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
 
 <input type="hidden" name="u" value="5e0434478e96f6841daff1690">
 <input type="hidden" name="id" value="5854671be8"> 
@@ -44,7 +44,7 @@
                 
                 <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
                 <div style="position: absolute; left: -5000px;" aria-hidden="true">
-                  <input type="text" name="b_df2b62f883c43ba3749ff7368_c53aaba024" tabindex="-1" value="">
+                  <input type="text" name="b_df2b62f883c43ba3749ff7368_0d8f665f5d" tabindex="-1" value="">
                 </div>
                 <div class="clear">
                   <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="btn btn-primary">
