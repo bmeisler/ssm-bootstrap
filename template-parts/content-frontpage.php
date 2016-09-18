@@ -123,7 +123,7 @@
 
             	//}else if (file_exists(content_url().'/images/tns/'.$postimageurl)){ 
             		}else if (@getimagesize(content_url().'/images/tns/'.$postimageurl)){ 
-					echo 'using postimageurl'
+					//echo 'using postimageurl'
             		?>
 
                          <figure class="post-img-medium-right">
