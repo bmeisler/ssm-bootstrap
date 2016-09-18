@@ -82,7 +82,7 @@
                 	}else{
                 		$postimageurl = get_post_meta($post->ID, 'post-img', true);//DOES IT HAVE A TN?
 
-                		if (@getimagesize('http://www.sensitiveskinmagazine.com/wp-content/images/tns/'.$postimageurl)){ ?>
+                		if (@getimagesize(content_url().'/images/tns/'.$postimageurl)){ ?>
                          <figure class="post-img-medium-right">
                             <a href="<?php the_permalink(); $post_img_large=true;?>" class="the-display" rel="bookmark"><img src="<?php  bloginfo( 'wpurl' ); ?>/wp-content/images/tns/<?php echo $postimageurl; ?>" alt="Post Pic"  /></a>
                          </figure>
@@ -121,9 +121,9 @@
                     <?php    
 	                
 
-            	//}else if (file_exists('http://www.sensitiveskinmagazine.com/wp-content/images/tns/'.$postimageurl)){ 
-            		}else if (@getimagesize('http://www.sensitiveskinmagazine.com/wp-content/images/tns/'.$postimageurl)){ 
-					//echo 'using postimageurl'
+            	//}else if (file_exists(content_url().'/images/tns/'.$postimageurl)){ 
+            		}else if (@getimagesize(content_url().'/images/tns/'.$postimageurl)){ 
+					echo 'using postimageurl'
             		?>
 
                          <figure class="post-img-medium-right">
