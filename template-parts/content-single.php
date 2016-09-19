@@ -61,6 +61,7 @@
 			) );
 		?>
 	</div><!-- .entry-content -->
+	<?php comments_template(); ?>
 
 	<footer class="entry-footer">
 		<?php //sensitive_skin_bootstrap_entry_footer(); ?>
