@@ -509,18 +509,19 @@ Media Queries
 }
 .archive-content .entry-content p{
 	text-indent: 0px;
-	max-width:600px;
+	max-width:650px;
 	margin-top:0px;
 }
 .single-content p{
 	text-indent: 20px;
-	max-width:600px;
+	max-width:650px;
+	font-size: 14px;
 }
 .enter-header{
-	max-width:600px;
+	max-width:650px;
 }
 article{
-	max-width:600px;
+	max-width:650px;
 }
 
 aside ul{
@@ -530,7 +531,7 @@ aside ul{
 	padding: 0px;
 }
 
-//additional styles required for grid
+/*additional styles required for grid*/
 .thumbnails .col-md-6 img { 
  max-height:400px;
 }

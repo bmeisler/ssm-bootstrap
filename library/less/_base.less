@@ -179,7 +179,7 @@ STYLES FOR ARCHIVE PAGINATION BOXES
 		.page-title {}
 
 		.single-title {/*posts titles*/
-			font-size: 160%;
+			font-size: 160% !important;
 			line-height: 1.4em;
 			text-align: center;
 			margin: -5px;
@@ -1123,6 +1123,18 @@ tns created on the fly from post images, and tns derived from featured images */
   
 //   }
 }
+.post-thumb-medium{
+	display: block;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  width: 300px;
+  height: 200px;
+  float: left;
+  padding-right: 14px;
+  position: relative;
+  z-index: 2;
+}
 .span-1-2{
 	float: left;
 	width: 50%;
@@ -1138,6 +1150,41 @@ tns created on the fly from post images, and tns derived from featured images */
 	margin-bottom: 21px;
 	font-size: 16px;
 	color: #333;
+}
+.thumb-excerpt{
+	position: relative;
+	font-size: 12px;
+	line-height: 1.3em;
+	left: 7px;
+}
+.thumb-title{
+	font-size: 14px;
+	position: relative;
+	left: 7px;
+	font-weight: 700;
+	text-align: left;
+}
+.thumb-author {
+    font-family: Georgia,"Times New Roman",Times,serif;
+    line-height: 1em;
+    margin-bottom: 6px;
+    font-style: italic;
+    font-weight: bold;
+    //color: #a28f62;
+	color: #666;
+    line-height: 1.2em;
+    text-transform: uppercase;
+	position: relative;
+	left: 7px;
+}
+.paddingRtSm{
+	padding-right: 7px;
+}
+.floatRt{
+	float: right;
+}
+.floatLt{
+	float: left;
 }
 .tbl{
 	display: table;
@@ -1195,7 +1242,7 @@ article post{
 	font-size: 12px;
 	line-height: 22px;
 	margin-top:25px;
-	width:98%;
+	width:650px;
 	max-width: 640px;
 	min-height:134px;
     height:auto !important;
@@ -2173,6 +2220,21 @@ Downloads/issues
 	transition:all 0.4s ease-out;
 }
 .the-display:hover img {
+	-webkit-filter:brightness(110%);
+	-moz-filter:brightness(110%);
+	filter:brightness(110%);
+	transform:scale(1.02);
+}
+.the-display span {
+	-webkit-filter:brightness(100%);
+	-moz-filter:brightness(100%);
+	filter:brightness(100%);
+	-webkit-transition:all 0.4s ease-out;
+	-moz-transition:all 0.4s ease-out;
+	-o-transition:all 0.4s ease-out;
+	transition:all 0.4s ease-out;
+}
+.the-display:hover span {
 	-webkit-filter:brightness(110%);
 	-moz-filter:brightness(110%);
 	filter:brightness(110%);
