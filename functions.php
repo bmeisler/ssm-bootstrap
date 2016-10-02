@@ -170,31 +170,19 @@ function catch_that_image() {
   }
   return $first_img;
 }
-function find_img_src($post) {
-    if (!$img = gpi_find_image_id($post->ID))
-        if ($img = preg_match_all('/<img.+src=[\'"]([^\'"]+)[\'"].*>/i', $post->post_content, $matches))
-            $img = $matches[1][0];
-    if (is_int($img)) {
-        $img = wp_get_attachment_image_src($img);
-        $img = $img[0];
+/** used in the Related Posts plugin - good here too! **/
+
+function get_excerpt_by_id($post_id){
+        $the_post = get_post($post_id); //Gets post ID
+        $the_excerpt = $the_post->post_content; //Gets post_content to be used as a basis for the excerpt
+        $excerpt_length = 288; //Sets excerpt length by word count
+        $the_excerpt = strip_tags(strip_shortcodes($the_excerpt)); //Strips tags and images
+        if(strlen($the_excerpt) >= $excerpt_length) :
+            $words =  substr($the_excerpt, 0, $excerpt_length).'...';
+        endif;
+
+        return $words;
     }
-    return $img;
-}
-function gpi_find_image_id($post_id) {
-    if (!$img_id = get_post_thumbnail_id ($post_id)) {
-        $attachments = get_children(array(
-            'post_parent' => $post_id,
-            'post_type' => 'attachment',
-            'numberposts' => 1,
-            'post_mime_type' => 'image'
-        ));
-        if (is_array($attachments)) foreach ($attachments as $a)
-            $img_id = $a->ID;
-    }
-    if ($img_id)
-        return $img_id;
-    return false;
-}
 
 /* used with the old music player system*/
 // function popitup(url, params) {

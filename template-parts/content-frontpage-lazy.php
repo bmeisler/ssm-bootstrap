@@ -44,7 +44,8 @@
                  }
                  $permalink = get_the_permalink($post_ID);
                  $post_title = get_the_title($post_ID);
-                 $the_excerpt = get_the_excerpt();
+                 //$the_excerpt = get_the_excerpt();
+                 $the_excerpt = get_excerpt_by_id($post_ID);
                  //$tag_footer = sensitive_skin_bootstrap_archive_entry_footer();
                  $subtitle = get_post_meta($post->ID, 'subtitle', true);
 	            if (!$subtitle)
@@ -76,7 +77,7 @@
                     <div class="thumb-excerpt paddingRtSm">
                         <div class="entry paddingRtSm">
 						' . $the_excerpt . '
-						<a href="' . $permalink . '">' . __('Read More', 'glassdoor-blog') . '</a>
+						<a href="' . $permalink . '"><em class="link-color">Read More</em></a>
                         </div>
                         
 					</div>

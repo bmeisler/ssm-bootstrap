@@ -83,7 +83,7 @@ p + figcaption{
 a:hover,
 a:focus,
 a:active {
-	color: #cc0000;
+	color: #337ab7;
 }
 
 
@@ -433,7 +433,7 @@ Media Queries
 		color: black;
 	}
 	.grid-item .bottom-links-title a:hover{
-		color: #c00;
+		color: 337ab7
 	}
 	.grid-item:nth-child(4){
 		display:block;
@@ -458,7 +458,7 @@ Media Queries
 		color: black;
 	}
 	.grid-item .bottom-links-title a:hover{
-		color: #c00;
+		color: #337ab7;
 	}
 	.grid-item:last-child {
 	  display:block;
