@@ -17,10 +17,7 @@
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<div class="archive-content">
 		<?php
-             $post_img_large = false;
-             $currentAlignment = "left";
-
-			 
+             
 			 	$post_thumb = wp_get_attachment_url(get_post_thumbnail_id($post_ID));
                   if(!$post_thumb){
                      $img_path = catch_that_image();
@@ -48,7 +45,6 @@
                  $permalink = get_the_permalink($post_ID);
                  $post_title = get_the_title($post_ID);
                  $the_excerpt = get_the_excerpt();
-                 //$the_excerpt = self::get_excerpt_by_id($post_ID);
                  //$tag_footer = sensitive_skin_bootstrap_archive_entry_footer();
                  $subtitle = get_post_meta($post->ID, 'subtitle', true);
 	            if (!$subtitle)
@@ -85,14 +81,7 @@
                         
 					</div>
                     
-                    
-                    
-				
-			</div>';
-        
-    
-        //$rp .= "</div>";
-        //$rp .= "</div>";
+			    </div>';
 
 		echo $rp;
 		
@@ -102,8 +91,6 @@
         
 		<div class="clearfix">
 			
-
-
 			<?php
 				wp_link_pages( array(
 					'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'sensitive-skin-bootstrap' ),
