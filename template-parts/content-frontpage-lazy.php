@@ -22,6 +22,29 @@
 
 			 
 			 	$post_thumb = wp_get_attachment_url(get_post_thumbnail_id($post_ID));
+                  if(!$post_thumb){
+                     $img_path = catch_that_image();
+
+                      if ($img_path != '' && $img_path != null){ //if there is an image in the post, use it and style it according to size
+                        $post_thumb =  $img_path;
+                      }
+                    else{
+                          
+                          $postimageurl = get_post_meta($post->ID, 'post-img', true);
+                          if (@getimagesize(content_url().'/images/tns/'.$postimageurl)){
+                              $imageurl = bloginfo( 'wpurl' ) .'/wp-content/images/tns/' .   $postimageurl;
+                              if (imageurl){
+                                  $post_thumb = $imageurl;
+                                  echo 'using imageurl: ' . $imageurl;
+                                  
+                              }else{
+                                  echo 'SOL bub';
+                              }
+                             
+                          }
+                          
+                      }
+                 }
                  $permalink = get_the_permalink($post_ID);
                  $post_title = get_the_title($post_ID);
                  $the_excerpt = get_the_excerpt();

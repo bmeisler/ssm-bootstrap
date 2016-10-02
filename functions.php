@@ -162,14 +162,40 @@ function catch_that_image() {
   ob_start();
   ob_end_clean();
   $output = preg_match_all('/<img.+src=[\'"]([^\'"]+)[\'"].*>/i', $post->post_content, $matches);
-  $first_img = $matches [1] [0];
-
-  if(empty($first_img)){ //Defines a default image
-    $first_img = '';
+  $first_img = $matches [1][0];
+  if(empty($first_img)){
+		$first_img = 'http://www.sensitiveskinmagazine.com.dev/wp-content/uploads/2016/10/SensitiveSkinLogo300-200-300x200.jpg';
     //bloginfo('url')."/wp-content/images/tns/default-img_inverted.jpg";
+	
   }
   return $first_img;
 }
+function find_img_src($post) {
+    if (!$img = gpi_find_image_id($post->ID))
+        if ($img = preg_match_all('/<img.+src=[\'"]([^\'"]+)[\'"].*>/i', $post->post_content, $matches))
+            $img = $matches[1][0];
+    if (is_int($img)) {
+        $img = wp_get_attachment_image_src($img);
+        $img = $img[0];
+    }
+    return $img;
+}
+function gpi_find_image_id($post_id) {
+    if (!$img_id = get_post_thumbnail_id ($post_id)) {
+        $attachments = get_children(array(
+            'post_parent' => $post_id,
+            'post_type' => 'attachment',
+            'numberposts' => 1,
+            'post_mime_type' => 'image'
+        ));
+        if (is_array($attachments)) foreach ($attachments as $a)
+            $img_id = $a->ID;
+    }
+    if ($img_id)
+        return $img_id;
+    return false;
+}
+
 /* used with the old music player system*/
 // function popitup(url, params) {
 //             newwindow=window.open(url,'name', params);
