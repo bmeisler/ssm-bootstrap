@@ -66,10 +66,10 @@
 					</a>
 				
                 </div>
-                <div class="margBotSm floatRt">
+                <div class="floatRt">
                     <div>
 						<a href="' . $permalink . '">
-							<h2 class="thumb-title noMargTop MargBotSm span-1-1">' . $post_title . '</h2>
+							<h2 class="thumb-title MargBotSm span-1-1">' . $post_title . '</h2>
 						</a>
                     </div>
 
