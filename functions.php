@@ -180,6 +180,9 @@ function get_excerpt_by_id($post_id){
         if(strlen($the_excerpt) >= $excerpt_length) :
             $words =  substr($the_excerpt, 0, $excerpt_length).'...';
         endif;
+		if (strlen($the_excerpt) <= 144):
+			$words = get_the_excerpt();
+		endif;
 
         return $words;
     }
