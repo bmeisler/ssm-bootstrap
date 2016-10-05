@@ -11,15 +11,15 @@
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<header class="entry-header">
-		<?php the_title( '<h1 class="entry-title single-title">', '</h1>' ); 
+		<?php the_title( '<h1 class="entry-title single-title margBotLg">', '</h1>' ); 
 		$subtitle = get_post_meta($post->ID, 'subtitle', true);
             if (!$subtitle)
             {
-                echo '<h1 id="author">'.get_the_author().'</h1>';
+                echo '<h1 class="author margTopLg paddingTopLg">'.get_the_author().'</h1>';
             }
             else if ($subtitle)
             {
-                echo '<h1 id="author">'.$subtitle.'</h1>';
+                echo '<h1 class="author margTopLg paddingTopLg">'.$subtitle.'</h1>';
             }
             ?>
 		<!--<div class="entry-meta">
@@ -30,7 +30,7 @@
 		
 	</header><!-- .entry-header -->
 
-	<div class="entry-content single-content clearfix">
+	<div class="entry-content single-content clearfix margBotLg">
 		<?php		
 		// custom code to add JetPack social buttons before content
 		if ( function_exists( 'sharing_display' ) ) {

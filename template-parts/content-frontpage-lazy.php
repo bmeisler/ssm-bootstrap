@@ -35,11 +35,9 @@
                               $imageurl = bloginfo( 'wpurl' ) .'/wp-content/images/tns/' .   $postimageurl;
                               if (imageurl){
                                   $post_thumb = $imageurl;
-                                  echo 'using imageurl: ' . $imageurl;
-                                  
-                              }else{
-                                  echo 'SOL bub';
-                              }
+							  }else{
+								  $post_thumb = null;
+							  }
                              
                           }
                           
@@ -63,10 +61,10 @@
 				 
 				$rp .= '
 			    <div class="floatLt paddingRtSm">
-				
-					<a href="' . $permalink . '">
+				<a href="' . $permalink . '">
 						<span class="post-thumb-medium lazy" style="background-image: url(' . $post_thumb . ');"  data-original="' . $post_thumb .  ' </span>
 					</a>
+				
 				
                 </div>
                 <div class="floatRt">

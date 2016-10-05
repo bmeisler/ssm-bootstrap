@@ -52,7 +52,8 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 
 /*to fix jetpack social icons - not enough room on top*/
 .sharedaddy{
-	margin-top:12px;
+	margin-top:14px;
+	margin-bottom: 28px;
 }
 /*patch to fix messed up figcaption on Firefox*/
 p + figcaption{

@@ -21,45 +21,10 @@
              $currentAlignment = "left";
 			 if (has_tag( 'featured')) { //If this is a featured post, try to use as large a preview image as possible
       			//echo 'featured<br>';
-      			
-                $img_path =  catch_that_image();
-                //echo '</br>$image_path: '.$img_path;
-               
 
-                
-                if ($img_path != '' && $img_path != null){ //if there is an image in the post, use it and style it according to size
-                	$sizes = getimagesize($img_path);
-                    $width = $sizes[0];
-                    $height = $sizes[1];
-                    //echo 'width: '.$width;
-                // 
-                    if ($width>=200 & $width < 400 || $height > $width){
-                    	//echo "medium";
-                    	// if ($currentAlignment=="right"){
-                        //    $currentAlignment = "left";
-                    	?>
-                    	<figure class="post-img-medium">
-	                        <a href="<?php the_permalink(); ?>" class="the-display" rel="bookmark">
-	                            <img src="<?php echo $img_path; ?>"  />
-	                         </a>
-                        </figure>
-                        <?php
-                        
-                    } else if ($width >= 400){ ?>
-                    	<figure class="post-img-large">
-	                        <a href="<?php the_permalink(); ?>" class="the-display" rel="bookmark">
-	                            <img src="<?php echo $img_path; $post_img_large=true;?>"  />
-	                        </a>
-                        </figure>
-                    <?php 
-                	}          
-                }else{//no image found in post, use small thumbnail - eg Hardin's Drone loops
-                	//echo "no image found in post, use thumbnail";
-                	if ( has_post_thumbnail() ) { 
+				  if ( has_post_thumbnail() ) { 
                 		//echo 'use thumbnail'
                 		?>
-
-                
                 	<figure class="post-img-large">
 	                    <a href="<?php the_permalink(); ?>" class="the-display" rel="bookmark">
 	                        <?php the_post_thumbnail('large'); $post_img_large=true;?>
@@ -67,8 +32,32 @@
                 	</figure> 
 
             	<?php 
-					}
-                }
+                }else{//no image found in post, use small thumbnail - eg Hardin's Drone loops
+
+						if ($img_path != '' && $img_path != null){ //if there is an image in the post, use it and style it according to size
+							$sizes = getimagesize($img_path);
+							$width = $sizes[0];
+							$height = $sizes[1];
+							if ($width>=200 & $width < 400 || $height > $width){
+								?>
+								<figure class="post-img-medium">
+									<a href="<?php the_permalink(); ?>" class="the-display" rel="bookmark">
+										<img src="<?php echo $img_path; ?>"  />
+									</a>
+								</figure>
+								<?php
+								
+							} else if ($width >= 400){ ?>
+								<figure class="post-img-large">
+									<a href="<?php the_permalink(); ?>" class="the-display" rel="bookmark">
+										<img src="<?php echo $img_path; $post_img_large=true;?>"  />
+									</a>
+								</figure>
+							<?php 
+							}          
+						}
+				}
+				
             } else {//NOT A FEATURED POST - use a small image
                  //USE A FEATURED IMAGE IF ONE EXISTS
          		 //echo 'not a featured post';
@@ -101,14 +90,7 @@
 	                
 
             	//}else if (file_exists(content_url().'/images/tns/'.$postimageurl)){ 
-            		}else if (@getimagesize(content_url().'/images/tns/'.$postimageurl)){ 
-					//echo 'using postimageurl'
-            		?>
-
-                         <figure class="post-img-medium-right">
-                            <a href="<?php the_permalink(); $post_img_large=true;?>" class="the-display" rel="bookmark"><img src="<?php  bloginfo( 'wpurl' ); ?>/wp-content/images/tns/<?php echo $postimageurl; ?>" alt="Post Pic"  /></a>
-                         </figure>
-                      <?php 
+            		
                 }
             	
             }?>
@@ -143,7 +125,7 @@
 						<?php
 						$the_excerpt = get_excerpt_by_id($post_ID);
 						echo $the_excerpt; ?>
-						<a href="' . $permalink . '"><div class="read-more margTopLg">Read More</div></a>
+						<a href="<?php the_permalink(); ?>"><div class="read-more margTopLg">Read More</div></a>
                         </div>
                         
 					</div>

@@ -164,7 +164,8 @@ function catch_that_image() {
   $output = preg_match_all('/<img.+src=[\'"]([^\'"]+)[\'"].*>/i', $post->post_content, $matches);
   $first_img = $matches [1][0];
   if(empty($first_img)){
-		$first_img = 'http://www.sensitiveskinmagazine.com.dev/wp-content/uploads/2016/10/SensitiveSkinLogo300-200-300x200.jpg';
+		//$first_img = 'http://www.sensitiveskinmagazine.com.dev/wp-content/uploads/2016/10/SensitiveSkinLogo300-200-300x200.jpg';
+		$first_image = null;
     //bloginfo('url')."/wp-content/images/tns/default-img_inverted.jpg";
 	
   }
