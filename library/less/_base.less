@@ -1156,9 +1156,10 @@ tns created on the fly from post images, and tns derived from featured images */
 	font-size: 12px;
 	line-height: 1.3em;
 	left: 7px;
+	line-height: 1.6em;
 }
 .thumb-title{
-	font-size: 14px;
+	font-size: 20px;
 	position: relative;
 	left: 7px;
 	font-weight: 700;
@@ -1166,10 +1167,10 @@ tns created on the fly from post images, and tns derived from featured images */
 	margin-top: 7px !important;
 }
 .thumb-author {
-    font-family: Georgia,"Times New Roman",Times,serif;
+    //font-family: Georgia,"Times New Roman",Times,serif;
     line-height: 1em;
     margin-bottom: 6px;
-    font-style: italic;
+    //font-style: italic;
     font-weight: bold;
     margin-top: -4px;
 	color: #666;
@@ -1177,6 +1178,7 @@ tns created on the fly from post images, and tns derived from featured images */
     text-transform: uppercase;
 	position: relative;
 	left: 7px;
+	font-size: 14px;
 }
 .paddingRtSm{
 	padding-right: 7px;
@@ -1231,7 +1233,13 @@ article post{
 }
 
 .link-color{
+	color: @link-color !important;
+}
+.read-more{
 	color: @link-color;
+	font-size: 12px;
+	text-align: right;
+	font-weight: bold;
 }
 
 
@@ -1255,8 +1263,8 @@ article post{
 	font-family: Verdana, Geneva, sans-serif;
 	font-size: 12px;
 	line-height: 22px;
-	margin-top:25px;
-	width:650px;
+	margin-top:25px; 
+	max-width:650px;
 	min-height:134px;
     height:auto !important;
     height:134px; 

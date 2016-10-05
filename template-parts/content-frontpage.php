@@ -35,8 +35,8 @@
                 // 
                     if ($width>=200 & $width < 400 || $height > $width){
                     	//echo "medium";
-                    	if ($currentAlignment=="right"){
-                           $currentAlignment = "left";
+                    	// if ($currentAlignment=="right"){
+                        //    $currentAlignment = "left";
                     	?>
                     	<figure class="post-img-medium">
 	                        <a href="<?php the_permalink(); ?>" class="the-display" rel="bookmark">
@@ -44,18 +44,7 @@
 	                         </a>
                         </figure>
                         <?php
-                        }else{ 
-	                       	$currentAlignment = "right";
-	                       	?>
-	                       	<figure class="post-img-medium-right">
-	                            <a href="<?php the_permalink(); ?>" class="the-display" rel="bookmark">
-	                                <img src="<?php echo $img_path; $post_img_large=true; ?>"  />
-	                             </a>
-                            </figure>
-                        <?php
-                    	}
-                        ?>
-                    <?php
+                        
                     } else if ($width >= 400){ ?>
                     	<figure class="post-img-large">
 	                        <a href="<?php the_permalink(); ?>" class="the-display" rel="bookmark">
@@ -78,17 +67,7 @@
                 	</figure> 
 
             	<?php 
-            		
-                	}else{
-                		$postimageurl = get_post_meta($post->ID, 'post-img', true);//DOES IT HAVE A TN?
-
-                		if (@getimagesize(content_url().'/images/tns/'.$postimageurl)){ ?>
-                         <figure class="post-img-medium-right">
-                            <a href="<?php the_permalink(); $post_img_large=true;?>" class="the-display" rel="bookmark"><img src="<?php  bloginfo( 'wpurl' ); ?>/wp-content/images/tns/<?php echo $postimageurl; ?>" alt="Post Pic"  /></a>
-                         </figure>
-                      <?php 
-                  		}
-                	}
+					}
                 }
             } else {//NOT A FEATURED POST - use a small image
                  //USE A FEATURED IMAGE IF ONE EXISTS
@@ -135,7 +114,9 @@
             }?>
 		<header class="entry-header">
 
-			<?php the_title( sprintf( '<h2 class="entry-title archive-post-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' ); ?>
+			<?php the_title( sprintf( '<h2 class="thumb-title"><a class="link-color" href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' ); 
+			
+			?>
 
 		 	<?php if ( 'post' === get_post_type() ) : ?>
 			<div class="entry-meta">
@@ -145,11 +126,11 @@
 				$subtitle = get_post_meta($post->ID, 'subtitle', true);
 	            if (!$subtitle)
 	            {
-	                echo '<div class="archive-author">'.get_the_author().'</div>';
+	                echo '<div class="thumb-author">'.get_the_author().'</div>';
 	            }
 	            else if ($subtitle)
 	            {
-	                echo '<div class="archive-author">'.$subtitle.'</div>';
+	                echo '<div class="thumb-author">'.$subtitle.'</div>';
 	            }?>
 			</div>
 			<?php endif; ?>
@@ -157,28 +138,15 @@
 
 		<div class="archive-entry-content clearfix">
 			
-	            <div class="entry">
-		              <?php the_excerpt() ?>
-		        </div>
-                
-                <?php
-                if ($post_img_large===true){ ?>
-                     <div class="archive-entry-footer-large">
-                        <?php sensitive_skin_bootstrap_archive_entry_footer(); ?>
-                    </div>
-                <?php }else{ ?>
-                     <div class="archive-entry-footer">
-                        <?php sensitive_skin_bootstrap_archive_entry_footer(); ?>
-                    </div>
-                <?php } ?>
-               
-				<?php
-				// the_content( sprintf(
-				// 	/* translators: %s: Name of current post. */
-				// 	wp_kses( __( 'Continue reading %s <span class="meta-nav">&rarr;</span>', 'sensitive-skin-bootstrap' ), array( 'span' => array( 'class' => array() ) ) ),
-				// 	the_title( '<span class="screen-reader-text">"', '"</span>', false )
-				// ) );
-			?>
+	            <div class="thumb-excerpt paddingRtSm">
+                        <div class="entry paddingRtSm">
+						<?php
+						$the_excerpt = get_excerpt_by_id($post_ID);
+						echo $the_excerpt; ?>
+						<a href="' . $permalink . '"><div class="read-more margTopLg">Read More</div></a>
+                        </div>
+                        
+					</div>
 
 			<?php
 				wp_link_pages( array(

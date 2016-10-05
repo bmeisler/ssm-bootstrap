@@ -19,6 +19,9 @@
 		<?php
              
 			 	$post_thumb = wp_get_attachment_url(get_post_thumbnail_id($post_ID));
+				// $post_thumb = wp_get_attachment_image_src(get_post_thumbnail_id(get_the_ID()), 'category-medium');
+				
+				 //$post_thumb = get_the_thumbnail('category-medium');
                   if(!$post_thumb){
                      $img_path = catch_that_image();
 
@@ -69,7 +72,7 @@
                 <div class="floatRt">
                     <div>
 						<a href="' . $permalink . '">
-							<h2 class="thumb-title MargBotSm span-1-1">' . $post_title . '</h2>
+							<h2 class="thumb-title link-color MargBotSm span-1-1">' . $post_title . '</h2>
 						</a>
                     </div>
 
@@ -77,7 +80,7 @@
                     <div class="thumb-excerpt paddingRtSm">
                         <div class="entry paddingRtSm">
 						' . $the_excerpt . '
-						<a href="' . $permalink . '"><em class="link-color">Read More</em></a>
+						<a href="' . $permalink . '"><div class="read-more">Read More</div></a>
                         </div>
                         
 					</div>
