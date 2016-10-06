@@ -15,11 +15,13 @@
 		$subtitle = get_post_meta($post->ID, 'subtitle', true);
             if (!$subtitle)
             {
-                echo '<h1 class="author margTopLg paddingTopLg">'.get_the_author().'</h1>';
+                echo ('<h1 class="the-author margTopLg paddingTopLg link-color">');
+				the_author_posts_link();
+				echo ('</h1>');
             }
             else if ($subtitle)
             {
-                echo '<h1 class="author margTopLg paddingTopLg">'.$subtitle.'</h1>';
+                echo '<h1 class="the-author margTopLg paddingTopLg">'.$subtitle.'</h1>';
             }
             ?>
 		<!--<div class="entry-meta">
@@ -43,6 +45,7 @@
 		}
 		?>
 		<?php the_content(); ?>
+		
 		<?php		
 		// custom code to add JetPack social buttons after content too!
 		if ( function_exists( 'sharing_display' ) ) {
@@ -61,12 +64,13 @@
 			) );
 		?>
 	</div><!-- .entry-content -->
-	<?php comments_template(); ?>
+	
 
 	<footer class="entry-footer">
 		<?php //sensitive_skin_bootstrap_entry_footer(); ?>
         <!--custom function based on core to exclude featured-->
         <?php sensitive_skin_bootstrap_entry_excluded_tag_footer() ?>
+		<?php comments_template(); ?>
 	</footer><!-- .entry-footer -->
 </article><!-- #post-## -->
 
