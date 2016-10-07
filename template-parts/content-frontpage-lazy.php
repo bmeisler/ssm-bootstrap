@@ -18,8 +18,8 @@
 	<div class="archive-content">
 		<?php
              
-			 	$post_thumb = wp_get_attachment_url(get_post_thumbnail_id($post_ID));
-				// $post_thumb = wp_get_attachment_image_src(get_post_thumbnail_id(get_the_ID()), 'category-medium');
+			 	//$post_thumb = wp_get_attachment_url(get_post_thumbnail_id($post_ID));
+				$post_thumb = wp_get_attachment_image_src(get_post_thumbnail_id(get_the_ID()), 'large')[0];
 				
 				 //$post_thumb = get_the_thumbnail('category-medium');
                   if(!$post_thumb){
