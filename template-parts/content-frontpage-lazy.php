@@ -19,7 +19,7 @@
 		<?php
              
 			 	//$post_thumb = wp_get_attachment_url(get_post_thumbnail_id($post_ID));
-				$post_thumb = wp_get_attachment_image_src(get_post_thumbnail_id(get_the_ID()), 'large')[0];
+				$post_thumb = wp_get_attachment_image_src(get_post_thumbnail_id(get_the_ID()), 'medium')[0];
 				
 				 //$post_thumb = get_the_thumbnail('category-medium');
                   if(!$post_thumb){
@@ -30,19 +30,28 @@
                       }
                     else{
                           
-                          $postimageurl = get_post_meta($post->ID, 'post-img', true);
-                          if (@getimagesize(content_url().'/images/tns/'.$postimageurl)){
-                              $imageurl = bloginfo( 'wpurl' ) .'/wp-content/images/tns/' .   $postimageurl;
-                              if (imageurl){
-                                  $post_thumb = $imageurl;
-							  }else{
-								  $post_thumb = null;
-							  }
+                        //   $postimageurl = get_post_meta($post->ID, 'post-img', true);
+                        //   if (@getimagesize(content_url().'/images/tns/'.$postimageurl)){
+                        //       $imageurl = bloginfo( 'wpurl' ) .'/wp-content/images/tns/' .   $postimageurl;
+                        //       if (imageurl){
+                        //           $post_thumb = $imageurl;
+						// 	  }else{
+						// 		  $post_thumb = null;
+						// 	  }
                              
-                          }
+                        //   }
+						$post_thumb = null;
                           
                       }
                  }
+				 if ($post_thumb !== null){
+					 $img_content = '<a href="' . $permalink . '">
+						<span class="post-thumb-medium lazy" style="background-image: url(' . $post_thumb . ');"  data-original="' . $post_thumb .  ' </span>
+					</a>';
+				 }else{
+					 $img_content = '';
+				 }
+				 
                  $permalink = get_the_permalink($post_ID);
                  $post_title = get_the_title($post_ID);
                  //$the_excerpt = get_the_excerpt();
@@ -60,10 +69,9 @@
 				
 				 
 				$rp .= '
-			    <div class="floatLt paddingRtSm">
-				<a href="' . $permalink . '">
-						<span class="post-thumb-medium lazy" style="background-image: url(' . $post_thumb . ');"  data-original="' . $post_thumb .  ' </span>
-					</a>
+			    <div class="floatLt paddingRtSm">' . $img_content . '
+
+					
 				
 				
                 </div>
