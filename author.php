@@ -46,14 +46,14 @@ get_header(); ?>
 			<?php endwhile; ?>
 
 			<!--<?php the_posts_navigation(); ?>-->
-			<?php if (function_exists('wp_corenavi')) wp_corenavi(); ?>
+			
 
 		<?php else : ?>
 
-			<?php get_template_part( 'template-parts/content-archive', 'none' ); ?>
+			<?php get_template_part( 'template-parts/content-frontpage-lazy', 'none' ); ?>
 
 		<?php endif; ?>
-
+<?php if (function_exists('wp_corenavi')) wp_corenavi(); ?>
 		</main><!-- #main -->
 	</div><!-- #primary -->
 

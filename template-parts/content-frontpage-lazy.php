@@ -82,7 +82,7 @@
 						</a>
                     </div>
 
-                    <div class="thumb-author" paddingRtLg>'.$the_author.'</div>
+                    <div class="thumb-author paddingRtLg">'.$the_author.'</div>
                     <div class="thumb-excerpt">
                         <div class="entry paddingRtLg">
 						' . $the_excerpt . '
