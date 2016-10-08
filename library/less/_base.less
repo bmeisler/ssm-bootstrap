@@ -46,6 +46,9 @@ and will be used across all viewports.
 @link-color:        #337ab7;
 @link-hover:        darken(@link-color, 9%);
 
+/****MEDIA QUERY VARIABLES******/
+@handheld: ~"only screen and (max-width: 479px)";
+
 
 
 /*********************
@@ -1148,10 +1151,17 @@ tns created on the fly from post images, and tns derived from featured images */
   width: 300px;
   height: 200px;
   float: left;
-  //padding-right: 14px;
   position: relative;
   z-index: 2;
-
+  @media @handheld {
+	  width:100%;
+  }
+}
+.post-thumb-image-container{
+	padding-right: 7px !important;
+	@media @handheld {
+	  padding-right: 0 !important;
+  }
 }
 .span-1-2{
 	float: left;

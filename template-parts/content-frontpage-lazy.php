@@ -29,19 +29,7 @@
                         $post_thumb =  $img_path;
                       }
                     else{
-                          
-                        //   $postimageurl = get_post_meta($post->ID, 'post-img', true);
-                        //   if (@getimagesize(content_url().'/images/tns/'.$postimageurl)){
-                        //       $imageurl = bloginfo( 'wpurl' ) .'/wp-content/images/tns/' .   $postimageurl;
-                        //       if (imageurl){
-                        //           $post_thumb = $imageurl;
-						// 	  }else{
-						// 		  $post_thumb = null;
-						// 	  }
-                             
-                        //   }
-						$post_thumb = null;
-                          
+						$post_thumb = null; 
                       }
                  }
 				 if ($post_thumb !== null){
@@ -69,7 +57,7 @@
 				
 				 
 				$rp .= '
-			    <div class="floatLt paddingRtSm">' . $img_content . '
+			    <div class="floatLt post-thumb-image-container">' . $img_content . '
 
 					
 				
