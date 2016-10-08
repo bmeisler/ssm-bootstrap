@@ -15,7 +15,7 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<div class="archive-content">
+	<div class="thumb-content">
 		<?php
              
 			 	//$post_thumb = wp_get_attachment_url(get_post_thumbnail_id($post_ID));
@@ -46,7 +46,7 @@
                  }
 				 if ($post_thumb !== null){
 					 $img_content = '<a href="' . $permalink . '">
-						<span class="post-thumb-medium lazy" style="background-image: url(' . $post_thumb . ');"  data-original="' . $post_thumb .  ' </span>
+						<span class="post-thumb-medium lazy margRtLg" style="background-image: url(' . $post_thumb . ');"  data-original="' . $post_thumb .  ' </span>
 					</a>';
 				 }else{
 					 $img_content = '';
@@ -78,15 +78,15 @@
                 <div class="floatRt">
                     <div>
 						<a href="' . $permalink . '">
-							<h2 class="thumb-title link-color MargBotSm span-1-1">' . $post_title . '</h2>
+							<h2 class="thumb-title link-color MargBotSm MargTopLg paddingRtLg span-1-1">' . $post_title . '</h2>
 						</a>
                     </div>
 
-                    <div class="thumb-author" paddingRtSm>'.$the_author.'</div>
-                    <div class="thumb-excerpt paddingRtSm">
-                        <div class="entry paddingRtSm">
+                    <div class="thumb-author" paddingRtLg>'.$the_author.'</div>
+                    <div class="thumb-excerpt">
+                        <div class="entry paddingRtLg">
 						' . $the_excerpt . '
-						<a href="' . $permalink . '"><div class="read-more">Read More</div></a>
+						<a href="' . $permalink . '"><div class="read-more margTopSm">Read More</div></a>
                         </div>
                         
 					</div>

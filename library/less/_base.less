@@ -306,7 +306,8 @@ figure{
 	//padding-right:5px;
     text-indent:0 !important;
     margin-bottom:36px;  
-	font-size:12px;       
+	font-size:12px;   
+	max-width: 640px;    
 }
 p + figcaption{//gets rid of space from empty p tag sometimes added above figcaption by Chrome and FF
 	margin-top: -12px !important;
@@ -1108,6 +1109,20 @@ tns created on the fly from post images, and tns derived from featured images */
 
 ////////////////////////////////////
 //for use with Related Posts plugin
+//and new lazy front page
+
+.thumb-content {
+	margin-top:25px; 
+	max-width:750px;
+    height:auto !important;
+    //height:134px; 
+	text-align:justify;
+	margin-bottom:10px;
+	border-style:solid;
+	border-width:1px;
+	border-color:#ccc;
+	padding: 0px; 
+}
 .post-thumb {
   display: block;
   background-size: cover;
@@ -1126,16 +1141,17 @@ tns created on the fly from post images, and tns derived from featured images */
 //   }
 }
 .post-thumb-medium{
-	display: block;
+  display: block;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
   width: 300px;
   height: 200px;
   float: left;
-  padding-right: 14px;
+  //padding-right: 14px;
   position: relative;
   z-index: 2;
+
 }
 .span-1-2{
 	float: left;
@@ -1155,10 +1171,11 @@ tns created on the fly from post images, and tns derived from featured images */
 }
 .thumb-excerpt{
 	position: relative;
-	font-size: 12px;
+	font-size: 14px;
 	line-height: 1.3em;
 	left: 7px;
 	line-height: 1.6em;
+	padding-right: 3.5px;
 }
 .thumb-title{
 	font-size: 20px;
@@ -1166,13 +1183,11 @@ tns created on the fly from post images, and tns derived from featured images */
 	left: 7px;
 	font-weight: 700;
 	text-align: left;
-	margin-top: 7px !important;
+	padding-right: 3.5px;
 }
 .thumb-author {
-    //font-family: Georgia,"Times New Roman",Times,serif;
     line-height: 1em;
     margin-bottom: 6px;
-    //font-style: italic;
     font-weight: bold;
     margin-top: -4px;
 	color: #666;
@@ -1181,12 +1196,16 @@ tns created on the fly from post images, and tns derived from featured images */
 	position: relative;
 	left: 7px;
 	font-size: 14px;
+	padding-right: 3.5px;
 }
 .paddingRtSm{
 	padding-right: 7px;
 }
 .paddingTopLg{
 	padding-top: 14px !important;
+}
+.paddingRtLg{
+	padding-right: 14px !important;
 }
 .floatRt{
 	float: right;
@@ -1205,6 +1224,12 @@ tns created on the fly from post images, and tns derived from featured images */
 }
 .margTopLg{
 	margin-top: 14px !important;
+}
+.margRtLg{
+	margin-right: 14px !important;
+}
+.margLtLg{
+	margin-left: 14px !important;
 }
 .margBotSm{
 	margin-bottom: 7px !important;
@@ -1460,8 +1485,8 @@ div#NewContent p:first-child:first-line {
 	background: #666;
 	padding: 5px;
 	clear: both;
-	width: 98%;
-	max-width:650px;
+	width: 100%;
+	max-width:750px;
 	background: -webkit-linear-gradient(left,black,#666);
 	background: -moz-linear-gradient(left,black,#666);
 	background: -o-linear-gradient(left,black,#666);
