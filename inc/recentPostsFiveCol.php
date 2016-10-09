@@ -1,7 +1,7 @@
 <?php
 $tnCount = 0;
 ?>
-<div id="FiveColumnContainerTop">
+<div id="FiveColumnContainerTop" class="margBotSm">
 Previously, on Sensitive Skin!
 </div>
 <div class="grid" id="colcontainer">
