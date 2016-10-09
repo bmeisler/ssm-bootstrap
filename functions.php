@@ -173,10 +173,15 @@ function catch_that_image() {
 }
 /** used in the Related Posts plugin - good here too! **/
 
-function get_excerpt_by_id($post_id){
+function get_excerpt_by_id($post_id, $numChars){
         $the_post = get_post($post_id); //Gets post ID
         $the_excerpt = $the_post->post_content; //Gets post_content to be used as a basis for the excerpt
-        $excerpt_length = 244; //Sets excerpt length by word count
+		if (!$numChars){
+			 $excerpt_length = 244; //Sets excerpt length by character count
+		}else{
+			 $excerpt_length = $numChars; 
+		}
+       
         $the_excerpt = strip_tags(strip_shortcodes($the_excerpt)); //Strips tags and images
         if(strlen($the_excerpt) >= $excerpt_length) :
             $words =  substr($the_excerpt, 0, $excerpt_length).'...';
