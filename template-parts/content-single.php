@@ -15,13 +15,13 @@
 		$subtitle = get_post_meta($post->ID, 'subtitle', true);
             if (!$subtitle)
             {
-                echo ('<h1 class="the-author margTopLg paddingTopLg link-color">');
+                echo ('<h2 class="the-author margTopLg paddingTopLg link-color">');
 				the_author_posts_link();
-				echo ('</h1>');
+				echo ('</h2>');
             }
             else if ($subtitle)
             {
-                echo '<h1 class="the-author margTopLg paddingTopLg">'.$subtitle.'</h1>';
+                echo '<h2 class="the-author margTopLg paddingTopLg">'.$subtitle.'</h2>';
             }
             ?>
 		<!--<div class="entry-meta">
