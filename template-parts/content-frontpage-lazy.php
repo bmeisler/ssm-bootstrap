@@ -32,6 +32,7 @@
 						$post_thumb = null; 
                       }
                  }
+				  $permalink = get_the_permalink($post_ID);
 				 if ($post_thumb !== null){
 					 $img_content = '<a href="' . $permalink . '">
 						<span class="post-thumb-medium lazy margRtLg" style="background-image: url(' . $post_thumb . ');"  data-original="' . $post_thumb .  ' </span>
@@ -40,7 +41,7 @@
 					 $img_content = '';
 				 }
 				 
-                 $permalink = get_the_permalink($post_ID);
+                
                  $post_title = get_the_title($post_ID);
                  //$the_excerpt = get_the_excerpt();
                  $the_excerpt = get_excerpt_by_id($post_ID);
