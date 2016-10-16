@@ -176,7 +176,7 @@ function catch_that_image() {
 function get_excerpt_by_id($post_id, $numChars){
         $the_post = get_post($post_id); //Gets post ID
         $the_excerpt = $the_post->post_content; //Gets post_content to be used as a basis for the excerpt
-		if (!$numChars){
+		if ($numChars===null){
 			 $excerpt_length = 244; //Sets excerpt length by character count
 		}else{
 			 $excerpt_length = $numChars; 

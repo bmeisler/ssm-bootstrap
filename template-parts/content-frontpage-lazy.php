@@ -44,7 +44,7 @@
                 
                  $post_title = get_the_title($post_ID);
                  //$the_excerpt = get_the_excerpt();
-                 $the_excerpt = get_excerpt_by_id($post_ID);
+                 $the_excerpt = get_excerpt_by_id($post_ID, 224);
                  //$tag_footer = sensitive_skin_bootstrap_archive_entry_footer();
                  $subtitle = get_post_meta($post->ID, 'subtitle', true);
 	            if (!$subtitle)
