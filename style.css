@@ -43,7 +43,10 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 	## Captions
 	## Galleries
 --------------------------------------------------------------*/
-
+.well{
+	background: white;
+	margin-top: 14px;
+}
 
 /* TEMP PATCH - fix all styles in SSMin*/
 .figure-full-left{
@@ -64,7 +67,7 @@ p + figcaption{
 	font-size:22px;
 	font-weight:bold;
 	font-style: italic;
-	color: #ddd;
+	color: white;
 	background-color: #000;
 	height:36px;
 	padding-left:8px;
@@ -134,8 +137,9 @@ a:active {
 	padding-left:8px;
 }
 
-.mail{
-	background-color: #ddd;
+.mail{ 
+	background-color: white;
+	padding-top: 7px !important; 
 }
 .widget-title{
 	margin-top: -5px;
@@ -360,16 +364,7 @@ img {
 	.no-stack{
 		display:none;
 	}
-	#logo{
-		width:150px;
-		height:21px;
-		padding-top:5px;
-		-webkit-transition:all 0.4s ease-out;
-		-moz-transition:all 0.4s ease-out;
-		-o-transition:all 0.4s ease-out;
-		transition:all 0.4s ease-out; 
-	}
-}
+
 
 /*--------------------------------------------------------------
 Media Queries 
@@ -397,15 +392,7 @@ Media Queries
 
 /* Extra Small Devices, Phones */ 
 @media only screen and (min-width : 480px) {
-	#logo{
-		width:200px;
-		height:28px;
-		padding:0px;
-		-webkit-transition:all 0.4s ease-out;
-		-moz-transition:all 0.4s ease-out;
-		-o-transition:all 0.4s ease-out;
-		transition:all 0.4s ease-out; 
-	}
+	
 	.grid-item {
 	  width: 33%;
 	  min-width:33%;
@@ -486,7 +473,6 @@ Media Queries
 		height: auto;
 		margin: 0px auto;
 	}
-}
 
 /* Large Devices, Wide Screens */
 @media only screen and (min-width : 1200px) {

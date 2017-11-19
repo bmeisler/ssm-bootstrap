@@ -9,7 +9,7 @@
 	<header class="article-header">
 	
 		<h2 class="book-title"><?php the_title(); ?></h2>
-    	<h2 class="book-author"><?php the_field('books_author'); ?></h2>
+    	<h1 class="book-author"><?php the_field('books_author'); ?></h1>
 
 		<!-- <div class="btn-group"> -->
 		<?php if (get_field('books_amazon_print_link') !== ''){?>

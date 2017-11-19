@@ -17,11 +17,23 @@
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<div class="thumb-content">
 		<?php
-             
-			 	//$post_thumb = wp_get_attachment_url(get_post_thumbnail_id($post_ID));
-				$post_thumb = wp_get_attachment_image_src(get_post_thumbnail_id(get_the_ID()), 'medium')[0];
+		$post_ID = get_the_ID();
+		        if (has_tag( 'featured-art')) {
+					$image_size = 'large';
+					$title_content = '<h3 class="thumb-title-featured link-color MargBotSm paddingRtLg span-1-1">';
+					$author_content ='<h2 class="thumb-author-featured paddingRtLg">';
+					$excerpt_content = '<div class="thumb-excerpt-featured margRtLg margBotXLg">';
+					$readmore_content = '<div class="read-more margTopSm margRtLg"><a class="link-color" href="';
+				}else{
+					$image_size = 'medium';
+					$title_content = '<h3 class="thumb-title link-color MargBotSm paddingRtLg span-1-1">';
+					$author_content ='<h2 class="thumb-author paddingRtLg">';
+					$excerpt_content = '<div class="thumb-excerpt margRtXLg">';
+					$readmore_content = '<div class="read-more margTopSm margRtLg"><a class="link-color" href="';
+				}
+				$title_link = '<a class="link-color" href=';
+				$post_thumb = wp_get_attachment_image_src(get_post_thumbnail_id(get_the_ID()), $image_size)[0];
 				
-				 //$post_thumb = get_the_thumbnail('category-medium');
                   if(!$post_thumb){
                      $img_path = catch_that_image();
 
@@ -29,23 +41,32 @@
                         $post_thumb =  $img_path;
                       }
                     else{
-						$post_thumb = null; 
+						$post_thumb = ''; 
                       }
                  }
 				  $permalink = get_the_permalink($post_ID);
-				 if ($post_thumb !== null){
-					 $img_content = '<a href="' . $permalink . '">
-						<span class="post-thumb-medium lazy margRtLg" style="background-image: url(' . $post_thumb . ');"  data-original="' . $post_thumb .  ' </span>
-					</a>';
-				 }else{
-					 $img_content = '';
+				if ($post_thumb !== ''){
+					 if ($image_size === 'medium'){
+						 $img_content = '<div class="floatLt post-thumb-image-container"><a href="' . $permalink . '">
+            <span class="post-thumb-medium lazy margRtLg" style="background-image: url(' . $post_thumb . ');">
+            </span>
+            </a>
+            </div>';
+					 }else{
+						  $img_content = '<div class="post-thumb-image-container-large"><a href="' . $permalink . '">
+            <span class="post-thumb-large lazy" style="background-image: url(' . $post_thumb . ');">
+            </span>
+            </a>
+            </div>';					
+					 }
+					 
+				}else{
+					$img_content = '<div class="floatLt post-thumb-image-container paddingRtSm">';
 				 }
 				 
                 
                  $post_title = get_the_title($post_ID);
-                 //$the_excerpt = get_the_excerpt();
                  $the_excerpt = get_excerpt_by_id($post_ID, 224);
-                 //$tag_footer = sensitive_skin_bootstrap_archive_entry_footer();
                  $subtitle = get_post_meta($post->ID, 'subtitle', true);
 	            if (!$subtitle)
 	            {
@@ -56,37 +77,13 @@
 	                $the_author = $subtitle;
 	            }
 				
-				 
-				$rp .= '
-			    <div class="floatLt post-thumb-image-container">' . $img_content . '
-
-					
-				
-				
-                </div>
-                <div class="floatRt">
-                    <div>
-						<a href="' . $permalink . '">
-							<h2 class="thumb-title link-color MargBotSm MargTopLg paddingRtLg span-1-1">' . $post_title . '</h2>
-						</a>
-                    </div>
-
-                    <div class="thumb-author paddingRtLg">'.$the_author.'</div>
-                    <div class="thumb-excerpt">
-                        <div class="entry paddingRtLg">
-						' . $the_excerpt . '
-						<a href="' . $permalink . '"><div class="read-more margTopSm">Read More</div></a>
-                        </div>
-                        
-					</div>
-                    
-			    </div>';
+				  $rp = $img_content . $title_content . $title_link . $permalink . '>' . $post_title . '</a></h3>'. $author_content . $the_author. '</h2>' .
+            $excerpt_content . $the_excerpt .  ' </div>' . $readmore_content . $permalink . '">More...</a></div>';
 
 		echo $rp;
 		
 
 			 ?>
-		</header><!-- .entry-header -->
         
 		<div class="clearfix">
 			

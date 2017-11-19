@@ -11,17 +11,17 @@
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<header class="entry-header">
-		<?php the_title( '<h1 class="entry-title single-title margBotLg">', '</h1>' ); 
+		<?php the_title( '<h2 class="entry-title single-title margBotLg">', '</h2>' ); 
 		$subtitle = get_post_meta($post->ID, 'subtitle', true);
             if (!$subtitle)
             {
-                echo ('<h2 class="the-author margTopLg paddingTopLg link-color">');
+                echo ('<h1 class="the-author margTopLg paddingTopLg link-color">');
 				the_author_posts_link();
-				echo ('</h2>');
+				echo ('</h1>');
             }
             else if ($subtitle)
             {
-                echo '<h2 class="the-author margTopLg paddingTopLg">'.$subtitle.'</h2>';
+                echo '<h1 class="the-author margTopLg paddingTopLg">'.$subtitle.'</h1>';
             }
             ?>
 		<!--<div class="entry-meta">
