@@ -48,6 +48,49 @@ and will be used across all viewports.
 
 /****MEDIA QUERY VARIABLES******/
 @handheld: ~"only screen and (max-width: 479px)";
+@tablet: ~"only screen and (max-width: 1023px)";
+
+/* for setting logo in large type */
+@font-face {
+	font-family: 'Conv_FUTURAXK';
+	src: url('../fonts/FUTURAXK.eot');
+	src: local('☺'), url('../fonts/FUTURAXK.woff') format('woff'), url('../fonts/FUTURAXK.ttf') format('truetype'), url('../fonts/FUTURAXK.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+.text-logo {
+	font-family:'Conv_FUTURAXK',Sans-Serif;
+		width:250px;
+		margin-top:5px;
+		text-align:left;
+		padding:0;
+		font-weight: 1000;
+		font-size: 28px;
+		text-transform: uppercase;
+		@media @tablet {
+			font-size: 22px;
+			width: 200px;
+			margin-top: 10px;
+			margin-left:10px;
+	}
+	a {
+		color: black;
+		text-decoration: none;
+	}
+		
+}
+.text-logo::first-letter {
+  font-size: 36px;
+  	@media @tablet {
+		font-size: 28px;
+	}
+}
+.first-letter {
+    font-size: 36px;
+  	@media @tablet {
+		font-size: 28px;
+	}
+  }
 
 
 
@@ -193,13 +236,16 @@ STYLES FOR ARCHIVE PAGINATION BOXES
 		.the-author{
 			font-family: @serif;
 			font-weight: bold;
-		    font-size: 16px;
+		    font-size: 18px;
 		    margin: 0 25%;
 			text-align: center;
 			//font-style:italic;
 			border-top: 1px solid #aaa;
 			//border-bottom: 1px solid #000; 
-			color:black		
+			color:black;	
+			@media @handheld {
+				margin: 0;
+			}	
 		}
 		.the-author a {
 			text-decoration: none;
@@ -347,6 +393,9 @@ p + figcaption{//gets rid of space from empty p tag sometimes added above figcap
 		    width:50%;
 		    padding: 5px;
 		    float:left;
+			@media @handheld {
+				width:100%;
+			}
 		}  
 		.figure-50-left img{
 		    width:100%; 
@@ -356,10 +405,13 @@ p + figcaption{//gets rid of space from empty p tag sometimes added above figcap
 		    width:50%;
 		    padding: 5px;
 		    float:right;
+			@media @handheld {
+				width:100%;
+			}
 		    figcaption{
 				//width:66.7%;
 				text-align: right;			
-		}
+			}
 		}  
 		.figure-50-right img{
 		    width:100%;
@@ -479,7 +531,10 @@ p + figcaption{//gets rid of space from empty p tag sometimes added above figcap
 		}
 
  
-
+	.footnotes {
+		font-size: 14px !important;
+		text-indent: 0 !important;
+	}
 	.footnote-link{
 			    font-size: .83em;
 			    line-height: 0.5em;
@@ -511,7 +566,7 @@ p + figcaption{//gets rid of space from empty p tag sometimes added above figcap
 		.entry{
 			.entry-content{
 				p{
-					font-size: 14px;
+					font-size: 16px;
 					width: 100%;
 					//float: left;
 					text-indent:0em;
@@ -687,11 +742,11 @@ EASY DIGITAL DOWNLOAD OVERRIDES*/
 			}
 			.quote-block-small{
 			    font-style: italic;
-			    font-size:14px;
+			    font-size:16px;
 			    margin-bottom: 1em;
 			    margin-left: 5%;
 			    margin-right: 5%;
-			    line-height:1.3em;
+			    line-height:1.4em;
 			}
 			.contributors{
 				//font-size: 0.9em;
@@ -767,8 +822,8 @@ EASY DIGITAL DOWNLOAD OVERRIDES*/
 			.poem p{
 				text-indent: 0px;
 				margin-bottom: -0.5em;		
-				line-height:1.6em !important;
-				font-size: 14px;		
+				line-height:1.3em !important;
+				font-size: 16px;		
 			}
 			div .poem p{
 				text-indent: 0px;
@@ -789,7 +844,8 @@ EASY DIGITAL DOWNLOAD OVERRIDES*/
                 padding: 0px;
             }
              p.postpoem, p.poem{
-                text-indent: 0px;                
+                text-indent: 0px; 
+				line-height: 1.3em;               
             }
 			.poem-title, .poemTitle, .poem-subhead{
 				text-indent:0px;
@@ -1144,7 +1200,7 @@ tns created on the fly from post images, and tns derived from featured images */
 .single-content p{
 	text-indent: 20px;
 	max-width:650px;
-	font-size: 14px;
+	font-size: 16px;
 	line-height: 1.6em; 
 }
 .enter-header{
@@ -1152,6 +1208,17 @@ tns created on the fly from post images, and tns derived from featured images */
 }
 article{
 	max-width:750px;
+}
+.tiny-btn-container{
+	margin: 0 auto;
+	width: 320px;
+	position: relative;
+	top: 7px;
+	padding-bottom: 7px;
+	padding-left: 7px;
+}
+.clear-both{
+	clear: both;
 }
 
 .thumb-content {
@@ -1166,6 +1233,18 @@ article{
 	border-color:#ccc;
 	padding: 0px; 
 }
+.thumb-content-tiny {
+	margin-top:15px; 
+	max-width:320px;
+    max-height:225px;
+    //height:134px; 
+	text-align:justify;
+	margin-bottom:10px;
+	border-style:solid;
+	border-width:1px;
+	border-color:#ccc;
+	padding-bottom: 7px;
+}
 .post-thumb {
   display: block;
   background-size: cover;
@@ -1173,15 +1252,22 @@ article{
   background-position: center center;
   width: 100%;
   height: 150px;
+}
 
-//   @include respond-to(tablet) {
-//     height: 200px;
-//   }
-
-//   @include respond-to(handheld) {
-//     height: 250px;
-  
-//   }
+.post-thumb-large{
+  display: block;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  width: 100%;
+  height: 475px;
+  float: left;
+  position: relative;
+  z-index: 2;
+  @media @handheld {
+	  width:100%;
+	  height: 225px;
+  }
 }
 .post-thumb-medium{
   display: block;
@@ -1197,11 +1283,40 @@ article{
 	  width:100%;
   }
 }
+.post-thumb-tiny{
+  display: block;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  width: 100px;
+  height: 150px;
+  float: left;
+  position: relative;
+  z-index: 2;
+}
+.logo{
+	width:200px;
+	height:28px;
+	padding:0px;
+	-webkit-transition:all 0.4s ease-out;
+	-moz-transition:all 0.4s ease-out;
+	-o-transition:all 0.4s ease-out;
+	transition:all 0.4s ease-out; 
+	
+	@media @handheld {
+	  	width:178px;
+	  	height:25px;
+  }
+  }
 .post-thumb-image-container{
 	padding-right: 7px !important;
 	@media @handheld {
 	  padding-right: 0 !important;
+	  float: none !important;
   }
+}
+.post-thumb-image-container-large{
+	padding-right: 0px !important;
 }
 .span-1-2{
 	float: left;
@@ -1225,8 +1340,41 @@ article{
 	left: 7px;
 	line-height: 1.5em;
 	padding-right: 3.5px;
+	@media @tablet {
+	  line-height: 1.3em;
+	  left: 0;
+  	}
 	@media @handheld {
 	  top:7px;
+	  line-height: 1.5em;
+	  left:7px;
+	}
+}
+.thumb-excerpt-tiny{
+	position: relative;
+	font-size: 12px;
+	left: 0;
+	line-height: 1.5em;
+	top: -14px;
+	text-align: left;
+}
+.thumb-excerpt-featured{
+	position: relative;
+	font-size: 14px;
+	line-height: 1.5em;
+	top: 14px;
+	padding-right: 3.5px;
+	margin-left: 14px;
+
+	@media @tablet {
+	  line-height: 1.3em;
+	  left: 0;
+  	}
+	@media @handheld {
+	  top:7px;
+	  line-height: 1.5em;
+	  left:7px;
+	  margin-left: 0;
 	}
 }
 .thumb-title{
@@ -1236,9 +1384,46 @@ article{
 	font-weight: 700;
 	text-align: left;
 	padding-right: 3.5px;
+	@media @tablet {
+	  font-size: 18px;	
+	  line-height: 1.3em;
+	  left: 0;
+	  margin-top: 10px;
+  	}
 	@media @handheld {
 	  top:7px;
 	  font-size: 16px;
+	  left: 7px;
+	}
+}
+.thumb-title-tiny{
+	font-size: 14px;
+	position: relative;
+	left: 0;
+	font-weight: 700;
+	text-align: left;
+	padding-right: 3.5px;
+	top: -7px;
+}
+.thumb-title-featured{
+	font-size: 20px;
+	position: relative;
+	top: 14px;
+	font-weight: 700;
+	text-align: left;
+	padding-right: 3.5px;
+	margin-left: 14px;
+	@media @tablet {
+	  font-size: 18px;	
+	  line-height: 1.3em;
+	  left: 0;
+	  margin-top: 10px;
+  	}
+	@media @handheld {
+	  top:7px;
+	  font-size: 16px;
+	  left: 7px;
+	  margin-left: 0;
 	}
 }
 .thumb-author {
@@ -1253,8 +1438,56 @@ article{
 	left: 7px;
 	font-size: 14px;
 	padding-right: 3.5px;
+	@media @tablet {
+	  left: 0;
+  	}
 	@media @handheld {
 	  top:7px;
+	  left: 7px;
+	}
+}
+.thumb-author-tiny {
+    line-height: 1em;
+    margin-bottom: 6px;
+    font-weight: bold;
+    margin-top: 7px;
+	color: #666;
+    line-height: 1.2em;
+    text-transform: uppercase;
+	position: relative;
+	left: 0;
+	top: -10.5px !important;
+	font-size: 12px;
+	padding-right: 3.5px;
+}
+.tiny-btn{
+	font-size:12px;
+	padding: 4px 6px;
+}
+.tiny-btn-containter{
+	position: relative;
+	bottom: -14px;
+}
+.thumb-author-featured {
+    line-height: 1em;
+    margin-bottom: 6px;
+    font-weight: bold;
+    margin-top: -4px;
+	margin-left: 14px;
+	top: 14px;
+	color: #666;
+    line-height: 1.2em;
+    text-transform: uppercase;
+	position: relative;
+	font-size: 14px;
+	padding-right: 3.5px;
+	@media @tablet {
+	  left: 0;
+  	}
+	@media @handheld {
+	  top:7px;
+	  left: 7px;
+	  margin-left: 0;
 	}
 }
 //for "previously on" posts at bottom - may be deprecated
@@ -1303,6 +1536,13 @@ article{
 .paddingRtLg{
 	padding-right: 14px !important;
 }
+.paddingLtSm{
+	padding-left: 14px !important;
+}
+.paddingLtSm{
+	padding-left: 14px !important;
+}
+
 .floatRt{
 	float: right;
 }
@@ -1318,20 +1558,32 @@ article{
 .margBotLg{
 	margin-bottom: 14px !important;
 }
+.margBotXLg{
+	margin-bottom: 21px !important;
+}
 .margTopLg{
 	margin-top: 14px !important;
 }
 .margRtLg{
 	margin-right: 14px !important;
 }
+.margRtXLg{
+	margin-right: 14px !important;
+}
 .margLtLg{
 	margin-left: 14px !important;
+}
+.margLtXLg{
+	margin-left: 21px !important;
 }
 .margBotSm{
 	margin-bottom: 7px !important;
 }
 .margTopSm{
 	margin-top: 7px !important;
+}
+.margTopSmNeg{
+	margin-top: -7px !important;
 }
 .margLtSm{
 	margin-left: 7px !important;
@@ -1347,12 +1599,12 @@ article{
 }
 .entry-title{
 	margin: 14px 0;
-	font-size: 14px;
+	font-size: 18px;
 	padding-top: 7px;
 }
 .entry-content{
-	font-size: 12px;
-	color: #666;
+	font-size: 16px;
+	color: #333;
 }
 .recommended-post{
 	margin: 0;
@@ -1578,6 +1830,7 @@ div#NewContent p:first-child:first-line {
 .archive-title, .page-title {
 	font-weight: bold;
 	font-style: italic;
+	font-size: 22px;
 	color: white;
 	background: #666;
 	padding: 5px;
@@ -1742,6 +1995,104 @@ div#NewContent p:first-child:first-line {
 	font-style:italic;
 	float:left;
 	margin-left:10px;
+}
+////////////////////////////////////////////////
+//FLEX BOX FOR BOTTOM LINKS
+.flexbox-container {
+	display: -ms-flex;
+	display: -webkit-flex;
+	display: flex;
+	flex-direction: row;
+	width: 100%;
+}
+
+.flex-grid {
+	width: 20%;
+	padding: 10px;
+	display: block;
+}
+
+@media only screen and (max-width:600px){
+	.flex-grid:nth-child(5){
+		display:none;
+	}
+	.flex-grid:nth-child(4){
+		display:none;
+	}
+	.flex-grid:nth-child(3){
+		display:none;
+	}
+	.flex-grid{
+		width: 50%;
+	}
+}
+@media only screen and (min-width:601px) and (max-width:768px){
+	.flex-grid:nth-child(5){
+		display:none;
+	}
+	.flex-grid:nth-child(4){
+		display:none;
+	}
+	.flex-grid:nth-child(3){
+		display:block;
+	}
+	.flex-grid{
+		width: 33%;
+	}
+}
+@media only screen and (min-width : 768px) and (max-width:992px) {
+	.flex-grid:nth-child(5){
+		display:none;
+	}
+	.flex-grid:nth-child(4){
+		display:block;
+	}
+	.flex-grid:nth-child(3){
+		display:block;
+	}
+	.flex-grid{
+		width: 25%;
+	}
+}
+
+//FLEX BOX FOR TWO-COLUMN POEMS
+
+.flexbox-2-col-container{
+	display: -ms-flex;
+	display: -webkit-flex;
+	display: flex;
+	flex-direction: row;
+	width: 100%;
+}
+.flex-grid-2-col {
+	width: 50%;
+	padding: 20px;
+}
+@media only screen and (max-width:768px){
+	.flexbox-2-col-container{
+		display: -ms-flex;
+		display: -webkit-flex;
+		display: flex;
+		flex-direction: column;
+		width: 100%;
+	}
+	.flex-grid-2-col{
+		width: 100%;
+	}
+}
+
+//FLEX BOX FOR HANDLING FULL WIDTH IMAGES, WHICH OTHERWISE WRAP TEXT IN PAINFUL WAYS
+
+.flexbox-container-single-column {
+	display: -ms-flex;
+	display: -webkit-flex;
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+}
+.flex-grid-1-col {
+	width: 100%;
+	padding: 10px;
 }
 
 
@@ -2212,7 +2563,7 @@ Book styles
 .book-title{
 	font-size: 1.8em;
 	margin-bottom: -15px !important;
-	font-family: @serif;
+	font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
 	font-weight: bold;
 	color:#333333;
 }
@@ -2233,16 +2584,14 @@ Book styles
 	float: left;
 }
 .book-author{
-	font-family: Georgia, "Times New Roman", Times, serif;
+	font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+			font-weight: bold;
+		    font-size: 18px;
 	margin-bottom: 14px;
-	font-style: italic; 
-	font-size: 0.9em;
 	line-height: 1em;
 	margin-left:3px;
 	margin-bottom:6px;
-	font-style: italic;
-	font-weight:bold;
-	color: #A28F62;
+	color: black;
 	line-height: 1.2em;
 	text-transform: uppercase;
 }
@@ -2348,7 +2697,7 @@ Downloads/issues
 	margin-bottom:10px;
 }
 .download-title{
-	font-size: 20px;
+	font-size: 22px;
 	font-weight: bold;
 	font-family: "Helvetica Neue", "Helvetica", "Arial", "sans-serif";
 }
@@ -2401,22 +2750,22 @@ Downloads/issues
 	This makes each page fade in when navigated to
 	================================================================================	*/
 
-.page-transition {
-	-webkit-animation:fadeIn;
-	-moz-animation:fadeIn;
-	-o-animation:fadeIn;
-	animation:fadeIn;
-	-webkit-animation-duration:4s;
-	-moz-animation-duration:4s;
-	-o-animation-duration:4s;
-	animation-duration:4s;
-}
-@-webkit-keyframes fadeIn {0%{opacity:0;}100%{opacity:1;}}
-@-moz-keyframes fadeIn {0%{opacity:0;}100%{opacity:1;}}
-@-o-keyframes fadeIn {0%{opacity:0;}100%{opacity:1;}}
-@keyframes fadeIn {0%{opacity:0;}100%{opacity:1;}}
+// .page-transition {
+// 	-webkit-animation:fadeIn;
+// 	-moz-animation:fadeIn;
+// 	-o-animation:fadeIn;
+// 	animation:fadeIn;
+// 	-webkit-animation-duration:4s;
+// 	-moz-animation-duration:4s;
+// 	-o-animation-duration:4s;
+// 	animation-duration:4s;
+// }
+// @-webkit-keyframes fadeIn {0%{opacity:0;}100%{opacity:1;}}
+// @-moz-keyframes fadeIn {0%{opacity:0;}100%{opacity:1;}}
+// @-o-keyframes fadeIn {0%{opacity:0;}100%{opacity:1;}}
+// @keyframes fadeIn {0%{opacity:0;}100%{opacity:1;}}
 
-.page-transition {overflow:hidden;}
+// .page-transition {overflow:hidden;}
 
 .page-header{
 	margin-top: 0 !important;
