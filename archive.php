@@ -19,7 +19,7 @@ get_header(); ?>
 				<?php
 					// the_archive_title( '<h1 class="page-title">', '</h1>' );
 
-					 the_archive_description( '<div class="taxonomy-description">', '</div>' );
+					 
 				?>
 				<?php if (is_category()) { ?>
 						    <h1 class="archive-title h2">
@@ -34,7 +34,8 @@ get_header(); ?>
 					    <?php } elseif (is_author()) { 
 					    	global $post;
 					    	$author_id = $post->post_author;
-					    }?>
+					    }
+						the_archive_description( '<h4 class="taxonomy-description">', '</h4>' );?>
 			</header><!-- .page-header -->
 
 			<?php /* Start the Loop */ ?>
