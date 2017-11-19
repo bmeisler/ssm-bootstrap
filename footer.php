@@ -17,8 +17,13 @@
 
 			<!-- Links to previously featured posts -->
 			<div class="row five-column-container">
+        <div class="FiveColumnContainerTop margBotSm col-md-12 col-lg-12">
+          <div>
+          Previously, on Sensitive Skin!
+          </div>
+        </div>
 				<div class="col-md-12 col-lg-12">
-					<?php include('inc/recentPostsFiveCol.php');?>
+					<?php include('inc/recent-posts-flexbox.php');?>
 				</div>
 			</div><!-- .row -->
 			
@@ -34,6 +39,7 @@
         				<p><i>Associate Editors:</i> Rob Hardin and B. Kold</p>
         				<p><i>Music Editor:</i> Steve Horowitz</p>
         				<p><i>Contributing Editors:</i>Ron Kolm, <br/>Franklin Mount, Patrick O'Neil</p>
+                <p><i>Powered by NGINX</p>
               </div>
 
         
@@ -112,20 +118,7 @@
 
 <?php wp_footer(); 
 ?>
-<?php if (!$user_ID) : ?>
-   <script src="<?php bloginfo('wpurl'); ?>/wp-content/js/googleanalytics.js" type="text/javascript"></script>
 
-       <script type="text/javascript">
-        <!--
-        function popitup(url, params) {
-            newwindow=window.open(url,'name', params);
-            if (window.focus) {newwindow.focus()}
-            return false;
-        }
-
-        // -->
-    </script>
-    <?php endif; ?>
     <?php if (!$user_ID) : ?>
 
             <?php   echo '<script src="//static.getclicky.com/js" type="text/javascript"></script>';?>

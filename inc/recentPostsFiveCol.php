@@ -36,7 +36,7 @@ Previously, on Sensitive Skin!
 							
 						<?php } ?>
 						<div class="thumb-title-small margTopSm margBotSm margLtSm margRtSm">
-							<a href="<?php echo $permalink ?>"><?php echo the_title(); ?></a>
+							<a class="link-color" href="<?php echo $permalink ?>"><?php echo the_title(); ?></a>
 						</div> 		
 					    <?php //$subtitle = get_post_meta($post->ID, 'subtitle', true);
 						//if($subtitle) echo '<div class="bottom-links-author">'.$subtitle.'</div>'; ?>
@@ -53,9 +53,9 @@ Previously, on Sensitive Skin!
 							?>
 			
 						<div class="thumb-excerpt-small margTopSm margBotSm margLtSm margRtSm">
-							<p>
+							
 							<?php echo $the_excerpt .
-							'<a href="' . $permalink . '"><div class="read-more-small">Read More</div></a></p>'?>
+							'<div class="read-more-small"><a class="link-color" href="' . $permalink . '">More...</a></div>'?>
 						</div>
 				</div><!-- grid item -->
  			

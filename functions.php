@@ -41,10 +41,11 @@ function sensitive_skin_bootstrap_setup() {
 	 * @link https://developer.wordpress.org/themes/functionality/featured-images-post-thumbnails/
 	 */
 	add_theme_support( 'post-thumbnails' );
-	add_image_size( 'category-large', 600 );
-	add_image_size( 'category-medium', 300 ); // 300 pixels wide (and unlimited height)
-    add_image_size( 'homepage-thumb', 220, 180, true ); // (cropped)
-    add_image_size( 'archive-thumb', 200, 133, true);//cropped
+	add_image_size( 'category-large', 600 ); //600 wide and however high, 600 high and however wide
+	add_image_size( 'category-medium', 300 ); // 300 pixels wide (and unlimited height) AND 300 high and however wide
+    //add_image_size( 'homepage-thumb', 220, 180, true ); // (cropped)
+    //add_image_size( 'archive-thumb', 200, 133, true);//cropped - not needed here - in media
+    add_image_size( 'tiny-thumb', 100, 150, true);//cropped, for book and back-issue thumbnails
 
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus( array(
@@ -193,12 +194,6 @@ function get_excerpt_by_id($post_id, $numChars){
         return $words;
     }
 
-/* used with the old music player system*/
-// function popitup(url, params) {
-//             newwindow=window.open(url,'name', params);
-//             if (window.focus) {newwindow.focus()}
-//             return false;
-//         }
 
 /**
  * Register widget area.
@@ -229,71 +224,6 @@ function sensitive_skin_bootstrap_widgets_init() {
 add_action( 'widgets_init', 'sensitive_skin_bootstrap_widgets_init' );
 
 
-// add_action( 'init', 'prowp_register_my_post_types' );
-
-// function prowp_register_my_post_types() {
-
-//     register_post_type( 'books', array(
-// 		'labels' => array( 'name' => 'Books' ),
-// 		'public' => true, ))
-// };
-
-// }
-/**
-* nRegister custom posts for books
-*/
-//function sensitive_skin_bootstrap_register_post_types(){
-  
-  //register_post_type('books', $args);
- //    register_post_type( 'books', array(
-	// 'labels' => array( 'name' => 'Books' ),
-	// 'public' => true, )
-//};
-      //     $labels = array(
-      //   'name'=>'Books',
-      //   'singular_name'=>'Book',
-      //   'add_new'=>'Add New Book',
-      //   'edit_item'=>'Edit Book',
-      //   'new_item'=>'New Book',
-      //   'all_items'=>'All Books',
-      //   'view_item'=>'View Book',
-      //   'search_items'=>'Search Books',
-      //   'not_found'=>'No Books Found',
-      //   'not_found_in_trash'=>'No books found in trash.',
-      //   'menu_name'=>'Books'
-      //   );
-      // $args = array(
-      //   'labels'=>$labels,
-      //   'public'=>true,
-      //   'show_in_nav_menus'=>true,
-      //   'has_archive'=>true,
-      //   'taxonomies'=>array('category', 'post_tag'),
-      //   'rewrite'=>array('slug'=>'books'),
-      //   'supports'=>array('title', 'editor', 'author', 'thumbnail', 'custom-fields')
-      //   );
-
-    
-  
-//}
-//add_action ('init', 'sensitive-skin-bootstrap_register_post_types');
-
-/**THIS WILL ADD THE FEATURED THUMBNAIL, author and custom field subtitle TO THE JSON DATA*/
-// function my_rest_prepare_post( $data, $post, $request ) {
-// 	$_data = $data->data;
-// 	$thumbnail_id = get_post_thumbnail_id( $post->ID );
-// 	$thumbnail = wp_get_attachment_image_src( $thumbnail_id, 'category-medium' );
-// 	$_data['featured_image_thumbnail_url'] = $thumbnail[0];
-// 	$theAuthor = get_the_author();
-// 	$subtitle = get_post_meta($post->ID, 'subtitle', true);
-// 	$postimageurl = get_post_meta($post->ID, 'post-img', true);
-// 	$_data['theAuthor']=$theAuthor;
-// 	$_data['theSubtitleAuthor']=$subtitle;
-// 	$_data['post_image']=$postimageurl;
-// 	$data->data = $_data;
-// 	return $data;
-// };
-//add_filter( 'rest_prepare_post', 'my_rest_prepare_post', 10, 3 );
-
 
 /** uses the Google CDN version of Jquery instead of the WP version, and does NOT load it in the Head*/
 /*
@@ -307,18 +237,42 @@ function register_jquery() {
     }
 }
 */
+
+/** ENABLE HTTPS TRANSPORT HEADERS*/
+add_action( 'send_headers', 'tgm_io_strict_transport_security' );
+/**
+ * Enables the HTTP Strict Transport Security (HSTS) header.
+ *
+ * @since 1.0.0
+ */
+function tgm_io_strict_transport_security() {
+ 
+    header( 'Strict-Transport-Security: max-age=10886400' );
+ 
+}
+
+/** fixe og url to see all fb likes*/
+function update_og_url($url) {
+  //return "http://www.sensitiveskinmagazine.com";
+  return false;
+}
+//add_filter('wpseo_opengraph_url', 'update_og_url', 10, 1);
 /**
  * Enqueue scripts and styles.
  */
 function sensitive_skin_bootstrap_scripts() {
-	wp_enqueue_style( 'bootstrap-styles', get_template_directory_uri() . '/css/bootstrap.min.css', array(), '3.3.5', 'all' );
-	wp_enqueue_style( 'font-awesome', get_template_directory_uri() . '/css/font-awesome.min.css', array(), '4.4.0', 'all' );
-	wp_enqueue_style( 'bootstrap-social', get_template_directory_uri() . '/css/bootstrap-social.css', array(), '4.4.0', 'all' );
+	//wp_enqueue_style( 'bootstrap-styles', get_template_directory_uri() . '/css/bootstrap.min.css', array(), '3.3.5', 'all' );
+	//wp_enqueue_style( 'font-awesome', get_template_directory_uri() . '/css/font-awesome.min.css', array(), '4.4.0', 'all' );
+	//wp_enqueue_style( 'bootstrap-social', get_template_directory_uri() . '/css/bootstrap-social.min.css', array(), '4.4.0', 'all' );
 
 	/* we have particular ssm stles, leftover from older versions - load these BEFORE bootstrap styles, so bootstrap is favored */
-	wp_enqueue_style( 'ssm-styles', get_template_directory_uri() . '/css/ssm.min.css', array(), '1.0', 'all' );
+	//wp_register_style( 'ssm-styles', get_template_directory_uri().'/css/ssm.min.css', array(), filemtime( get_template_directory().'/css/ssm.min.css' ), 'all' );
+    //wp_enqueue_style( 'ssm-styles' );
+	wp_register_style( 'ssm-styles', get_template_directory_uri().'/css/output.min.css', array(), filemtime( get_template_directory().'/css/output.min.css' ), 'all' );
+    wp_enqueue_style( 'ssm-styles' );
 
-	wp_enqueue_style( 'sensitive-skin-bootstrap-style', get_stylesheet_uri() );
+	//wp_register_style( 'sensitive-skin-bootstrap-style', get_stylesheet_uri(), array(), '10-23-16', 'all' );
+	//wp_enqueue_style( 'sensitive-skin-bootstrap-style', get_stylesheet_uri() );
 
 	wp_enqueue_script( 'respond-js', get_template_directory_uri() . '/js/respond.min.js', array('jquery'), '1.4.2', true );
 	wp_enqueue_script( 'bootstrap-js', get_template_directory_uri() . '/js/bootstrap.min.js', array('jquery'), '3.3.5', true );
@@ -334,8 +288,8 @@ function sensitive_skin_bootstrap_scripts() {
 	wp_enqueue_script( 'sensitive-skin-bootstrap-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20130115', true );
 
 	/* handles drag and drop for Nancy cut up post */
-	wp_enqueue_script('preload', "https://code.createjs.com/createjs-2015.05.21.min.js", array(), '0.6.0', true);
-    wp_enqueue_script( 'random-image',  '/wp-content/js/random-image-dnd.js', array('preload', 'underscore'), '1.0.0', true );
+		wp_enqueue_script('preload', "https://code.createjs.com/createjs-2015.05.21.min.js", array(), '0.6.0', true);
+    	wp_enqueue_script( 'random-image',  '/wp-content/js/random-image-dnd.js', array('preload', 'underscore'), '1.0.0', true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
@@ -343,6 +297,123 @@ function sensitive_skin_bootstrap_scripts() {
 }
 add_action( 'wp_enqueue_scripts', 'sensitive_skin_bootstrap_scripts' );
 
+
+
+// add_action( 'pre_amp_render_post', 'gd_amp_add_custom_actions' );
+
+// function gd_amp_add_custom_actions() {
+//     //adding CTAs only the b2b blog at this point
+//     $url = $_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'];
+
+//     $pos = strpos($url, 'employers.glassdoor');
+//     if ($pos){
+//         add_filter( 'the_content', 'gd_amp_add_ctas' );
+//     }
+
+// }
+
+// function gd_amp_add_ctas( $content ) {
+//     $cta_title = '<h2 class="aligncenter gd-amp-center">' .  __('Getting Started', 'gd') . '</h2>';
+//     $table_in = '<div class="gd-amp-center">';
+
+//     $cta_free = '<div><a href="/employers/index.htm?source=blog-amp" class="btn gd-amp-btn gradient gd-amp-btn-1"><span>' . __('Get a FREE Employer Account', 'gd') . '</span></a></div>';
+//     $table_middle = '<div><span>' . __(' -or- ', 'gd') . '</span></div>';
+//     $cta_job = '<div><a href="/post-job?src=b2b-blog-amp" class="btn gradient gd-amp-btn gd-amp-btn-2 margBot  noMarg"><span>' . __('Post a Job', 'gd') . '</span></a></div>';
+//     $table_out = '</div>';
+//     $content = $content . $cta_title . $table_in . $cta_free . $table_middle . $cta_job . $table_out;
+
+//     return $content;
+// }
+
+
+add_action( 'amp_post_template_css', 'ssm_amp_additional_css_styles' );
+
+/** overrides built-in css */
+function ssm_amp_additional_css_styles( $amp_template ) {
+    // only CSS here please...
+    ?>
+    #top{
+        background: #000;
+    }
+    .amp-wp-header{
+        background-color: #000;
+    }
+    .amp-wp-header a{
+        color: white;
+    }
+   a {
+        color: #337ab7;
+        text-decoration: none;
+    }
+
+
+    body {
+        font-family: "Helvetica Neue", HelveticaNeue, Helvetica, Arial, sans-serif;
+    }
+
+    div.amp-wp-meta.amp-wp-comments-link, div.amp-wp-meta.amp-wp-tax-category{
+        display: none;
+    }
+
+    .amp-wp-footer div{
+        display: none;
+    }
+
+    .recommended-posts{
+        display: none;
+    }
+	figcaption{
+		font-size: 12px;
+		line-height: 1.2em;
+		padding-top: 7px;
+	}
+
+    .amp-wp-byline amp-img{
+        display: none;
+    }
+	div.amp-wp-meta.amp-wp-posted-on{
+		display: none;
+	}
+	span.amp-wp-author{
+		font-weight: bold;
+		text-transform: uppercase;
+	}
+
+    .gd-amp-btn{
+        box-sizing: border-box;
+        display: inline-block;
+        height: 34px;
+        padding: 0 21px;
+        text-align: center;
+        border-radius: 2px;
+        vertical-align: middle;
+        outline: 0;
+        white-space: nowrap;
+        font-weight: 700;
+        font-size: 14px;
+    }
+    .gd-amp-btn-1 {
+        background-color: #2c84cc;
+        box-shadow: 0 2px 0 0 #336c9b;
+        border-width: 0;
+        color: white;
+    }
+    .gd-amp-btn-2{
+        background-color: #f1f1f1;
+        box-shadow: 0 2px 0 0 #ccc;
+        border: 1px solid #ccc;
+    }
+    .gd-amp-center{
+        text-align: center;
+        width: 100%;
+    }
+    .gd-amp-align span{
+        position: relative:
+        top: 3.5px;
+    }
+    <?php
+
+}
 /** allows external files to access the JSON file */
 //header("Access-Control-Allow-Origin: *");
 
@@ -388,5 +459,9 @@ require get_template_directory() . '/inc/post-types/register-book.php';
  */
 require get_template_directory() . '/inc/edd.php';
 define('EDD_SLUG', 'downloads'); 
+
+require get_template_directory() . '/lib/image-inventory.php';
+
+
 
 

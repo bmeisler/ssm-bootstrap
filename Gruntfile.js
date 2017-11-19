@@ -4,12 +4,13 @@ module.exports = function (grunt) {
     // load all grunt tasks
     grunt.loadNpmTasks('grunt-contrib-less');
     grunt.loadNpmTasks('grunt-contrib-watch');
+    grunt.loadNpmTasks('grunt-contrib-cssmin');
     
     grunt.initConfig({
         watch: {
             // if any .less file changes in directory "public/css/" run the "less"-task.
             files: "library/less/*.less",
-            tasks: ["less"]
+            tasks: ["less", "cssmin"]
         },
         // "less"-task configuration
         less: {
@@ -28,6 +29,22 @@ module.exports = function (grunt) {
                 }
             },
         },
+        cssmin: {
+            // target: {
+            //     files: [{
+            //         expand: true,
+            //         cwd: 'css',
+            //         src: ['*.css', '!*.min.css'],
+            //         dest: 'css',
+            //         ext: '.min.css'
+            //     }]
+            // },
+            target: {
+                files: {
+                'css/output.min.css': ['style.css', 'css/bootstrap-social.min.css', 'css/bootstrap.min.css', 'css/ssm.min.css', 'css/font-awesome.min.css']
+                }
+            }
+        }
     });
      // the default task (running "grunt" in console) is "watch"
      grunt.registerTask('default', ['watch']);
